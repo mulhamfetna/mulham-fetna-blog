@@ -11,7 +11,15 @@ showTableOfContents: false
 
 # Technical Portfolio
 
-Mechatronics Engineering student at Aleppo University with expertise in AI/ML, Robotics, and Embedded Systems. Active open source contributor with 18+ PRs across major projects.
+**Mechatronics Engineering Student | AI/ML Engineer | Open Source Contributor**
+
+- **University:** Aleppo University (4th year, 89% cumulative grade)
+- **Open Source:** 18+ PRs (OpenCV, Ultralytics, OpenDR)
+- **Research:** 3 papers submitted (Elsevier, IEEE RA-L)
+- **Teaching:** 200+ students across 7+ cohorts
+
+**Technical Stack:**
+Python, C++, PyTorch, TensorFlow, OpenCV, ROS, Embedded Systems, Docker, FastAPI
 
 ---
 
@@ -19,18 +27,20 @@ Mechatronics Engineering student at Aleppo University with expertise in AI/ML, R
 
 | Area | Description | Link |
 |------|-------------|------|
-| **Research** | 3 journal papers submitted (Elsevier, IEEE) | [/research/](/research/) |
-| **Open Source** | OpenCV, Ultralytics, OpenDR contributions | [/open-source/](/open-source/) |
+| **Research** | 3 journal papers (MPC, Bees Algorithm, Hybrid IK) | [/research/](/research/) |
+| **Open Source** | 18+ PRs across 4 projects | [/open-source/](/open-source/) |
 | **Skills** | 50+ technical competencies | [/skills/](/skills/) |
-| **Projects** | Technical project portfolio | [/projects/portfolio/](/projects/portfolio/) |
+| **Projects** | 9 technical projects portfolio | [/projects/portfolio/](/projects/portfolio/) |
+| **Timeline** | Career journey 2020-2026 | [/about/timeline/](/about/timeline/) |
 
 ---
 
 ## Latest Updates
 
-- **May 2026:** 3 research papers submitted to top journals
-- **2026:** 18+ open source contributions
-- **2025:** Founded Neurobotics & Boundless
+- **May 2026:** 3 research papers submitted to top journals (100% benchmark success)
+- **2026:** 18+ open source contributions (2 approved PRs)
+- **2025:** Founded Neurobotics & Boundless companies
+- **2024:** 29 Olympic medals as coach (Syrian Scientific Olympiad)
 
 ---
 

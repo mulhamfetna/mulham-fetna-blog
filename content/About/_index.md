@@ -5,17 +5,19 @@ image: "/img/mulham_professional_photo.jpg"
 
 # Mulham Fetna
 
-Mechatronics engineering student at Aleppo University, fourth year of five.
-I have been teaching Python, Data Science, MLOps, Robotics, and Embedded Systems since 2021 — across Syria,
-Lebanon, Palestine, and remotely through international programs including Paper
-Airplanes and HerWill. Over 500 mentees across 7+ cohorts.
+**Mechatronics Engineering Student | AI/ML Engineer | Open Source Contributor**
 
-I founded Neurobotics to close the gap between academic theory and real engineering
-practice, and Boundless to help Syrian students access international research,
-competitions, and scholarships that most assume are out of reach.
+Mechatronics engineering student at Aleppo University (4th year, top of class with 89% cumulative grade). Active open source contributor with 18+ PRs across major projects including OpenCV, Ultralytics, and OpenDR.
 
-This site is my platform-independent professional record — built after losing
-access to LinkedIn, and designed to outlast any single platform.
+Teaching since 2021 across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill. 200+ mentees across 7+ cohorts.
+
+**Technical Roles:**
+- AI & Machine Learning Engineer
+- Embedded Systems Designer
+- OpenCV Contributor (C++)
+- Robotics & Control Systems Developer
+
+This site is my platform-independent professional record — built after losing access to LinkedIn, and designed to outlast any single platform.
 
 For the archived long-form homepage narrative, see:
 [Homepage Archive (v1)](/about/homepage-archive/).
@@ -24,11 +26,11 @@ For the archived long-form homepage narrative, see:
 
 ## Renaissance Engineer Mission
 
-**Combining expertise:** Mechatronics + Data Science + MLOps + Research + STEM Training
+**Combining expertise:** Mechatronics + Data Science + MLOps + Research + STEM Training + Open Source
 
 **Target:** Syria → Arab world → Islamic world → Global Impact
 
-**Experience:** +4 years mentoring | +500 mentees | Neurobotics Founder | Boundless Founder
+**Experience:** +4 years mentoring | 200+ mentees | 18+ open source PRs | 3 research papers | 2 companies founded
 
 ---
 

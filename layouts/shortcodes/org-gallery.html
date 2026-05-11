@@ -2,8 +2,8 @@
 {{ $title := .Get "title" | default "Partner Organizations" }}
 {{ $orgs := slice }}
 
-{{ $govOrgs := hugo.Data.organizations.governmental }}
-{{ $ngoOrgs := hugo.Data.organizations.non_governmental }}
+{{ $govOrgs := site.Data.organizations.governmental }}
+{{ $ngoOrgs := site.Data.organizations.non_governmental }}
 
 {{ if eq $type "all" }}
   {{ range $govOrgs }}
