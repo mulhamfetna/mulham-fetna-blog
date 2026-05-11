@@ -34,7 +34,7 @@
   weight = 7
 
 [[main]]
-  name = "Updates"
+  name = "Blog"
   pageRef = "Social-Media-Posts"
   weight = 8
 

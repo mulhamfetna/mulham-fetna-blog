@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Mulham Fetna Blog"
+title = "Mulham Fetna"
 
 [params]
   displayName = "EN"
@@ -11,7 +11,7 @@ title = "Mulham Fetna Blog"
   dateFormat = "2 January 2006"
   logo = "logo/favikon.svg"
   secondaryLogo = "logo/favikon.svg"
-  description = """Mulham Fetna Blog
+  description = """Mulham Fetna
   Mechatronics Engineer | Renaissance Engineer | MLops Developer | STEM International Instructor | Robotics Enthusiast | 
   Sharing insights and knowledge on robotics, engineering, and technology.
   Explore articles, projects, and tutorials on the latest advancements in robotics and engineering.
