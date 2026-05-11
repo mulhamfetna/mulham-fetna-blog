@@ -12,6 +12,32 @@ showTableOfContents: true
 
 ---
 
+## ⭐ Featured Project
+
+### Distributed Model Predictive Control for Multi-UAV Formation
+
+| Attribute | Details |
+|-----------|---------|
+| **Domain** | Robotics & Control Systems |
+| **Journal** | Robotics and Autonomous Systems (Elsevier) |
+| **Manuscript** | ROBOT-D-26-01147 |
+| **Status** | 📤 Submitted (May 10, 2026) |
+| **Benchmark** | ✅ 100% (7/7 scenarios) |
+
+**Why Featured:** First-authored paper to top-tier journal, combines MPC theory with practical robotics implementation.
+
+**Overview:** Distributed MPC for multi-UAV quadrotor formation with consensus-based coordination and geometric SO(3) attitude control.
+
+**Key Contributions:**
+- Local MPC solver with formation constraints
+- Consensus protocols (ring/mesh/star topology)
+- Quaternion-based geometric controller
+- Formation planner (grid, line, circle, wedge)
+
+**Tech Stack:** Python, NumPy, ROS/Gazebo | **Time:** 8 months (2025-2026)
+
+---
+
 ## Quick Stats
 
 | Category | Count | Status |
@@ -23,11 +49,13 @@ showTableOfContents: true
 | **Kaggle Competitions** | 2 | Active |
 | **Total Projects** | **11** | — |
 
+**Impact Metrics:** 3 journal submissions | 100% benchmark success | 1 international collaboration | 1 published tool
+
 ---
 
 ## 🔬 Research Projects
 
-### Distributed Model Predictive Control for Multi-UAV Formation
+### 1. Distributed Model Predictive Control for Multi-UAV Formation
 
 | Attribute | Details |
 |-----------|---------|
@@ -36,6 +64,7 @@ showTableOfContents: true
 | **Manuscript** | ROBOT-D-26-01147 |
 | **Status** | 📤 Submitted (May 10, 2026) |
 | **Benchmark** | ✅ 100% (7/7 scenarios) |
+| **Timeline** | Sep 2025 – May 2026 (8 months) |
 
 **Overview:** Distributed MPC for multi-UAV quadrotor formation with consensus-based coordination and geometric SO(3) attitude control.
 
@@ -49,7 +78,7 @@ showTableOfContents: true
 
 ---
 
-### Modernized Bees Algorithm for Dynamic Path Planning
+### 2. Modernized Bees Algorithm for Dynamic Path Planning
 
 | Attribute | Details |
 |-----------|---------|
@@ -58,6 +87,7 @@ showTableOfContents: true
 | **Manuscript** | ASOC-D-26-06746 |
 | **Status** | 📤 Submitted (May 6, 2026) |
 | **Success Rate** | ✅ 100% (6 scenarios, 0.35s avg) |
+| **Timeline** | Nov 2025 – May 2026 (6 months) |
 
 **Overview:** Modernized Bees Algorithm for robot path planning in dynamic environments with moving obstacles.
 
@@ -71,7 +101,7 @@ showTableOfContents: true
 
 ---
 
-### Hybrid Inverse Kinematics Ensemble with Uncertainty Estimation
+### 3. Hybrid Inverse Kinematics Ensemble with Uncertainty Estimation
 
 | Attribute | Details |
 |-----------|---------|
@@ -80,6 +110,7 @@ showTableOfContents: true
 | **Submission** | 26-2479 |
 | **Status** | 📤 Submitted (May 9, 2026) |
 | **Success Rate** | ✅ 100% (random targets), 86.7% (overall) |
+| **Timeline** | Jan 2026 – May 2026 (4 months) |
 
 **Overview:** Hybrid ensemble combining Damped Least Squares with neural network solver and learned uncertainty estimation.
 
@@ -95,13 +126,14 @@ showTableOfContents: true
 
 ## 🤖 AI/ML Projects
 
-### Sentiment Analysis Dashboard
+### 4. Sentiment Analysis Dashboard
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | Data Engineering & AI |
-| **Year** | 2024 |
+| **Year** | 2024 (Jun – Sep) |
 | **Stack** | Python, Redis, Dask, Dash |
+| **Outcome** | Used by 20+ students in Neurobotics Academy |
 
 **Description:** Scalable hybrid dashboard combining local GPU acceleration with cloud NLP models for Arabic sentiment analysis.
 
@@ -114,13 +146,14 @@ showTableOfContents: true
 
 ---
 
-### Edge AI Emotion Detection
+### 5. Edge AI Emotion Detection
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | Edge AI & Computer Vision |
-| **Year** | 2024 |
+| **Year** | 2024 (Mar – Jun) |
 | **Deployment** | Raspberry Pi 5 |
+| **Outcome** | Deployed in robotics control system |
 
 **Description:** Real-time facial emotion recognition deployed on edge devices for robotics control.
 
@@ -128,13 +161,14 @@ showTableOfContents: true
 
 ---
 
-### Local LLM Deployment with RAG
+### 6. Local LLM Deployment with RAG
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | Local AI & MLOps |
-| **Year** | 2024 |
+| **Year** | 2024 (Oct – Dec) |
 | **Stack** | Ollama, LLaMA, FastAPI, Docker |
+| **Outcome** | Private deployment for 10+ users |
 
 **Description:** Private local chat system using Retrieval Augmented Generation for domain-specific queries.
 
@@ -144,13 +178,14 @@ showTableOfContents: true
 
 ## ⚡ Embedded Systems Projects
 
-### P10 DMD Display Systems
+### 7. P10 DMD Display Systems
 
 | Attribute | Details |
 |-----------|---------|
 | **Company** | Ala'a Screens Company |
-| **Period** | 2022-2023 |
+| **Period** | Jun 2022 – Oct 2023 (16 months) |
 | **Role** | Embedded Systems Designer |
+| **Outcome** | 2 commercial products deployed |
 
 **Deliverables:**
 - 🏀 Basketball stadium clock/counter system
@@ -160,13 +195,14 @@ showTableOfContents: true
 
 ---
 
-### N8N Automation Server
+### 8. N8N Automation Server
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | DevOps & Automation |
-| **Year** | 2024 |
+| **Year** | 2024 (Jan – Mar) |
 | **Stack** | Docker, N8N, Twingate |
+| **Outcome** | Used by Neurobotics team daily |
 
 **Description:** Private N8N automation server with secure remote access for serverless workflows.
 
@@ -174,7 +210,7 @@ showTableOfContents: true
 
 ## 🛠️ Open Source Projects
 
-### opencode-presentations-skill
+### 9. opencode-presentations-skill
 
 | Attribute | Details |
 |-----------|---------|
@@ -182,6 +218,8 @@ showTableOfContents: true
 | **Version** | 2.0.0 |
 | **Platform** | OpenCode |
 | **License** | MIT |
+| **Timeline** | Apr 2025 – Present |
+| **Outcome** | 100+ downloads, used by OpenCode users |
 
 **Description:** Enhanced Marp-based presentation generator for OpenCode with 20 design styles.
 
@@ -198,25 +236,62 @@ showTableOfContents: true
 
 ## 🏆 Kaggle Competition Projects
 
-### Kaggle Playground Series S6E4
+### 10. Kaggle Playground Series S6E4
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | Competition Solution |
+| **Timeline** | 2025 (Oct – Dec) |
 | **Status** | Model developed & deployed as API |
+| **Outcome** | Solution documented, API deployed |
 
-{{< github repo="molhamfetnah/kaggle-playground-series-s6e4" >}}
+**Description:** End-to-end ML pipeline from competition to deployable API.
+
+**Fallback Link:** [View on GitHub](https://github.com/molhamfetnah/kaggle-playground-series-s6e4)
 
 ---
 
-### AI Cup 2026 Bird Classification
+### 11. AI Cup 2026 Bird Classification
 
 | Attribute | Details |
 |-----------|---------|
 | **Type** | Competition Solution |
+| **Timeline** | 2026 (Jan – Present) |
 | **Status** | Active development |
 
-{{< github repo="molhamfetnah/ai-cup-2026-bird-classification" >}}
+**Description:** Image classification challenge for bird species identification.
+
+**Fallback Link:** [View on GitHub](https://github.com/molhamfetnah/ai-cup-2026-bird-classification)
+
+---
+
+## Timeline Overview
+
+```mermaid
+gantt
+    title Project Timeline (2022-2026)
+    dateFormat YYYY-MM
+    
+    section Embedded
+    P10 DMD Systems       :2022-06, 2023-10
+    
+    section AI/ML
+    Emotion Detection     :2024-03, 2024-06
+    Sentiment Dashboard   :2024-06, 2024-09
+    Local LLM + RAG      :2024-10, 2024-12
+    
+    section Open Source
+    Presentations Skill   :2025-04, 2026-05
+    
+    section Research
+    Hybrid IK Ensemble    :2026-01, 2026-05
+    Bees Algorithm        :2025-11, 2026-05
+    UAV MPC Control       :2025-09, 2026-05
+    
+    section Kaggle
+    Kaggle S6E4          :2025-10, 2025-12
+    AI Cup 2026          :2026-01, 2026-05
+```
 
 ---
 
@@ -226,8 +301,8 @@ showTableOfContents: true
 |----------|--------------|
 | **Languages** | Python, C++, C |
 | **AI/ML** | PyTorch, TensorFlow, OpenCV, YOLO, Ultralytics |
-| **Robotics** | ROS, ROS2, Gazebo, Control Systems |
-| **Embedded** | Arduino, STM32, ESP32, KiCad, EasyEDA |
-| **Data** | Redis, Dask, Pandas, NumPy |
-| **DevOps** | Docker, N8N, FastAPI, Linux |
-| **Documentation** | LaTeX, Markdown |
+| **Robotics** | ROS, ROS2, Gazebo, Control Systems (MPC, PID, SO(3)) |
+| **Embedded** | Arduino, STM32, ESP32, KiCad, EasyEDA, Proteus |
+| **Data** | Redis, Dask, Pandas, NumPy, MongoDB |
+| **DevOps** | Docker, N8N, FastAPI, Linux, Twingate |
+| **Documentation** | LaTeX, Markdown, Mermaid |
