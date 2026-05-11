@@ -1,75 +1,91 @@
 ---
-title: "Technical Projects Portfolio"
-description: "Comprehensive portfolio of technical projects in AI, robotics, and embedded systems."
+title: "Projects Portfolio"
+description: "Technical projects in AI/ML, Robotics, Embedded Systems, and Open Source."
 showDate: false
 showAuthor: false
 showTableOfContents: true
 ---
 
-# Technical Projects Portfolio
+# Projects Portfolio
 
-> Showcase of technical projects spanning AI/ML, robotics, embedded systems, and data engineering.
+> Comprehensive showcase of technical projects spanning research, AI/ML, embedded systems, and open source development.
 
 ---
 
-## Research Projects
+## Quick Stats
 
-### 1. UAV Distributed MPC Control
+| Category | Count | Status |
+|----------|-------|--------|
+| **Research Papers** | 3 | Submitted (2026) |
+| **AI/ML Projects** | 3 | Completed |
+| **Embedded Systems** | 2 | Deployed |
+| **Open Source Tools** | 1 | Published |
+| **Kaggle Competitions** | 2 | Active |
+| **Total Projects** | **11** | — |
 
-| Field | Details |
-|-------|---------|
-| **Type** | Robotics & Control Systems |
-| **Status** | Submitted to Elsevier Robotics and Autonomous Systems |
-| **Manuscript ID** | ROBOT-D-26-01147 |
-| **Benchmark** | 100% success rate (7/7 scenarios) |
+---
 
-**Description:** Distributed Model Predictive Control for multi-UAV quadrotor formation with consensus-based coordination and geometric SO(3) attitude control.
+## 🔬 Research Projects
 
-**Key Features:**
+### Distributed Model Predictive Control for Multi-UAV Formation
+
+| Attribute | Details |
+|-----------|---------|
+| **Domain** | Robotics & Control Systems |
+| **Journal** | Robotics and Autonomous Systems (Elsevier) |
+| **Manuscript** | ROBOT-D-26-01147 |
+| **Status** | 📤 Submitted (May 10, 2026) |
+| **Benchmark** | ✅ 100% (7/7 scenarios) |
+
+**Overview:** Distributed MPC for multi-UAV quadrotor formation with consensus-based coordination and geometric SO(3) attitude control.
+
+**Key Contributions:**
 - Local MPC solver with formation constraints
 - Consensus protocols (ring/mesh/star topology)
-- Geometric SO(3) controller with quaternion representation
+- Quaternion-based geometric controller
 - Formation planner (grid, line, circle, wedge)
 
-**Technical Stack:** Python, NumPy, ROS/Gazebo
+**Tech Stack:** Python, NumPy, ROS/Gazebo
 
 ---
 
-### 2. Modernized Bees Algorithm
+### Modernized Bees Algorithm for Dynamic Path Planning
 
-| Field | Details |
-|-------|---------|
-| **Type** | Swarm Intelligence & Optimization |
-| **Status** | Submitted to Elsevier Applied Soft Computing |
-| **Manuscript ID** | ASOC-D-26-06746 |
-| **Success Rate** | 100% across 6 scenarios |
+| Attribute | Details |
+|-----------|---------|
+| **Domain** | Swarm Intelligence & Optimization |
+| **Journal** | Applied Soft Computing (Elsevier) |
+| **Manuscript** | ASOC-D-26-06746 |
+| **Status** | 📤 Submitted (May 6, 2026) |
+| **Success Rate** | ✅ 100% (6 scenarios, 0.35s avg) |
 
-**Description:** Modernized Bees Algorithm for dynamic robot path planning in environments with moving obstacles.
+**Overview:** Modernized Bees Algorithm for robot path planning in dynamic environments with moving obstacles.
 
-**Key Features:**
+**Key Contributions:**
 - Adaptive parameter tuning
 - Multi-objective optimization
 - Dynamic obstacle handling
 - ROS/Gazebo integration
 
-**GitHub:** [swarm-path-planning-bees](https://github.com/molhamfetnah/swarm-path-planning-bees)
+**Code:** [GitHub](https://github.com/molhamfetnah/swarm-path-planning-bees)
 
 ---
 
-### 3. Hybrid Inverse Kinematics Ensemble
+### Hybrid Inverse Kinematics Ensemble with Uncertainty Estimation
 
-| Field | Details |
-|-------|---------|
-| **Type** | Robotics & Machine Learning |
-| **Status** | Submitted to IEEE RA-L |
+| Attribute | Details |
+|-----------|---------|
+| **Domain** | Robotics & Machine Learning |
+| **Journal** | IEEE Robotics and Automation Letters |
 | **Submission** | 26-2479 |
-| **Success Rate** | 100% on random targets |
+| **Status** | 📤 Submitted (May 9, 2026) |
+| **Success Rate** | ✅ 100% (random targets), 86.7% (overall) |
 
-**Description:** Hybrid ensemble combining Damped Least Squares with neural network solver and learned uncertainty estimation.
+**Overview:** Hybrid ensemble combining Damped Least Squares with neural network solver and learned uncertainty estimation.
 
-**Key Features:**
+**Key Contributions:**
 - Multiple IK solver strategies
-- Uncertainty-based weighting
+- Uncertainty-based solver weighting
 - 6-DOF UR5-like manipulator
 - 5ms average solve time
 
@@ -77,19 +93,19 @@ showTableOfContents: true
 
 ---
 
-## AI/ML Projects
+## 🤖 AI/ML Projects
 
-### 4. Sentiment Analysis Dashboard
+### Sentiment Analysis Dashboard
 
-| Field | Details |
-|-------|---------|
+| Attribute | Details |
+|-----------|---------|
 | **Type** | Data Engineering & AI |
 | **Year** | 2024 |
 | **Stack** | Python, Redis, Dask, Dash |
 
 **Description:** Scalable hybrid dashboard combining local GPU acceleration with cloud NLP models for Arabic sentiment analysis.
 
-**Technologies:**
+**Architecture:**
 - Redis for caching
 - Dask for parallel processing
 - Torch for model inference
@@ -98,68 +114,56 @@ showTableOfContents: true
 
 ---
 
-### 5. Edge AI Emotion Detection
+### Edge AI Emotion Detection
 
-| Field | Details |
-|-------|---------|
+| Attribute | Details |
+|-----------|---------|
 | **Type** | Edge AI & Computer Vision |
 | **Year** | 2024 |
 | **Deployment** | Raspberry Pi 5 |
 
 **Description:** Real-time facial emotion recognition deployed on edge devices for robotics control.
 
-**Technologies:**
-- PyTorch, TensorFlow
-- CNN models (FER-2013 dataset)
-- Raspberry Pi 5 optimization
-- Low-latency inference pipeline
+**Stack:** PyTorch, TensorFlow, CNN (FER-2013 dataset), Raspberry Pi 5 optimization
 
 ---
 
-### 6. Local LLM Deployment with RAG
+### Local LLM Deployment with RAG
 
-| Field | Details |
-|-------|---------|
+| Attribute | Details |
+|-----------|---------|
 | **Type** | Local AI & MLOps |
 | **Year** | 2024 |
 | **Stack** | Ollama, LLaMA, FastAPI, Docker |
 
 **Description:** Private local chat system using Retrieval Augmented Generation for domain-specific queries.
 
-**Features:**
-- On-premise fine-tuning
-- Secure Docker deployment
-- FastAPI REST endpoints
-- API authentication
+**Features:** On-premise fine-tuning, Docker deployment, FastAPI REST endpoints, API authentication
 
 ---
 
-## Embedded Systems Projects
+## ⚡ Embedded Systems Projects
 
-### 7. P10 DMD Display Systems
+### P10 DMD Display Systems
 
-| Field | Details |
-|-------|---------|
-| **Type** | Embedded Systems |
+| Attribute | Details |
+|-----------|---------|
 | **Company** | Ala'a Screens Company |
 | **Period** | 2022-2023 |
+| **Role** | Embedded Systems Designer |
 
-**Projects Delivered:**
-- Basketball stadium clock/counter system
-- Interactive school bus display system
+**Deliverables:**
+- 🏀 Basketball stadium clock/counter system
+- 🚌 Interactive school bus display system
 
-**Technologies:**
-- Atmega8 microcontrollers
-- C programming
-- Circuit design
-- PCB layout (Proteus, EasyEDA)
+**Tech Stack:** Atmega8 microcontrollers, C programming, Circuit design, PCB layout (Proteus, EasyEDA)
 
 ---
 
-### 8. N8N Automation Server
+### N8N Automation Server
 
-| Field | Details |
-|-------|---------|
+| Attribute | Details |
+|-----------|---------|
 | **Type** | DevOps & Automation |
 | **Year** | 2024 |
 | **Stack** | Docker, N8N, Twingate |
@@ -168,47 +172,62 @@ showTableOfContents: true
 
 ---
 
-## Open Source Projects
+## 🛠️ Open Source Projects
 
-### 9. opencode-presentations-skill
+### opencode-presentations-skill
 
-| Field | Details |
-|-------|---------|
+| Attribute | Details |
+|-----------|---------|
 | **Type** | Open Source Tool |
 | **Version** | 2.0.0 |
 | **Platform** | OpenCode |
+| **License** | MIT |
 
 **Description:** Enhanced Marp-based presentation generator for OpenCode with 20 design styles.
 
 **Features:**
-- 20 CSS design styles
-- 5 slide sizes
-- AI image generation
-- Live preview
-- Full test suite
+- 20 CSS design styles (Modern, Professional, Creative, Tech)
+- 5 slide sizes (16:9, 4:3, 1:1, 9:16, 21:9)
+- AI image generation (Pollinations.ai)
+- Live preview with hot reload
+- Full test suite (20 tests, 100% pass)
 
-**GitHub:** [opencode-presentations-skill](https://github.com/molhamfetnah/opencode-presentations-skill)
-
----
-
-## Project Statistics
-
-| Category | Count |
-|----------|-------|
-| Research Papers | 3 |
-| AI/ML Projects | 3 |
-| Embedded Systems | 2 |
-| Open Source Tools | 1 |
-| **Total** | **9** |
+**Code:** [GitHub](https://github.com/molhamfetnah/opencode-presentations-skill)
 
 ---
 
-## Technical Skills Used
+## 🏆 Kaggle Competition Projects
 
-- Python, C++, C
-- PyTorch, TensorFlow, OpenCV
-- ROS, Gazebo, ROS2
-- Docker, N8N, FastAPI
-- Redis, Dask, MongoDB
-- KiCad, EasyEDA, Proteus
-- LaTeX, Markdown
+### Kaggle Playground Series S6E4
+
+| Attribute | Details |
+|-----------|---------|
+| **Type** | Competition Solution |
+| **Status** | Model developed & deployed as API |
+
+{{< github repo="molhamfetnah/kaggle-playground-series-s6e4" >}}
+
+---
+
+### AI Cup 2026 Bird Classification
+
+| Attribute | Details |
+|-----------|---------|
+| **Type** | Competition Solution |
+| **Status** | Active development |
+
+{{< github repo="molhamfetnah/ai-cup-2026-bird-classification" >}}
+
+---
+
+## Technologies Used Across Projects
+
+| Category | Technologies |
+|----------|--------------|
+| **Languages** | Python, C++, C |
+| **AI/ML** | PyTorch, TensorFlow, OpenCV, YOLO, Ultralytics |
+| **Robotics** | ROS, ROS2, Gazebo, Control Systems |
+| **Embedded** | Arduino, STM32, ESP32, KiCad, EasyEDA |
+| **Data** | Redis, Dask, Pandas, NumPy |
+| **DevOps** | Docker, N8N, FastAPI, Linux |
+| **Documentation** | LaTeX, Markdown |
