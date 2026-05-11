@@ -19,29 +19,44 @@
   weight = 4
 
 [[main]]
+  name = "Research"
+  pageRef = "Research"
+  weight = 5
+
+[[main]]
+  name = "Open Source"
+  pageRef = "Open-Source"
+  weight = 6
+
+[[main]]
+  name = "Skills"
+  pageRef = "Skills"
+  weight = 7
+
+[[main]]
   name = "Roadmaps"
   pageRef = "Roadmaps"
-  weight = 5
+  weight = 8
 
 [[main]]
   name = "Tutorials"
   pageRef = "Tutorials-Guides"  
-  weight = 6
+  weight = 9
 
 [[main]]
   name = "Workshops"
   pageRef = "Workshops-Camps"
-  weight = 7
+  weight = 10
 
 [[main]]
   name = "Blog"
   pageRef = "Social-Media-Posts"
-  weight = 8
+  weight = 11
 
 [[main]]
   name = "Mentorship & Consultations"
   pageRef = "Services"
-  weight = 9
+  weight = 12
 
 [[footer]]
   name = "Tags"

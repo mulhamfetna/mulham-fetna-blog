@@ -174,6 +174,54 @@ Marathon (KPM), delivering programming fundamentals to 350+ students across Syri
 
 ---
 
+# Technical Expertise & Research
+
+## Open Source Contributions
+
+Active contributor to major open source projects with 18+ PRs across 4 repositories:
+
+| Repository | Role | PRs |
+|------------|------|-----|
+| **OpenCV** (opencv/opencv) | Contributor | 11 PRs (2 merged, 1 approved) |
+| **opencv-python** | Contributor | 4 PRs |
+| **Ultralytics** | Contributor | 5 PRs (2 direct commits merged) |
+| **OpenDR** (opendr-eu/opendr) | Contributor | 1 PR (approved) |
+
+**Focus Areas:**
+- Bug fixes: Integer overflow prevention, undefined behavior
+- Performance: Edge device optimization
+- Compatibility: Cross-platform, new Python versions
+
+**GitHub:** [github.com/molhamfetnah](https://github.com/molhamfetnah)
+
+---
+
+## Research Publications
+
+Three journal papers submitted in 2026:
+
+| Paper | Journal | Status |
+|-------|---------|--------|
+| Distributed MPC for Multi-UAV Formation with Consensus | Robotics and Autonomous Systems (Elsevier) | Received |
+| Modernized Bees Algorithm for Dynamic Path Planning | Applied Soft Computing (Elsevier) | Received |
+| Hybrid Inverse Kinematics Ensemble with Uncertainty | IEEE RA-L | Received |
+
+**Key Metrics:**
+- 100% benchmark success rate across all projects
+- International collaboration (Italy: Luca Ricci, University of Tuscia)
+
+---
+
+## Technical Stack
+
+**Languages:** Python (Advanced), C++ (Advanced), C, Shell
+**AI/ML:** PyTorch, TensorFlow, OpenCV, YOLO, Ultralytics
+**Robotics:** ROS/ROS2, Gazebo, Control Systems (MPC, PID, SO(3))
+**Embedded:** Arduino, STM32, ESP32, PCB Design (KiCad, EasyEDA)
+**DevOps:** Docker, N8N, FastAPI, Linux
+
+---
+
 # Affiliations
 
 ## Mechatronics Advisor — Syrian Professional Network (SyrProNet)

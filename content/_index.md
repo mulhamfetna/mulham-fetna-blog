@@ -1,5 +1,5 @@
 ---
-title: "Mulham Fetna | Start Here"
+title: "Mulham Fetna | Technical Portfolio"
 layout: "page"
 showDate: false
 showAuthor: false
@@ -7,6 +7,31 @@ showAuthorBottom: false
 showDateUpdated: false
 showEdit: false
 showTableOfContents: false
+---
+
+# Technical Portfolio
+
+Mechatronics Engineering student at Aleppo University with expertise in AI/ML, Robotics, and Embedded Systems. Active open source contributor with 18+ PRs across major projects.
+
+---
+
+## Quick Links
+
+| Area | Description | Link |
+|------|-------------|------|
+| **Research** | 3 journal papers submitted (Elsevier, IEEE) | [/research/](/research/) |
+| **Open Source** | OpenCV, Ultralytics, OpenDR contributions | [/open-source/](/open-source/) |
+| **Skills** | 50+ technical competencies | [/skills/](/skills/) |
+| **Projects** | Technical project portfolio | [/projects/portfolio/](/projects/portfolio/) |
+
+---
+
+## Latest Updates
+
+- **May 2026:** 3 research papers submitted to top journals
+- **2026:** 18+ open source contributions
+- **2025:** Founded Neurobotics & Boundless
+
 ---
 
 > **إعلان مهم | Important:** التسجيل مفتوح الآن للدفعة القادمة من مسارات Python و MLOps. المقاعد محدودة.
