@@ -21,7 +21,7 @@ title = "Mulham Fetna"
 
 [params.author]
   name = "Mulham Fetna"
-  # email = "youremail@example.com"
+  email = "contact@mulhamfetna.com"
   image = "/img/mulham_professional_photo.jpg"
   imageQuality = 96
   headline = "Data Science & AI Educator — Mechatronics Engineer — Syria"
