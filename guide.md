@@ -8,7 +8,7 @@ https://dash.cloudflare.com/62d6b0abac91c436491b9e4df8dbeabc/pages/view/mulham-f
 
 
 ## the github repo
-https://github.com/molhamfetnah/mulham-fetna-blog
+https://github.com/mulhamfetna/mulham-fetna-blog
 
 
 ## push integrated command
