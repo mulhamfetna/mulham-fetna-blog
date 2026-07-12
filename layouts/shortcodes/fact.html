@@ -1,0 +1,18 @@
+{{- /*
+  fact — render a canonical statistic from data/facts.yaml.
+
+  Usage: {{< fact key="medals_total" >}}
+
+  Fails the build on an unknown key. This is deliberate: a silent empty stat is
+  worse than a broken build, because it ships a wrong claim to a reader.
+*/ -}}
+{{- $key := .Get "key" -}}
+{{- if not $key -}}
+  {{- errorf "fact shortcode: missing required 'key' parameter (called from %s)" .Page.File.Filename -}}
+{{- end -}}
+{{- $value := index site.Data.facts $key -}}
+{{- if $value -}}
+  {{- $value -}}
+{{- else -}}
+  {{- errorf "fact shortcode: unknown key %q in data/facts.yaml (called from %s)" $key .Page.File.Filename -}}
+{{- end -}}
