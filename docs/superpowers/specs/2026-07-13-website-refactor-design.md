@@ -214,11 +214,12 @@ with a default social image. No change needed.
 
 ## 8. Custom code inventory
 
-**Add (2):**
+**Add (3):**
 | File | Purpose |
 |---|---|
 | `layouts/partials/extend-head.html` | `Person` JSON-LD (§7.1) |
 | `layouts/shortcodes/faq.html` + `faqitem.html` | Accordion + `FAQPage` JSON-LD (§7.2) |
+| `layouts/shortcodes/fact.html` | Renders a value from `data/facts.yaml` (§3). Errors loudly on an unknown key, so a stat can never silently render empty. |
 
 **Delete (3 files + 1 bug):**
 | File | Reason |
@@ -230,11 +231,16 @@ with a default social image. No change needed.
 
 **Keep (4):** `org-gallery.html`, `mdimporter.html`, `cal-embed.html`, `page-section.html`.
 
-**Net effect — a wash, not a reduction.** Custom files before: 5 shortcodes + 1 layout override +
-1 dead root file = **7**. After: 6 shortcodes (4 kept + `faq` + `faqitem`) + 1 partial
-(`extend-head.html`) = **7**. We remove three and add three. The custom surface does not grow, and
-the site gains `Person` + `FAQPage` schema it cannot otherwise have. (`assets/css/custom.css`
-is unchanged and excluded from both counts.)
+**Net effect — grows by exactly one file, deliberately.** Custom files before: 5 shortcodes + 1
+layout override + 1 dead root file = **7**. After: 7 shortcodes (4 kept + `faq` + `faqitem` +
+`fact`) + 1 partial (`extend-head.html`) = **8**. We remove three and add four.
+
+The one-file growth is `fact.html`, and it is justified: it is the **only mechanism that
+structurally prevents the number-drift this refactor exists to fix**. Hardcoding corrected
+statistics into markdown would let them diverge again the moment a page is edited — which is
+precisely how the site came to claim both 29 and 65 medals. Every other addition (`faq`,
+`extend-head`) buys schema the theme cannot emit at all. (`assets/css/custom.css` is unchanged and
+excluded from both counts.)
 
 **Also fix:** `params.toml` `editURL` points at the wrong GitHub username (`molhamfetnah` vs
 `mulhamfetna`).
