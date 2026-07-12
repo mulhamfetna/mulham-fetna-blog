@@ -9,7 +9,7 @@ image: "/img/mulham_professional_photo.jpg"
 
 Mechatronics engineering student at Aleppo University (4th year, top of class with 89% cumulative grade). Active open source contributor with 18+ PRs across major projects including OpenCV, Ultralytics, and OpenDR.
 
-Teaching since 2021 across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill. 200+ mentees across 7+ cohorts.
+Teaching since {{< fact key="teaching_since" >}} across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill. {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}.
 
 **Technical Roles:**
 - AI & Machine Learning Engineer
@@ -30,7 +30,7 @@ For the archived long-form homepage narrative, see:
 
 **Target:** Syria → Arab world → Islamic world → Global Impact
 
-**Experience:** +4 years mentoring | 200+ mentees | 18+ open source PRs | 3 research papers | 2 companies founded
+**Experience:** {{< fact key="teaching_years" >}} years teaching | {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}} | {{< fact key="open_source_prs" >}} open source PRs | {{< fact key="papers_under_review" >}} research papers under peer review | 2 companies founded
 
 ---
 
@@ -62,7 +62,7 @@ For the archived long-form homepage narrative, see:
 
 ### Boundless Divisions
 
-* **Scientific Research Camp (SRC1):** 75 graduates in the first cohort — engineering, medical, and agriculture research tracks. One publication under review.
+* **Scientific Research Camp (SRC1):** {{< fact key="src1_enrolled" >}} enrolled, {{< fact key="src1_graduated" >}} graduated in the first cohort — engineering, medical, and agriculture research tracks. One publication under review.
 * **Boundless Elite Club:** International Olympiads including IAAC, IYMC, and IOI. IPHO national team trainer and ICSC/IAAC ambassador.
 * **Scholarship Mentorship:** 3 confirmed UWC final acceptances. Students placed toward Chevening, DAAD, and GKS scholarships.
 * **Academic Mentorship:** Standardized exams (SAT, IELTS, TOEFL, GRE) and professional personal branding.

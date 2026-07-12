@@ -16,7 +16,7 @@ showTableOfContents: false
 - **University:** Aleppo University (4th year, 89% cumulative grade)
 - **Open Source:** 18+ PRs (OpenCV, Ultralytics, OpenDR)
 - **Research:** 3 papers submitted (Elsevier, IEEE RA-L)
-- **Teaching:** 200+ students across 7+ cohorts
+- **Teaching:** {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}
 
 **Technical Stack:**
 Python, C++, PyTorch, TensorFlow, OpenCV, ROS, Embedded Systems, Docker, FastAPI
@@ -40,7 +40,7 @@ Python, C++, PyTorch, TensorFlow, OpenCV, ROS, Embedded Systems, Docker, FastAPI
 - **May 2026:** 3 research papers submitted to top journals (100% benchmark success)
 - **2026:** 18+ open source contributions (2 approved PRs)
 - **2025:** Founded Neurobotics & Boundless companies
-- **2024:** 29 Olympic medals as coach (Syrian Scientific Olympiad)
+- **2024:** {{< fact key="medals_total" >}} Olympic medals as coach (Syrian Scientific Olympiad)
 
 ---
 

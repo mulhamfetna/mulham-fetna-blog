@@ -39,7 +39,7 @@ showTableOfContents: false
 
 ### Teaching
 - **Paper Airplanes:** Volunteer of the Month (Fall 2025)
-- **Syrian Scientific Olympiad:** 29 Olympic medals (12 gold, 21 silver, 32 bronze as coach)
+- **Syrian Scientific Olympiad:** {{< fact key="medals_total" >}} Olympic medals as coach ({{< fact key="medals_gold" >}} gold, {{< fact key="medals_silver" >}} silver, {{< fact key="medals_bronze" >}} bronze)
 - **Neurobotics Academy:** Delivered 7+ Python and MLOps cohorts
 
 ### Projects
