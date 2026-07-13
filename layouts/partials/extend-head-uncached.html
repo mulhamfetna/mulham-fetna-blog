@@ -1,0 +1,62 @@
+{{- /*
+  extend-head-uncached.html — Blowfish's sanctioned per-page <head> hook.
+  No theme file is overridden.
+
+  NOTE: it must be this hook, not `extend-head.html`. Blowfish invokes that one as
+  `partialCached "extend-head.html" .Site` — it receives the SITE, not the page, and
+  is cached once for the whole build, so `.IsHome` / `.RelPermalink` are unavailable
+  and per-page scoping is impossible there. `extend-head-uncached.html` is called as
+  `partial "extend-head-uncached.html" .` with the page context.
+
+  Emits Person JSON-LD on the identity pages only (home + /about/).
+
+  Why this matters: Blowfish ships WebSite and Article schema, but no entity for
+  the person. `sameAs` is what lets Google and AI assistants bind ORCID, Google
+  Scholar, ResearchGate, GitHub and the social profiles into a SINGLE recognized
+  entity — which is the precondition for being cited as a source rather than
+  treated as an anonymous page.
+
+  sameAs is built from params.author.links so there is one source of truth.
+  Excluded: `email` (a mailto:, not a profile) and `whatsapp` (a group-chat
+  invite, which does not identify the person).
+*/ -}}
+{{- if or .IsHome (eq .RelPermalink "/about/") -}}
+  {{- $exclude := slice "email" "whatsapp" -}}
+  {{- $sameAs := slice -}}
+  {{- range site.Params.Author.links -}}
+    {{- range $key, $url := . -}}
+      {{- if and $url (not (in $exclude $key)) (hasPrefix $url "http") -}}
+        {{- $sameAs = $sameAs | append $url -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" "Mulham Fetna"
+    "url" site.BaseURL
+    "image" (printf "%simg/mulham_professional_photo.jpg" site.BaseURL)
+    "email" "contact@mulhamfetna.com"
+    "jobTitle" "Mechatronics & AI/ML Engineer, Researcher, Technical Trainer"
+    "description" "Mechatronics and AI/ML engineer, researcher, and technical trainer based in Aleppo, Syria. Builds robotics and machine-learning systems, publishes research, and trains engineers and researchers."
+    "nationality" (dict "@type" "Country" "name" "Syria")
+    "address" (dict "@type" "PostalAddress" "addressLocality" "Aleppo" "addressCountry" "SY")
+    "alumniOf" (dict "@type" "CollegeOrUniversity" "name" "University of Aleppo")
+    "worksFor" (slice
+      (dict "@type" "Organization" "name" "Neurobotics")
+      (dict "@type" "Organization" "name" "Boundless")
+    )
+    "knowsAbout" (slice
+      "Mechatronics" "Robotics" "ROS" "Embedded Systems" "Machine Learning"
+      "Computer Vision" "MLOps" "Data Engineering" "Arabic NLP"
+      "Research Methodology"
+    )
+    "knowsLanguage" (slice
+      (dict "@type" "Language" "name" "Arabic")
+      (dict "@type" "Language" "name" "English")
+    )
+    "identifier" (dict "@type" "PropertyValue" "propertyID" "ORCID" "value" (index site.Data.facts "orcid"))
+    "sameAs" $sameAs
+  -}}
+<script type="application/ld+json">{{ $schema | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end -}}
