@@ -2,6 +2,9 @@
 title: "Privacy Policy"
 date: 2026-04-10
 slug: "privacy"
+description: "Privacy policy for mulhamfetna.com — what data this site collects, how it is used, and your rights."
+keywords: ["privacy policy"]
+
 ---
 
 # Privacy Policy

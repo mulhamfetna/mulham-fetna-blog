@@ -1,0 +1,24 @@
+{{- /*
+  faqitem — one question/answer pair. Must be nested inside {{< faq >}}.
+
+  Usage:
+    {{< faqitem question="Does Mulham teach in Arabic?" >}}
+    Yes. Courses run in Arabic and English.
+    {{< /faqitem >}}
+
+  Renders nothing itself: it appends to a page-scoped store which the parent
+  {{< faq >}} reads after its .Inner is evaluated. This is why the answers can be
+  emitted both as HTML and as FAQPage JSON-LD from a single authoring source —
+  the answer text can never drift from what the reader sees.
+*/ -}}
+{{- $q := .Get "question" -}}
+{{- if not $q -}}
+  {{- errorf "faqitem: missing required 'question' parameter (in %s)" .Page.File.Filename -}}
+{{- end -}}
+{{- $a := .Inner | .Page.RenderString -}}
+{{- if not (trim ($a | plainify) " \n\r\t") -}}
+  {{- errorf "faqitem: empty answer for question %q (in %s). An empty answer would ship a blank citation to an AI assistant." $q .Page.File.Filename -}}
+{{- end -}}
+{{- $items := .Page.Store.Get "faqitems" | default slice -}}
+{{- $items = $items | append (dict "question" $q "answer" $a) -}}
+{{- .Page.Store.Set "faqitems" $items -}}

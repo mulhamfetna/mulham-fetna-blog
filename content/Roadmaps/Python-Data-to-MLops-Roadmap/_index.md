@@ -1,6 +1,9 @@
 ---
 title: Python Data Engineering & MLOps Comprehensive Roadmap
 summary: Deep, integrated roadmap from Python foundations to production AI systems with strong alignment to the Python Mastery and MLOps courses.
+description: "An integrated roadmap from Python foundations to production AI systems, aligned with the Python Mastery and MLOps courses."
+keywords: ["Python roadmap", "MLOps roadmap", "data engineering path", "production AI systems"]
+
 ---
 
 # Python Data Engineering & MLOps Comprehensive Roadmap

@@ -1,6 +1,9 @@
 ---
 title: Markdown‑First Workflow (for Engineers)
 date: 2026-03-31
+description: "A markdown-first workflow for engineers: writing, slides, and documentation from plain text you actually own."
+keywords: ["markdown workflow", "engineering documentation", "Marp slides", "plain text writing"]
+
 ---
 
 # Markdown‑First Workflow (for Engineers)

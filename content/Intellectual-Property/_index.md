@@ -2,6 +2,9 @@
 title: "© Intellectual Property - All Rights Reserved"
 date: 2026-04-10
 slug: "intellectual-property"
+description: "Intellectual property and copyright policy for the content, curricula, and code published on mulhamfetna.com."
+keywords: ["intellectual property policy", "copyright"]
+
 ---
 
 # Intellectual Property Policy

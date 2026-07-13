@@ -1,5 +1,8 @@
 ---
 title: Workshops & Camps
+description: "Short, intensive workshops by Mulham Fetna: personal branding for professionals, mechatronics and robotics, and careers in data and AI."
+keywords: ["engineering workshops Syria", "personal branding workshop", "robotics workshop Arabic", "data AI careers workshop"]
+
 ---
 
 ### Learn, Build, and Transform

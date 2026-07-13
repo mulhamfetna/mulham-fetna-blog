@@ -1,6 +1,9 @@
 ---
 title: "Mentorship & Consultations"
 date: 2026-03-31
+description: "Book one-to-one mentorship or a technical consultation with Mulham Fetna — engineering, AI/ML, research, and academic guidance."
+keywords: ["technical consultation", "engineering mentorship Arabic", "AI mentorship", "book a session Mulham Fetna"]
+
 ---
 
 # Mentorship & Consultations

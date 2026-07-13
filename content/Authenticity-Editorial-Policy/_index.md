@@ -2,6 +2,9 @@
 title: "Authenticity & Editorial Policy"
 date: 2026-04-11
 slug: "authenticity-editorial-policy"
+description: "How content on this site is written, verified, and edited — including where AI assistance is and is not used."
+keywords: ["editorial policy", "authenticity policy", "AI disclosure"]
+
 ---
 
 # Authenticity & Editorial Policy

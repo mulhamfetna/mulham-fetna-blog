@@ -1,6 +1,9 @@
 ---
 title: Mechatronics Engineering Roadmap
 summary: Analog & Digital Electronics -> ... ->  Advanced Embedded & Controllers Perspective ... -> Deep ROS Applications ->  Advanced Robotics & Reinforcement Learning
+description: "A 12-level mechatronics roadmap: analog and digital electronics through embedded controllers, deep ROS, and advanced robotics."
+keywords: ["mechatronics roadmap", "robotics learning path", "ROS roadmap Arabic", "embedded systems roadmap"]
+
 ---
 
 ## Level 1: Analog Electronics

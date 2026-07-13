@@ -1,6 +1,8 @@
 ---
 title: Python from Zero to Data Engineering Mastery
 summary: Beginner-to-professional Python program covering fundamentals, data stack, APIs, async systems, and production portfolio delivery.
+description: "Beginner-to-professional Python program: fundamentals, the data stack, APIs, async systems, and a production portfolio project."
+keywords: ["Python bootcamp Arabic", "Python from zero", "data engineering Python", "learn Python Syria"]
 
 ---
 
