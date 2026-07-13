@@ -16,7 +16,7 @@ This Privacy Policy explains how **Mulham Fetna Blog** collects, uses, and prote
 ## 1. Who controls your data
 
 - **Controller:** Mulham Fetna
-- **Contact email:** [mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)
+- **Contact email:** [contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)
 
 ## 2. Information collected
 
@@ -79,7 +79,7 @@ Depending on your location and applicable laws, you may request to:
 5. Receive a copy of your data (data portability).
 6. Withdraw consent where processing is based on consent.
 
-To submit a request, email: [mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)
+To submit a request, email: [contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)
 
 ## 10. Children and minors
 

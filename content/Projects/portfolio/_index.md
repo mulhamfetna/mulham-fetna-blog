@@ -201,4 +201,4 @@ Published npm package with **MIT license** — freely available for commercial u
 
 ---
 
-*For detailed technical documentation or code access, contact: molhamfetneh@gmail.com*
+*For detailed technical documentation or code access, contact: contact@mulhamfetna.com*
