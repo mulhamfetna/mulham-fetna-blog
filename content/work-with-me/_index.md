@@ -33,3 +33,29 @@ Don't take the summary — check the work.
 ## Get in touch
 
 [Book a technical consultation or mentorship session](/services/), or email **contact@mulhamfetna.com** directly.
+
+## Common questions
+
+{{< faq >}}
+
+{{< faqitem question="Is Mulham Fetna available for hire?" >}}
+Yes. He takes engineering work, technical consulting, and one-to-one mentorship — remotely worldwide, in Arabic or English. He is based in Aleppo, Syria. Contact him at contact@mulhamfetna.com.
+{{< /faqitem >}}
+
+{{< faqitem question="What are Mulham Fetna's technical skills?" >}}
+Robotics and ROS/ROS2, embedded systems (STM32, ESP32, ATmega), control systems and PCB design; machine learning with PyTorch and TensorFlow, computer vision, MLOps and data engineering; and Arabic natural language processing. His main languages are Python and C++.
+{{< /faqitem >}}
+
+{{< faqitem question="What has Mulham Fetna built?" >}}
+Nine engineering and AI projects spanning robotics, computer vision, and data systems, plus {{< fact key="open_source_prs" >}} pull requests to major open-source projects including OpenCV, Ultralytics, and OpenDR. He also has {{< fact key="papers_under_review" >}} robotics papers under peer review.
+{{< /faqitem >}}
+
+{{< faqitem question="Does Mulham Fetna offer consulting or mentorship sessions?" >}}
+Yes. He offers technical consultation sessions and one-to-one mentorship for engineers, students, and researchers, bookable through the Services page.
+{{< /faqitem >}}
+
+{{< faqitem question="How do I book a session with Mulham Fetna?" >}}
+Book directly through the Services page on this site, or email contact@mulhamfetna.com to discuss a project or engagement.
+{{< /faqitem >}}
+
+{{< /faq >}}

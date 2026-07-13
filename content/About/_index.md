@@ -102,4 +102,30 @@ Fourth year. Top of class, 89% cumulative (first two years). Coursework spans me
 
 Full experience, affiliations, and certifications: **[see my CV](/work-with-me/cv/)**.
 
+---
+
+## Common questions
+
+{{< faq >}}
+
+{{< faqitem question="What is Mulham Fetna's background?" >}}
+He is a fourth-year mechatronics engineering student at the University of Aleppo, top of his class at 89%, and simultaneously a practising engineer, researcher, and trainer. He founded two Syrian ventures — Neurobotics, for engineering and technical education, and Boundless, for academic services — and has been teaching since {{< fact key="teaching_since" >}}.
+{{< /faqitem >}}
+
+{{< faqitem question="What languages does Mulham Fetna speak?" >}}
+Arabic is his native language and he is fluent in English. He teaches and delivers workshops in both, and founded the Arabic-language ROS developer community.
+{{< /faqitem >}}
+
+{{< faqitem question="Why does Mulham Fetna run his own website instead of LinkedIn?" >}}
+This site is his platform-independent professional record, built after losing access to LinkedIn. It is designed to outlast any single platform and to remain under his own control.
+{{< /faqitem >}}
+
+{{< faqitem question="What has Mulham Fetna achieved as a trainer?" >}}
+He has taught {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}, coached students to {{< fact key="medals_total" >}} olympiad medals in {{< fact key="medals_year" >}} as one of 20 nationally selected trainers, and co-led a {{< fact key="src1_hours" >}}-hour scientific research camp partnered with SANAD and UNFPA Syria.
+{{< /faqitem >}}
+
+{{< /faq >}}
+
+---
+
 Get in touch: **contact@mulhamfetna.com**
