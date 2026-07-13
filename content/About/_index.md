@@ -191,7 +191,7 @@ Active contributor to major open source projects with 18+ PRs across 4 repositor
 - Performance: Edge device optimization
 - Compatibility: Cross-platform, new Python versions
 
-**GitHub:** [github.com/molhamfetnah](https://github.com/molhamfetnah)
+**GitHub:** [github.com/mulhamfetna](https://github.com/mulhamfetna)
 
 ---
 

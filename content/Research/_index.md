@@ -74,7 +74,7 @@ This work presents a modernized implementation of the Bees Algorithm for robot p
 **Results:**
 - 100% success rate across 6 scenarios
 - Average planning time: 0.35 seconds
-- GitHub: [swarm-path-planning-bees](https://github.com/molhamfetnah/swarm-path-planning-bees)
+- GitHub: [swarm-path-planning-bees](https://github.com/mulhamfetna/swarm-path-planning-bees)
 
 ---
 
@@ -155,4 +155,4 @@ This paper presents a hybrid ensemble architecture combining Damped Least Square
 
 For research collaboration opportunities, please contact:
 - **Email:** molhamfetneh@gmail.com
-- **GitHub:** github.com/molhamfetnah
+- **GitHub:** github.com/mulhamfetna

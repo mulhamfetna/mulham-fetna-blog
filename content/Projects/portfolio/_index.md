@@ -65,7 +65,7 @@ This work presents a novel distributed control framework enabling multiple UAVs 
 
 A complete overhaul of the classical Bees Algorithm introducing adaptive parameter tuning and multi-objective optimization for real-world robotics applications.
 
-**Repository:** [GitHub](https://github.com/molhamfetnah/swarm-path-planning-bees)
+**Repository:** [GitHub](https://github.com/mulhamfetna/swarm-path-planning-bees)
 
 ---
 
@@ -169,7 +169,7 @@ Published npm package with **MIT license** — freely available for commercial u
 | **Tests** | 20 tests, 100% pass |
 | **Features** | 20 design styles, 5 sizes, AI generation |
 
-**Repository:** [GitHub](https://github.com/molhamfetnah/opencode-presentations-skill)
+**Repository:** [GitHub](https://github.com/mulhamfetna/opencode-presentations-skill)
 
 ---
 
