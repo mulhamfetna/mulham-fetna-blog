@@ -1,6 +1,7 @@
 ---
-title: "Mulham Fetna | Technical Portfolio"
-layout: "page"
+title: "Mulham Fetna"
+description: "Mechatronics and AI/ML engineer, researcher, and technical trainer in Aleppo, Syria. Robotics, machine learning, Arabic NLP, and research capacity building."
+keywords: ["Mulham Fetna", "mechatronics engineer Syria", "AI ML engineer Aleppo", "robotics researcher Syria", "Arabic NLP", "technical trainer Syria"]
 showDate: false
 showAuthor: false
 showAuthorBottom: false
@@ -9,92 +10,41 @@ showEdit: false
 showTableOfContents: false
 ---
 
-# Technical Portfolio
+Mechatronics and AI/ML engineer, researcher, and technical trainer — based in Aleppo, Syria.
 
-**Mechatronics Engineering Student | AI/ML Engineer | Open Source Contributor**
+I build robotics and machine-learning systems, publish research, and train the next generation of Syrian engineers and researchers.
 
-- **University:** Aleppo University (4th year, 89% cumulative grade)
-- **Open Source:** 18+ PRs (OpenCV, Ultralytics, OpenDR)
-- **Research:** 3 papers submitted (Elsevier, IEEE RA-L)
-- **Teaching:** {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}
-
-**Technical Stack:**
-Python, C++, PyTorch, TensorFlow, OpenCV, ROS, Embedded Systems, Docker, FastAPI
+| | |
+|---|---|
+| **{{< fact key="teaching_years" >}} years** teaching | **{{< fact key="learners_total" >}}** learners taught |
+| **{{< fact key="papers_under_review" >}}** papers under peer review | **{{< fact key="open_source_prs" >}}** open-source contributions |
 
 ---
 
-## Quick Links
+## Where would you like to go?
 
-| Area | Description | Link |
-|------|-------------|------|
-| **Research** | 3 journal papers (MPC, Bees Algorithm, Hybrid IK) | [/research/](/research/) |
-| **Open Source** | 18+ PRs across 4 projects | [/open-source/](/open-source/) |
-| **Skills** | 50+ technical competencies | [/skills/](/skills/) |
-| **Projects** | 9 technical projects portfolio | [/projects/portfolio/](/projects/portfolio/) |
-| **Timeline** | Career journey 2020-2026 | [/about/timeline/](/about/timeline/) |
+**Hiring or collaborating?**
+→ **[Work With Me](/work-with-me/)** — projects, skills, CV, and consulting.
 
----
+**Reviewing my research?**
+→ **[Research](/research/)** — publications, ORCID, and open-source work.
 
-## Latest Updates
+**Looking to learn?**
+→ **[Learn](/learn/)** — courses, workshops, and free roadmaps in Arabic and English.
 
-- **May 2026:** 3 research papers submitted to top journals (100% benchmark success)
-- **2026:** 18+ open source contributions (2 approved PRs)
-- **2025:** Founded Neurobotics & Boundless companies
-- **2024:** {{< fact key="medals_total" >}} Olympic medals as coach (Syrian Scientific Olympiad)
+**Partner or sponsor?**
+→ **[Ventures](/ventures/)** — Neurobotics and Boundless.
 
 ---
 
-> **إعلان مهم | Important:** التسجيل مفتوح الآن للدفعة القادمة من مسارات Python و MLOps. المقاعد محدودة.
+## Featured
 
-# الصفحة الرئيسية (Router)
+**[Research under peer review](/research/)** — {{< fact key="papers_under_review" >}} robotics papers: distributed model-predictive control for multi-UAV formation, a modernized Bees Algorithm for path planning, and hybrid inverse kinematics with learned uncertainty.
 
-هذه الصفحة صُمّمت لتوجيهك بسرعة نحو أهم المسارات الحالية بدون تشتت.
+**[Scientific Research Camp](/ventures/)** — {{< fact key="src1_hours" >}} training hours across {{< fact key="src1_workshops" >}} workshops, with SANAD and UNFPA Syria. Camp II is running now with {{< fact key="src2_researchers" >}} researchers.
 
-*This homepage is a routing layer: high-signal announcements, top actions, and fast navigation.*
-
----
-
-## ابدأ من هنا | Start Here
-
-1. **المسار الرئيسي (موصى به):** [استعرض الكورسات الحالية](/courses/) ثم قدّم عبر الفورم الموجود داخل صفحة الكورس.
-2. **المسار المباشر:** [ورشات ومعسكرات](/workshops-camps/) للتطبيق العملي والتحديثات القادمة.
-3. **المسار الفردي:** [الإرشاد والاستشارات](/services/) للدعم الشخصي والأكاديمي.
+**[Open source](/open-source/)** — {{< fact key="open_source_prs" >}} pull requests to OpenCV, Ultralytics, and OpenDR.
 
 ---
 
-## لماذا هذا المسار؟ | Why this path?
-
-{{< page-section page="/Courses" start="HOMEPAGE_TESTIMONIALS_START" end="HOMEPAGE_TESTIMONIALS_END" >}}
-
----
-
-## المواضيع الساخنة | Hot Topics
-
-### 1. Courses
-ابدأ بمسارات تعلم منظمة من الصفر إلى التنفيذ:  
-**[Go to Courses](/courses/)**
-
-### 2. Workshops & Camps
-تعلّم عملي مباشر وتحديثات الأنشطة القادمة:  
-**[Go to Workshops](/workshops-camps/)**
-
-### 3. Roadmaps
-خطط تعلم طويلة المدى للمجالات الهندسية والبيانية:  
-**[Go to Roadmaps](/roadmaps/)**
-
-### 4. Mentorship & Consultations
-توجيه فردي للمسار الأكاديمي أو المهني:  
-**[Go to Services](/services/)**
-
----
-
-## الدفع الدولي | International Payment
-
-{{< page-section page="/Services" start="HOMEPAGE_PAYMENT_START" end="HOMEPAGE_PAYMENT_END" >}}
-
----
-
-## CTA النهائي | Final CTA
-
-إذا هدفك الانضمام للدفعة القادمة، ابدأ من صفحة الكورسات واختر المسار ثم انتقل للفورم:  
-**[Start from Courses](/courses/)**
+Get in touch: **contact@mulhamfetna.com**

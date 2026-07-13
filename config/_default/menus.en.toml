@@ -1,62 +1,101 @@
-[[main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+# Six audience lanes. Each top-level item serves one visitor type.
+# See docs/superpowers/specs/2026-07-13-website-refactor-design.md §4.1
+#
+# Renaming a content section breaks these pageRefs — update both in lockstep and
+# add an `aliases` entry to the moved page.
+#
+# "Home" is intentionally omitted: the site logo links to / already, and a Home
+# item would spend one of six slots on a route every visitor knows.
 
 [[main]]
   name = "About"
   pageRef = "about"
-  weight = 2
-
-[[main]] 
-  name = "Projects"
-  pageRef = "Projects"
-  weight = 3
-
-[[main]]
-  name = "Courses" 
-  pageRef = "Courses"
-  weight = 4
+  weight = 1
 
 [[main]]
   name = "Research"
   pageRef = "Research"
+  weight = 2
+
+  [[main]]
+    name = "Publications"
+    pageRef = "Research"
+    parent = "Research"
+    weight = 1
+
+  [[main]]
+    name = "Open Source"
+    pageRef = "Open-Source"
+    parent = "Research"
+    weight = 2
+
+[[main]]
+  name = "Learn"
+  pageRef = "learn"
+  weight = 3
+
+  [[main]]
+    name = "Courses"
+    pageRef = "Courses"
+    parent = "Learn"
+    weight = 1
+
+  [[main]]
+    name = "Workshops"
+    pageRef = "Workshops-Camps"
+    parent = "Learn"
+    weight = 2
+
+  [[main]]
+    name = "Roadmaps"
+    pageRef = "Roadmaps"
+    parent = "Learn"
+    weight = 3
+
+  [[main]]
+    name = "Tutorials"
+    pageRef = "Tutorials-Guides"
+    parent = "Learn"
+    weight = 4
+
+[[main]]
+  name = "Ventures"
+  pageRef = "ventures"
+  weight = 4
+
+  [[main]]
+    name = "Services"
+    pageRef = "Services"
+    parent = "Ventures"
+    weight = 1
+
+[[main]]
+  name = "Work With Me"
+  pageRef = "work-with-me"
   weight = 5
 
-[[main]]
-  name = "Open Source"
-  pageRef = "Open-Source"
-  weight = 6
+  [[main]]
+    name = "Projects"
+    pageRef = "Projects"
+    parent = "Work With Me"
+    weight = 1
 
-[[main]]
-  name = "Skills"
-  pageRef = "Skills"
-  weight = 7
+  [[main]]
+    name = "Skills"
+    pageRef = "Skills"
+    parent = "Work With Me"
+    weight = 2
 
-[[main]]
-  name = "Roadmaps"
-  pageRef = "Roadmaps"
-  weight = 8
-
-[[main]]
-  name = "Tutorials"
-  pageRef = "Tutorials-Guides"  
-  weight = 9
-
-[[main]]
-  name = "Workshops"
-  pageRef = "Workshops-Camps"
-  weight = 10
+  [[main]]
+    name = "CV"
+    pageRef = "work-with-me/cv"
+    parent = "Work With Me"
+    weight = 3
 
 [[main]]
   name = "Blog"
-  pageRef = "Social-Media-Posts"
-  weight = 11
-
-[[main]]
-  name = "Mentorship & Consultations"
-  pageRef = "Services"
-  weight = 12
+  pageRef = "blog"
+  weight = 6
 
 [[footer]]
   name = "Tags"
