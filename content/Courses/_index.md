@@ -132,4 +132,6 @@ my biggest takeaway from this course is The creativity
 
 
 
+See what past students say: **[student outcomes and testimonials](/testimonials/)**.
+
 ### Featured Courses & Learning Tracks

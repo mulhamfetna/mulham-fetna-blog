@@ -1,138 +1,109 @@
-# Project Knowledge Base
+# Knowledge Base — mulhamfetna.com
 
-Last scanned (UTC): 2026-04-10T14:52:33Z
+Architecture snapshot. Last regenerated: 2026-07-13, after the audience-routed refactor.
 
-## 1) Project Identity
+- **Stack:** Hugo (v0.154.5+extended) + Blowfish v2.100.0
+- **Deploy:** Cloudflare Pages, auto-builds on push to `main`. No CI in-repo.
+- **Live:** https://mulhamfetna.com/ · **Repo:** github.com/mulhamfetna/mulham-fetna-blog
+- **Build:** `hugo --gc --minify` · **Dev:** `hugo server -D`
+- **No tests or lint exist.** Verification = clean build + visual review in light *and* dark
+  (the site uses `autoSwitchAppearance`).
 
-- **Type:** Hugo static site
-- **Theme:** Blowfish (`theme = "blowfish"`)
-- **Deployment target:** Cloudflare Pages (`https://mulham-fetna-blog.pages.dev/`)
-- **Default language:** English (`defaultContentLanguage = "en"`)
-- **Site focus:** Personal/professional brand, courses, workshops, roadmaps, guides, services
+## Design docs
 
-## 2) High-Level Architecture
+The refactor's spec and plan live in `docs/superpowers/`. Read the spec before changing structure:
 
-- **Hugo core config:** `config/_default/hugo.toml`
-- **Language/author metadata:** `config/_default/languages.en.toml`
-- **Theme behavior/UI config:** `config/_default/params.toml`
-- **Menus:** `config/_default/menus.en.toml`
-- **Markup/rendering:** `config/_default/markup.toml`
-- **Custom data source:** `data/organizations.yaml`
-- **Custom shortcodes:** `layouts/shortcodes/`
-  - `org-gallery.html`
-  - `org-gallery-debug.html`
-  - `cal-embed.html`
-- **Custom assets:** `assets/css/custom.css`, `assets/org-images/*`, `assets/img/*`, `assets/logo/*`
-- **Content:** `content/**` (section-driven structure with page bundles in many subfolders)
-- **Theme source (vendored):** `themes/blowfish/` (large upstream theme codebase)
+- `docs/superpowers/specs/2026-07-13-website-refactor-design.md`
+- `docs/superpowers/plans/2026-07-13-website-refactor.md`
 
-## 3) Current Content Topology
+## Information architecture — six audience lanes
 
-Top-level sections under `content/`:
+Each top-level nav item serves **one** audience. This is the site's organizing principle; keep it.
 
-- `About`
-- `Courses`
-- `Intellectual-Property`
-- `Privacy`
-- `Projects`
-- `Roadmaps`
-- `Services`
-- `Social-Media-Posts`
-- `Tutorials-Guides`
-- `Workshops-Camps`
+| Nav | URL | Audience |
+|---|---|---|
+| About | `/about/` | Everyone — the story |
+| Research | `/research/` | Academic & scholarship panels |
+| Learn | `/learn/` | Students & learners |
+| Ventures | `/ventures/` | Clients & sponsors |
+| Work With Me | `/work-with-me/` | Recruiters & collaborators |
+| Blog | `/blog/` | Everyone (SEO surface) |
 
-Notable implementation details:
+`/learn/`, `/ventures/`, and `/work-with-me/` are **hub pages** that route into the pre-existing
+sections (`/courses/`, `/projects/`, `/skills/`, …). Those sections keep their original URLs, so no
+SEO equity was lost. The homepage is a **router**, not a CV.
 
-- Several sections use page bundles (`section/topic/_index.md` + local cover/image files).
-- `Courses/_index.md` uses shortcode `{{< org-gallery ... >}}`.
-- Homepage (`content/_index.md`) has Cal embed shortcode currently commented out.
-- Services pages use RTL shortcode blocks (`{{% rtl %}} ... {{% /rtl %}}`).
+## Canonical facts — `data/facts.yaml`
 
-## 4) Navigation Model (Configured Menus)
+**Every statistic on the site must come from here**, via `{{< fact key="..." >}}`.
 
-Main menu:
+Do not hand-type numbers into content. This file exists because the site previously claimed both
+29 and 65 Olympic medals, both 200+ and 500+ mentees, and "75 graduates" where 75 was the
+*enrolment* figure. `fact.html` **fails the build** on an unknown key — a silent empty stat would
+ship a wrong claim to a reader.
 
-1. Home
-2. About
-3. Projects
-4. Courses
-5. Roadmaps
-6. Tutorials
-7. Workshops
-8. Posts
-9. Hire Me
+Statistics that must always carry their basis (never a bare number): `learners_total` is rendered
+together with `learners_basis`.
 
-Footer menu:
+## Custom code (everything outside `themes/`)
 
-1. Tags
-2. Categories
-3. IP Policy
-4. Privacy
+Blowfish is not forked. Eight custom files, each justified by a capability the theme lacks:
 
-Source of truth: `config/_default/menus.en.toml`.
+| File | Purpose |
+|---|---|
+| `layouts/shortcodes/fact.html` | Renders a canonical value from `data/facts.yaml`. Errors on unknown key. |
+| `layouts/shortcodes/faq.html` + `faqitem.html` | `<details>` accordions **and** `FAQPage` JSON-LD from one source. |
+| `layouts/partials/extend-head-uncached.html` | `Person` JSON-LD with `sameAs` (GEO/entity binding). |
+| `layouts/shortcodes/org-gallery.html` | Partner card grid from `data/organizations.yaml`. |
+| `layouts/shortcodes/mdimporter.html` | Pulls a remote README into a page. |
+| `layouts/shortcodes/cal-embed.html` | Cal.com booking widget. |
+| `layouts/shortcodes/page-section.html` | Transcludes a marked section of another page. |
+| `assets/css/custom.css` | Line-clamp + org-card styles. |
 
-## 5) Custom Component: Organization Gallery
+## Hugo gotchas that have already bitten (do not relearn these)
 
-Key files:
+- **`site.Data`, never `hugo.Data`.** `hugo.Data` does not exist; a template using it fails with
+  `can't evaluate field Data in type interface {}`.
+- **`extend-head.html` receives the *Site*, not the page**, and Blowfish calls it via
+  `partialCached ... .Site` — so it is cached once per build and **cannot** be scoped per page. For
+  page-scoped `<head>` output use **`extend-head-uncached.html`**, which receives the page.
+- **Nested shortcodes render BEFORE their parent.** `faq.html` must not reset its page store before
+  reading it, or it wipes the `faqitem` children that already ran.
+- Hugo errors if a shortcode has a closing tag but never evaluates `.Inner`.
+- **`--minify` strips attribute quotes and JSON whitespace.** Never grep built HTML for
+  `type="application/ld+json"` or `"@type": "Question"` — parse the JSON instead.
 
-- Data: `data/organizations.yaml`
-- Assets: `assets/org-images/*`
-- Renderer: `layouts/shortcodes/org-gallery.html`
-- Documentation: `content/Tutorials-Guides/Hugo-BlowFish/Organization-Gallery-Component-Documentation.md`
+## Conventions
 
-Behavior:
+- **Images:** global assets live in `assets/img/…` and are referenced as `/img/…` (never
+  `/assets/img/…`). Page-bundle images by bare relative filename. `static/` files as `/file.ext`.
+- **New content:** create from `archetypes/default.md`.
+- **Renaming a section breaks `menus.en.toml` `pageRef`s.** Update both in lockstep and add an
+  `aliases` entry to the moved page so the old URL still resolves.
+- **`data/organizations.yaml` contract:** keys `governmental` / `non_governmental`; `logo` is a
+  filename only and must exist in `assets/org-images/`.
+- Every content page has a hand-written `description` and `keywords`. Keep it that way — a page
+  without one falls back to a generic site bio.
 
-- Reads organizations from YAML (governmental/non-governmental).
-- Renders card grid with links, description, location.
-- Uses Hugo image pipeline (`resources.Get`, `.Fit "400x300 webp q80"`).
-- Emits JSON-LD structured data for SEO.
+## SEO / GEO
 
-## 6) Build & Operational Notes
+- `Person` schema (home + `/about/`) binds 11 profiles via `sameAs` — ORCID, Google Scholar,
+  ResearchGate, GitHub, GitLab, socials — into one recognized entity. This is what makes the site
+  citable by an AI assistant rather than anonymous.
+- `FAQPage` schema on all six lanes plus the three workshop pages. Answers must be
+  **self-contained**: an assistant quoting one in isolation must still be correct and attributable.
+- Google Analytics (`G-L9LCQSRM78`) and Search Console verification are active. Sitemap, RSS, and
+  `index.json` (search) are generated.
 
-Local build command used in scan:
+## Known outstanding
 
-```bash
-hugo --gc --minify
-```
-
-Observed scan result:
-
-- Build succeeds.
-- Hugo warning: **Module compatibility warning** for Blowfish version range.
-- Hugo warning: **`.Site.Data` deprecated** (Hugo recommends `hugo.Data`).
-
-Repository size indicators (snapshot):
-
-- `content` files: 43
-- `layouts` files: 3
-- `config` files: 7
-- `assets` files: 16
-- `themes/blowfish` files: 2253
-
-## 7) Known Quality/Consistency Findings
-
-- `menus.en.toml` uses mixed case in `pageRef` values (works with current structure, but consistency could be improved).
-- `content/Services/academic-mentroship/` appears to contain a typo in folder name (`mentroship` vs `mentorship`).
-- `content/Projects/Smart-robot.md` is currently empty.
-- `config/_default/module.toml` appears empty in current scan.
-- `config/_default/icons.md` is a note file, not executable config.
-
-## 8) Fast Orientation Guide for Future Edits
-
-If you need to modify:
-
-- **Branding / author bio / social links:** `config/_default/languages.en.toml`
-- **Homepage behavior & theme toggles:** `config/_default/params.toml`
-- **Header/footer menus:** `config/_default/menus.en.toml`
-- **Organization gallery data/content:** `data/organizations.yaml` + `assets/org-images/*`
-- **Custom styles:** `assets/css/custom.css`
-- **Homepage copy:** `content/_index.md`
-- **Service offer pages:** `content/Services/*`
-- **Legal pages:** `content/Privacy/_index.md`, `content/Intellectual-Property/_index.md`
-
-## 9) Suggested Next Hardening Targets
-
-1. Replace deprecated `site.Data` usage with `hugo.Data` in custom shortcodes to remove deprecation warnings.
-2. Normalize naming conventions (folder names, `pageRef` casing).
-3. Fill/clean placeholder or empty content pages.
-4. Keep all custom behavior documented in `Tutorials-Guides/Hugo-BlowFish/` for maintainability.
+- **Blowfish is vendored into git with a broken submodule link** (~2,250 files, no `.gitmodules`).
+  Theme upgrades will be painful until this is resolved. Deliberately out of scope so far.
+- **Bilingual EN/AR is not implemented.** The site is English-only (`languages.en.toml`); `i18n/` is
+  empty. Arabic currently exists only as inline `{{% rtl %}}` blocks in Services and the
+  University-Email tutorials. Phase 4 of the spec designs the real multilingual build.
+- **Blog has no posts yet.** Phase 5 imports Facebook / Instagram / Telegram exports.
+- **Unverified credentials still published** on `/work-with-me/cv/`: CS50 Certified Instructor,
+  Modarby, Courseing Platform. No supporting artifact was found for these. Substantiate or remove.
+- **Degree dates conflict:** the CV page says University of Aleppo 2023–2027, while other records
+  say a 2022 start. Reconcile before the next application.
