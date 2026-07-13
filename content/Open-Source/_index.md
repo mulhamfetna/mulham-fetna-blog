@@ -1,6 +1,10 @@
 ---
 title: "Open Source Contributions"
-description: "Technical contributions to major open source projects including OpenCV, Ultralytics, and OpenDR."
+description: "Merged contributions to major open source projects — two fixes accepted into OpenCV core, and one into OpenDR."
+keywords: ["OpenCV contributor", "open source contributions", "OpenCV merged PR", "OpenDR contributor"]
+# /research/ was removed until there is proper content for it. Redirect the indexed
+# URL here rather than 404 it — this is the closest technical-evidence page.
+aliases: ["/research/"]
 showDate: false
 showAuthor: false
 showTableOfContents: true

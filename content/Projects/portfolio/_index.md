@@ -95,12 +95,4 @@ Professional work, 2022–2023. Embedded systems design for P10 DMD LED display 
 
 ---
 
-## Research papers
-
-Three robotics papers are **under peer review**: distributed model-predictive control for multi-UAV formation, a modernized Bees Algorithm for dynamic path planning, and hybrid inverse kinematics with learned uncertainty estimation.
-
-They are submitted, not accepted, and their code is early-stage. See **[Research](/research/)** for detail — submission is not publication, and this site will not pretend otherwise.
-
----
-
 **Code:** [github.com/mulhamfetna](https://github.com/mulhamfetna) · **Contact:** contact@mulhamfetna.com

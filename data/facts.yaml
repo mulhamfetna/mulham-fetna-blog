@@ -39,8 +39,16 @@ pb101_online: "270"
 pb101_inperson: "75"
 pb101_year: "2026"
 
-# Under peer review — NOT published. Never describe these as published.
-papers_under_review: "3"
+# RESEARCH: the three 2026 journal submissions (ROBOT-D-26-01147, ASOC-D-26-06746,
+# RA-L 26-2479) were all REJECTED. The `papers_under_review` key is deliberately
+# REMOVED so that any page still claiming them fails the build rather than shipping
+# a false claim.
+#
+# Real record, to be published once there is proper content for it:
+#   - 1 published paper
+#   - 1 conference participation
+# Do not add these to the site until the details are confirmed. The /research/
+# section is removed until then.
 
 # Open source — verified against the live GitHub API on 2026-07-13.
 #

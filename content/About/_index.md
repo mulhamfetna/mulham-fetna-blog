@@ -12,7 +12,7 @@ showTableOfContents: true
 
 I build robotics and machine-learning systems, publish research, and train the next generation of Syrian engineers and researchers — from Aleppo.
 
-Mechatronics engineering student at the University of Aleppo (fourth year, top of class at 89%). Open-source contributor with {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}} — two of them into OpenCV core — and {{< fact key="papers_under_review" >}} robotics papers under peer review.
+Mechatronics engineering student at the University of Aleppo (fourth year, top of class at 89%). Open-source contributor with {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}} — two of them into OpenCV core.
 
 Teaching since {{< fact key="teaching_since" >}} across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill — **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}**.
 
@@ -28,7 +28,7 @@ Syria's engineering talent is not the bottleneck — access is. Access to a rese
 
 **Reach:** Syria → the Arab world → globally.
 
-**Experience at a glance:** {{< fact key="teaching_years" >}} years teaching · {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}} · {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} · {{< fact key="papers_under_review" >}} papers under peer review · 2 companies founded
+**Experience at a glance:** {{< fact key="teaching_years" >}} years teaching · {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}} · {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} · 2 companies founded
 
 ---
 
@@ -66,7 +66,6 @@ graph TD
     BL --> SM[Scholarship Mentorship]
 
     SRC --- SND[Sanad / UNFPA Partnership]
-    SRC --> PUB[Research Under Review]
 
     BEC --- AMB[ICSC & IAAC Ambassador]
     SM --> UWC[3x UWC Final Acceptances]
@@ -94,7 +93,7 @@ Fourth year. Top of class, 89% cumulative (first two years). Coursework spans me
 
 ## Where to next
 
-- **[Research](/research/)** — publications, ORCID, and open-source contributions.
+- **[Open Source](/open-source/)** — merged contributions to OpenCV and OpenDR.
 - **[Learn](/learn/)** — courses, workshops, and free roadmaps.
 - **[Ventures](/ventures/)** — Neurobotics and Boundless.
 - **[Work With Me](/work-with-me/)** — engineering, consulting, and mentorship.

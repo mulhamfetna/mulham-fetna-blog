@@ -13,23 +13,6 @@
   weight = 1
 
 [[main]]
-  name = "Research"
-  pageRef = "Research"
-  weight = 2
-
-  [[main]]
-    name = "Publications"
-    pageRef = "Research"
-    parent = "Research"
-    weight = 1
-
-  [[main]]
-    name = "Open Source"
-    pageRef = "Open-Source"
-    parent = "Research"
-    weight = 2
-
-[[main]]
   name = "Learn"
   pageRef = "learn"
   weight = 3
@@ -108,10 +91,16 @@
     weight = 2
 
   [[main]]
+    name = "Open Source"
+    pageRef = "Open-Source"
+    parent = "Work With Me"
+    weight = 3
+
+  [[main]]
     name = "CV"
     pageRef = "work-with-me/cv"
     parent = "Work With Me"
-    weight = 3
+    weight = 4
 
 [[main]]
   name = "Blog"
