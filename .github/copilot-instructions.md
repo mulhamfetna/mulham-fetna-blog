@@ -40,4 +40,4 @@
   - Keep shortcode/data/asset changes in sync together.
 - **Image path convention:** for files in `assets/img`, reference as `/img/...` in content/config (not `/assets/img/...`).
 - **New content defaults come from `archetypes/default.md`** (TOML front matter with `draft = true` by default).
-- **Use `hugo.Data` in new templates** instead of deprecated `.Site.Data` (current `org-gallery.html` still uses `.Site.Data` and emits a deprecation warning during build).
+- **Use `site.Data` in new templates** (e.g. `site.Data.organizations`, `index site.Data.facts $key`). Do **not** use `hugo.Data` — no such field exists in Hugo; the `hugo` namespace exposes `Version`, `Environment`, `IsProduction`, etc., and a template referencing `hugo.Data` fails the build with `can't evaluate field Data in type interface {}`. `org-gallery.html` and `fact.html` both use `site.Data`, and the build emits no deprecation warning.

@@ -62,7 +62,7 @@ As a coach for the Kids and Adolescents Programming Marathon (KPM):
 
 **Partner:** SANAD and UNFPA
 **Program:** Scientific Research Camp (SRC1)
-**Result:** 75 graduates, 1 publication under review
+**Result:** {{< fact key="src1_enrolled" >}} enrolled, {{< fact key="src1_graduated" >}} graduated, 1 publication under review
 
 ---
 
@@ -95,5 +95,5 @@ As a coach for the Kids and Adolescents Programming Marathon (KPM):
 | Students Mentored | 200+ |
 | Countries Reached | 6 |
 | Courses Delivered | 7+ |
-| Olympic Medals (as Coach) | 29 |
+| Olympic Medals (as Coach) | {{< fact key="medals_total" >}} |
 | Graduation Projects | 20+ |

@@ -120,7 +120,7 @@ OpenDR (Open Domain Radiance) is a modular, open-source library for robotic visi
 | **Author** | Mulham Fetna |
 | **Version** | 2.0.0 |
 | **Type** | OpenCode Plugin |
-| **GitHub** | [molhamfetnah/opencode-presentations-skill](https://github.com/molhamfetnah/opencode-presentations-skill) |
+| **GitHub** | [mulhamfetna/opencode-presentations-skill](https://github.com/mulhamfetna/opencode-presentations-skill) |
 
 **Features:**
 - 20 CSS design styles (Modern, Professional, Creative, Tech)
@@ -135,7 +135,7 @@ OpenDR (Open Domain Radiance) is a modular, open-source library for robotic visi
 
 ## GitHub Profile
 
-**Username:** [molhamfetnah](https://github.com/molhamfetnah)
+**Username:** [mulhamfetna](https://github.com/mulhamfetna)
 
 **Total Contributions:** 18+ PRs across 4 major open source projects
 

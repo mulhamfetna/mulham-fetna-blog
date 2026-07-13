@@ -1,0 +1,46 @@
+# Canonical facts for mulhamfetna.com — SINGLE SOURCE OF TRUTH.
+#
+# Every statistic rendered on the site MUST come from here via {{< fact key="..." >}}.
+# Do not hand-type these numbers into content: that is how the site came to claim
+# both 29 and 65 Olympic medals at the same time.
+#
+# See docs/superpowers/specs/2026-07-13-website-refactor-design.md §3
+
+teaching_years: "4"
+teaching_since: "2022"
+
+# Always render learners_total together with learners_basis. Never a bare number.
+learners_total: "500+"
+learners_basis: "across all programs, 2022–2026"
+
+# 65 total. The "29" previously used as a total was only the younger-group subtotal.
+# Younger 4/10/15 = 29; Adolescent 8/11/17 = 36; 29 + 36 = 65. And 12+21+32 = 65.
+medals_total: "65"
+medals_gold: "12"
+medals_silver: "21"
+medals_bronze: "32"
+medals_year: "2024"
+
+# Scientific Research Camp I — enrolment and completion are different numbers.
+src1_enrolled: "75"
+src1_continued: "50"
+src1_graduated: "35+"
+src1_year: "2025"
+src1_hours: "40"
+src1_workshops: "11"
+
+src2_researchers: "50"
+src2_year: "2026"
+
+paper_airplanes_women: "60+"
+paper_airplanes_countries: "6"
+
+pb101_online: "270"
+pb101_inperson: "75"
+pb101_year: "2026"
+
+# Under peer review — NOT published. Never describe these as published.
+papers_under_review: "3"
+
+open_source_prs: "18+"
+orcid: "0009-0006-4432-798X"

@@ -1,4 +1,9 @@
-# Tutorials & Technical Guides
+---
+title: "Tutorials & Technical Guides"
+description: "Practical engineering guides from real work — embedded systems, ESP32 drivers, Linux recovery, research software publishing, and getting a university email in Syria."
+keywords: ["engineering tutorials", "ESP32 Arduino driver", "research software DOI", "Linux dual boot recovery", "university email Syria"]
+showTableOfContents: true
+---
 
 **A Note on Authenticity and Craftsmanship**
 
