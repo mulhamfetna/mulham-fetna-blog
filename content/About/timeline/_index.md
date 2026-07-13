@@ -16,7 +16,7 @@ showTableOfContents: false
 
 ### January - Present
 - **Research:** 3 journal papers submitted simultaneously (May 2026)
-- **Open Source:** 18+ PRs across OpenCV, Ultralytics, OpenDR
+- **Open Source:** {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} (from {{< fact key="oss_submitted" >}} submitted)
 - **Neurobotics:** 4th cohort of Python Mastery in progress
 
 ---

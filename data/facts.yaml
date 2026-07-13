@@ -42,5 +42,23 @@ pb101_year: "2026"
 # Under peer review — NOT published. Never describe these as published.
 papers_under_review: "3"
 
-open_source_prs: "18+"
+# Open source — verified against the live GitHub API on 2026-07-13.
+#
+# The old "18+ PRs" figure was misleading: it conflated PRs merely *opened* (many
+# later rejected) — and even some merges into his own forks — with real accepted
+# contributions. Lead with the merged count; it is checkable and it is hard.
+#
+#   opencv/opencv    #28935  Unicode temp-path handling on Windows   merged 2026-06-28
+#   opencv/opencv    #28880  UTF-8 window names in Qt fallback paths merged 2026-04-26
+#   opendr-eu/opendr #522    Python 3.12 compatibility               merged 2026-05-11
+oss_merged: "3"
+oss_submitted: "30+"
+oss_projects: "OpenCV and OpenDR"
+
+# Current employment
+current_role: "Data Science Researcher"
+current_employer: "BeInMedia"
+current_employer_location: "Kuwait"
+current_role_since: "2026"
+
 orcid: "0009-0006-4432-798X"

@@ -25,7 +25,7 @@ Don't take the summary — check the work.
 
 - **[Projects](/projects/portfolio/)** — nine engineering and AI projects, with outcomes.
 - **[Skills](/skills/)** — the full technical competency matrix.
-- **[Open source](/open-source/)** — {{< fact key="open_source_prs" >}} pull requests across OpenCV, Ultralytics, and OpenDR.
+- **[Open source](/open-source/)** — {{< fact key="oss_merged" >}} merged pull requests into {{< fact key="oss_projects" >}} (from {{< fact key="oss_submitted" >}} submitted), including two fixes accepted into OpenCV core.
 - **[Research](/research/)** — {{< fact key="papers_under_review" >}} robotics papers under peer review.
 - **[Full CV](/work-with-me/cv/)** — complete experience, affiliations, and certifications.
 - **[Testimonials](/testimonials/)** — what students and partners say.
@@ -47,7 +47,7 @@ Robotics and ROS/ROS2, embedded systems (STM32, ESP32, ATmega), control systems 
 {{< /faqitem >}}
 
 {{< faqitem question="What has Mulham Fetna built?" >}}
-Nine engineering and AI projects spanning robotics, computer vision, and data systems, plus {{< fact key="open_source_prs" >}} pull requests to major open-source projects including OpenCV, Ultralytics, and OpenDR. He also has {{< fact key="papers_under_review" >}} robotics papers under peer review.
+Public projects spanning robotics, computer vision, and data systems — including a CNN fault-diagnosis system trained on real motor data — plus {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}}, two of them into OpenCV core. He also has {{< fact key="papers_under_review" >}} robotics papers under peer review.
 {{< /faqitem >}}
 
 {{< faqitem question="Does Mulham Fetna offer consulting or mentorship sessions?" >}}

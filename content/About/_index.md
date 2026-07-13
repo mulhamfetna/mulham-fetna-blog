@@ -12,7 +12,7 @@ showTableOfContents: true
 
 I build robotics and machine-learning systems, publish research, and train the next generation of Syrian engineers and researchers — from Aleppo.
 
-Mechatronics engineering student at the University of Aleppo (fourth year, top of class at 89%). Open-source contributor with {{< fact key="open_source_prs" >}} pull requests across OpenCV, Ultralytics, and OpenDR, and {{< fact key="papers_under_review" >}} robotics papers under peer review.
+Mechatronics engineering student at the University of Aleppo (fourth year, top of class at 89%). Open-source contributor with {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}} — two of them into OpenCV core — and {{< fact key="papers_under_review" >}} robotics papers under peer review.
 
 Teaching since {{< fact key="teaching_since" >}} across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill — **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}**.
 
@@ -28,7 +28,7 @@ Syria's engineering talent is not the bottleneck — access is. Access to a rese
 
 **Reach:** Syria → the Arab world → globally.
 
-**Experience at a glance:** {{< fact key="teaching_years" >}} years teaching · {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}} · {{< fact key="open_source_prs" >}} open-source PRs · {{< fact key="papers_under_review" >}} papers under peer review · 2 companies founded
+**Experience at a glance:** {{< fact key="teaching_years" >}} years teaching · {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}} · {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} · {{< fact key="papers_under_review" >}} papers under peer review · 2 companies founded
 
 ---
 
