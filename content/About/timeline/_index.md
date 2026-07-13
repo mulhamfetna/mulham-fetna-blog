@@ -15,7 +15,7 @@ showTableOfContents: false
 ## 2026 (Current)
 
 ### January - Present
-- **Research:** 3 journal papers submitted simultaneously (May 2026)
+- **Open Source:** two fixes merged into OpenCV core (Unicode and UTF-8 path handling)
 - **Open Source:** {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} (from {{< fact key="oss_submitted" >}} submitted)
 - **Neurobotics:** 4th cohort of Python Mastery in progress
 
@@ -132,4 +132,4 @@ gantt
 | 2023 | Started university |
 | 2024 | First open source PR |
 | 2025 | Founded two companies |
-| 2026 | 3 research papers submitted |
+| 2026 | Fixes merged into OpenCV core |

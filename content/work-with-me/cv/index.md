@@ -9,7 +9,7 @@ showTableOfContents: true
 
 Mechatronics and AI/ML engineer, researcher, and technical trainer — Aleppo, Syria.
 
-**{{< fact key="teaching_years" >}} years teaching** · **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}** · **{{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}}** · **{{< fact key="papers_under_review" >}} papers under peer review** · 2 companies founded
+**{{< fact key="teaching_years" >}} years teaching** · **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}** · **{{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}}** · 2 companies founded
 
 Contact: **contact@mulhamfetna.com** · [ORCID {{< fact key="orcid" >}}](https://orcid.org/0009-0006-4432-798X)
 
@@ -97,18 +97,6 @@ One of 20 selected national trainers for the Kids and Adolescents Programming Ma
 Two of these landed in **OpenCV core** — one of the most widely used computer-vision libraries in the world. I have also submitted PRs to opencv-python and Ultralytics that were not accepted.
 
 **GitHub:** [github.com/mulhamfetna](https://github.com/mulhamfetna)
-
-## Research Publications
-
-{{< fact key="papers_under_review" >}} journal papers **under peer review** (2026). Full detail: **[Research](/research/)**.
-
-| Paper | Journal | Status |
-|-------|---------|--------|
-| Distributed MPC for Multi-UAV Formation with Consensus | Robotics and Autonomous Systems (Elsevier) | Under review |
-| Modernized Bees Algorithm for Dynamic Path Planning | Applied Soft Computing (Elsevier) | Under review |
-| Hybrid Inverse Kinematics Ensemble with Uncertainty | IEEE RA-L | Under review |
-
-International collaboration: Luca Ricci, University of Tuscia, Italy.
 
 ## Technical Stack
 
