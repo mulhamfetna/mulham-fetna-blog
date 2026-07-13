@@ -38,3 +38,29 @@ Boundless also runs scholarship mentorship (three confirmed UWC acceptances), in
 ## Work with us
 
 Sponsorship, partnership, or programme delivery — [get in touch](/work-with-me/), or email **contact@mulhamfetna.com**.
+
+## Common questions
+
+{{< faq >}}
+
+{{< faqitem question="What is Neurobotics?" >}}
+Neurobotics is a Syrian engineering and technical-education venture founded by Mulham Fetna. It runs Neurobotics Academy (paid diplomas in Python, data engineering, and MLOps), an engineering team building custom mechatronics and robotics solutions, STEM labs for school students, and the Arabic-language ROS developer community.
+{{< /faqitem >}}
+
+{{< faqitem question="What is Boundless?" >}}
+Boundless is a Syrian academic-services venture founded by Mulham Fetna, aimed at removing barriers to global academic opportunity for Syrian and Arab students. Its flagship is the Scientific Research Camp; it also runs scholarship mentorship, international olympiad training, and academic personal-branding programmes.
+{{< /faqitem >}}
+
+{{< faqitem question="What is the Scientific Research Camp?" >}}
+A research-methodology training programme run by Boundless with SANAD as strategic partner and UNFPA Syria as donor. It comprises {{< fact key="src1_hours" >}} training hours across {{< fact key="src1_workshops" >}} workshops. The first cohort ({{< fact key="src1_year" >}}) enrolled {{< fact key="src1_enrolled" >}} researchers, of whom {{< fact key="src1_graduated" >}} graduated; the second ({{< fact key="src2_year" >}}) is running with {{< fact key="src2_researchers" >}} youth researchers and academics.
+{{< /faqitem >}}
+
+{{< faqitem question="Who has partnered with these ventures?" >}}
+SANAD and UNFPA Syria back the Scientific Research Camp. Training and educational partnerships include the Syrian Virtual University, the Distinction and Creativity Agency, Paper Airplanes, HerWill, and Homs University.
+{{< /faqitem >}}
+
+{{< faqitem question="How can I sponsor or partner with these ventures?" >}}
+Email contact@mulhamfetna.com. Both ventures work with donors, universities, companies, and NGOs on programme funding, delivery, and venue or in-kind support.
+{{< /faqitem >}}
+
+{{< /faq >}}

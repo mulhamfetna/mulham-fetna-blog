@@ -154,5 +154,32 @@ This paper presents a hybrid ensemble architecture combining Damped Least Square
 ## Contact for Research Collaboration
 
 For research collaboration opportunities, please contact:
-- **Email:** molhamfetneh@gmail.com
-- **GitHub:** github.com/mulhamfetna
+- **Email:** contact@mulhamfetna.com
+- **ORCID:** [{{< fact key="orcid" >}}](https://orcid.org/0009-0006-4432-798X)
+- **GitHub:** [github.com/mulhamfetna](https://github.com/mulhamfetna)
+
+## Common questions
+
+{{< faq >}}
+
+{{< faqitem question="What does Mulham Fetna research?" >}}
+Robotics and control: distributed model-predictive control for multi-UAV formation, swarm-intelligence path planning (a modernized Bees Algorithm), and hybrid inverse kinematics with learned uncertainty estimation. He also works on Arabic natural language processing and computer vision.
+{{< /faqitem >}}
+
+{{< faqitem question="Has Mulham Fetna published research?" >}}
+He has {{< fact key="papers_under_review" >}} journal papers currently under peer review, submitted in 2026 to Robotics and Autonomous Systems (Elsevier), Applied Soft Computing (Elsevier), and IEEE Robotics and Automation Letters. They are under review and not yet accepted for publication.
+{{< /faqitem >}}
+
+{{< faqitem question="What is Mulham Fetna's ORCID?" >}}
+His ORCID identifier is {{< fact key="orcid" >}}. His work is also listed on Google Scholar and ResearchGate.
+{{< /faqitem >}}
+
+{{< faqitem question="Does Mulham Fetna collaborate internationally?" >}}
+Yes. His work on hybrid inverse kinematics is co-authored with Luca Ricci of the University of Tuscia, Italy. He also contributes to international open-source projects including OpenCV, Ultralytics, and OpenDR.
+{{< /faqitem >}}
+
+{{< faqitem question="How can I collaborate with Mulham Fetna on research?" >}}
+Email contact@mulhamfetna.com. He is open to collaboration in robotics, control systems, computer vision, and Arabic NLP, and mentors early-career researchers through the Boundless Scientific Research Camp.
+{{< /faqitem >}}
+
+{{< /faq >}}

@@ -2,6 +2,8 @@
 title: "Scholarships Mentorship"
 date: 2026-03-31
 description: "UWC and Bachelor scholarships mentorship: positioning, application strategy, essay review, activity planning, and submission readiness."
+keywords: ["scholarship mentorship", "UWC application", "bachelor scholarship Syria", "essay review", "DAAD Chevening application"]
+aliases: ["/services/academic-mentroship/"]
 ---
 {{% rtl %}}
 # الإرشاد الأكاديمي والمنح (UWC / Bachelor Scholarships)
