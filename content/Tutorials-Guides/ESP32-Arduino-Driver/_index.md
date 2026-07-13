@@ -1,6 +1,9 @@
 ---
 title: ESP32 Arduino Core Installation Guide
 date: 2026-03-31
+description: "Installing the ESP32 Arduino core — two methods, driver setup, and the pitfalls that break a first flash."
+keywords: ["ESP32 Arduino core", "ESP32 driver install", "embedded setup guide", "ESP32 tutorial"]
+
 ---
 
 ---

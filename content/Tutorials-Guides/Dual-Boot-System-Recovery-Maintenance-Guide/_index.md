@@ -1,6 +1,8 @@
 ---
 title: Dual-Boot System Recovery & Maintenance Guide
 date: 2026-03-31
+description: "A practical guide to UEFI boot mechanics, dual-boot failure modes, and recovering a broken Linux/Windows setup."
+keywords: ["dual boot recovery", "UEFI boot repair", "Linux Windows dual boot", "GRUB recovery"]
 
 ---
 

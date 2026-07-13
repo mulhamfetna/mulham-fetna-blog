@@ -1,6 +1,9 @@
 ---
 title: MLops - from Zero to Full Stack AI Engineer
 summary: 27-session AI/ML journey from chatbot APIs and local models to Arabic NLP, multimodal AI, deep learning, and production deployment.
+description: "27-session MLOps course: chatbot APIs, local model serving, Arabic NLP, multimodal AI, deep learning, and production deployment."
+keywords: ["MLOps course", "full stack AI engineer course", "Arabic NLP course", "local LLM deployment", "AI engineering bootcamp"]
+
 ---
 
 # Course Foundation

@@ -1,5 +1,7 @@
 ---
 title: Your Zero-to-Hero Path to Industry-Ready Expertise
+description: "Free, self-paced learning roadmaps in mechatronics and Python-to-MLOps — the full path from zero to industry-ready, in Arabic and English."
+keywords: ["free engineering roadmap", "mechatronics roadmap Arabic", "Python MLOps roadmap", "self-paced learning path"]
 
 ---
 

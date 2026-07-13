@@ -1,5 +1,8 @@
 ---
 title: "Welcome to Your Data Science & AI Journey"
+description: "Cohort-based technical diplomas from Mulham Fetna: Python, data engineering, and MLOps — assessed, project-based, taught in Arabic and English."
+keywords: ["Python course Arabic", "data engineering course Syria", "MLOps diploma", "Neurobotics Academy courses", "AI course Aleppo"]
+
 ---
 
 ## Welcome to Your Data Science & AI Journey

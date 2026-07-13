@@ -2,6 +2,9 @@
 title: "Terms of Service"
 date: 2026-04-10
 slug: "terms-of-service"
+description: "Terms of service for mulhamfetna.com and for mentorship, consultation, and course bookings."
+keywords: ["terms of service"]
+
 ---
 
 # Terms of Service
