@@ -1,0 +1,62 @@
+{{- /*
+  faq — renders a Q&A block as native <details> accordions AND emits FAQPage
+  JSON-LD from the same source.
+
+  Why this exists: Blowfish ships no FAQ shortcode and no FAQ schema. Visible Q&A
+  helps a reader; FAQPage schema is what lets a search engine show a rich result
+  and lets an AI assistant lift a specific answer and attribute it. Emitting both
+  from one authoring source means the quoted answer is always the answer on screen.
+
+  Uses <details>/<summary> — accessible and keyboard-navigable with no JavaScript.
+
+  Usage:
+    {{< faq >}}
+      {{< faqitem question="..." >}}Answer.{{< /faqitem >}}
+    {{< /faq >}}
+*/ -}}
+{{- /*
+  .Inner must be referenced — Hugo errors on a shortcode that has a closing tag but
+  never evaluates .Inner. Its output is intentionally discarded: faqitem children
+  render nothing, they only append to the page store.
+
+  Do NOT reset the store before reading it. Hugo renders NESTED shortcodes BEFORE
+  the parent, so every faqitem has already appended itself by the time this runs.
+  Resetting here would wipe them. The store is cleared at the END instead, so a
+  second faq block on the same page starts clean.
+*/ -}}
+{{- $_ := .Inner -}}
+{{- $items := .Page.Store.Get "faqitems" | default slice -}}
+{{- if not $items -}}
+  {{- errorf "faq: no faqitem children found (in %s). An empty faq block emits nothing." .Page.File.Filename -}}
+{{- end -}}
+<div class="faq my-6">
+  {{- range $items }}
+  <details class="group border-b border-neutral-200 dark:border-neutral-700 py-3">
+    <summary class="cursor-pointer font-semibold text-neutral-800 dark:text-neutral-200 marker:text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+      {{ .question }}
+    </summary>
+    <div class="mt-2 text-neutral-700 dark:text-neutral-300 prose dark:prose-invert max-w-none">
+      {{ .answer }}
+    </div>
+  </details>
+  {{- end }}
+</div>
+{{- $mainEntity := slice -}}
+{{- range $items -}}
+  {{- $mainEntity = $mainEntity | append (dict
+      "@type" "Question"
+      "name" (.question | plainify)
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" (.answer | plainify | chomp)
+      )
+  ) -}}
+{{- end -}}
+{{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "FAQPage"
+    "mainEntity" $mainEntity
+-}}
+<script type="application/ld+json">{{ $schema | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- /* Clear so a second faq block on the same page does not inherit these items. */ -}}
+{{- .Page.Store.Set "faqitems" slice -}}
