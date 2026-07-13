@@ -60,7 +60,7 @@ Commercial, institutional, or public reuse requires prior written permission.
 
 To request permission, contact:
 
-- **Email:** [mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)
+- **Email:** [contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)
 
 Please include:
 

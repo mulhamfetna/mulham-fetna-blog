@@ -40,18 +40,18 @@ keywords: ["technical consultation", "engineering mentorship Arabic", "AI mentor
 ### International Payments (Quick Note)
 
 للتحويلات الدولية، تواصل معي عبر البريد:
-**[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)**
+**[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)**
 
 For international payments, contact me directly at:
-**[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)**
+**[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)**
 <!-- HOMEPAGE_PAYMENT_END -->
 
-> **تنبيه مهم:** للمدفوعات الدولية، تواصل معي مباشرة على **[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)** وسيتم التعامل يدويًا مؤقتًا إلى أن يصبح حجم الطلب مبررًا لنظام دفع آلي.
+> **تنبيه مهم:** للمدفوعات الدولية، تواصل معي مباشرة على **[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)** وسيتم التعامل يدويًا مؤقتًا إلى أن يصبح حجم الطلب مبررًا لنظام دفع آلي.
 
 ### الإبلاغ عن المشاكل
 
 في حال وجود أي مشكلة في الحجز أو الدفع، أرسل التفاصيل مع لقطات شاشة إلى:  
-**[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)**
+**[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)**
 {{% /rtl %}}
 
 ---
@@ -75,9 +75,9 @@ Use the service pages above to choose the right offer for your goal.
 2. **Diaspora/Gulf:** $50–$75/session (based on request type and complexity).
 3. **International:** $100/session.
 
-> **Important:** For international payments, contact me directly at **[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)** and payment will be handled manually until volume justifies a dedicated system.
+> **Important:** For international payments, contact me directly at **[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)** and payment will be handled manually until volume justifies a dedicated system.
 
 ### Support
 
 For booking/payment issues, email details and screenshots to:  
-**[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)**
+**[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)**

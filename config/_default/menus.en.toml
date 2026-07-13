@@ -58,21 +58,42 @@
     parent = "Learn"
     weight = 4
 
+# Mentorship is its OWN lane, not a child of Ventures. Individuals buying 1:1 time
+# are a different audience and a different transaction from organizations
+# sponsoring a venture — burying it under Ventures hid the most important
+# individual-facing section on the site.
 [[main]]
-  name = "Ventures"
-  pageRef = "ventures"
+  name = "Mentorship"
+  pageRef = "Services"
   weight = 4
 
   [[main]]
-    name = "Services"
-    pageRef = "Services"
-    parent = "Ventures"
+    name = "Professional Mentorship"
+    pageRef = "Services/professional-mentorship"
+    parent = "Mentorship"
     weight = 1
+
+  [[main]]
+    name = "Technical Consultation"
+    pageRef = "Services/technical-consultation-session"
+    parent = "Mentorship"
+    weight = 2
+
+  [[main]]
+    name = "Scholarships Mentorship"
+    pageRef = "Services/academic-mentorship"
+    parent = "Mentorship"
+    weight = 3
+
+[[main]]
+  name = "Ventures"
+  pageRef = "ventures"
+  weight = 5
 
 [[main]]
   name = "Work With Me"
   pageRef = "work-with-me"
-  weight = 5
+  weight = 6
 
   [[main]]
     name = "Projects"
@@ -95,7 +116,7 @@
 [[main]]
   name = "Blog"
   pageRef = "blog"
-  weight = 6
+  weight = 7
 
 [[footer]]
   name = "Tags"

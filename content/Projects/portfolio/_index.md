@@ -1,204 +1,106 @@
 ---
 title: "Technical Portfolio"
-description: "Award-winning research and enterprise-grade technical projects."
+description: "Engineering and research projects by Mulham Fetna — CNN fault diagnosis on real motor data, merged OpenCV contributions, WiFi-radar SLAM research, and shipped open-source tools."
+keywords: ["Mulham Fetna projects", "PMSM fault diagnosis CNN", "OpenCV contributor", "WiFi radar SLAM", "robotics portfolio Syria"]
 showDate: false
 showAuthor: false
 showTableOfContents: true
 ---
 
-# Technical Portfolio
-
-> A curated collection of high-impact technical work spanning robotics research, enterprise AI systems, and open source contributions. Selected work represents 4+ years of professional-grade development.
+Every project here is public, and every claim links to the code. Where a result is weak or a project is early-stage, it says so.
 
 ---
 
-## Impact at a Glance
+## Fault Diagnosis in PMSM Motors — CNN on Wavelet Scalograms
 
-| Metric | Value |
-|--------|-------|
-| **Research Papers** | 3 published/submitted to top-tier journals |
-| **Open Source Contributions** | 18+ PRs across major projects |
-| **Benchmark Success** | 100% across all research projects |
-| **International Collaboration** | Co-author from University of Tuscia, Italy |
-| **Industry Experience** | 2 years embedded systems development |
-| **Code Quality** | Production-ready with full test suites |
+**[github.com/mulhamfetna/pmsm-fault-diagnosis-cnn-scalogram](https://github.com/mulhamfetna/pmsm-fault-diagnosis-cnn-scalogram)** · Python · MIT
 
----
+Detecting inter-turn stator faults in permanent-magnet synchronous motors by converting raw sensor signals into continuous-wavelet scalograms and classifying them with a CNN.
 
-## Featured Work
+Trained on the **real KAIST motor dataset** (DOI `10.17632/rgn5brrgrn.5`) — not synthetic data.
 
-### Distributed Model Predictive Control for Multi-UAV Formation
+**Results, reported honestly:**
 
-**Recognition:** Primary research contribution to *Robotics and Autonomous Systems* (Elsevier) — one of the top robotics journals globally.
+| Sensor channel | Balanced accuracy |
+|---|---|
+| Vibration @ 25.6 kHz | **1.00** |
+| Current @ 100 kHz | **0.69** |
 
-This work presents a novel distributed control framework enabling multiple UAVs to maintain formation while achieving consensus. The approach combines Model Predictive Control (MPC) with geometric SO(3) attitude control, achieving **100% success rate** across all benchmark scenarios.
+The vibration result is excellent. The current-channel result is not, and the repository says so. The dataset contains only four healthy recordings, so the perfect vibration score may not generalize — that caveat is in the README, not buried in a footnote.
 
-| Specification | Detail |
-|--------------|--------|
-| **Publication** | Robotics and Autonomous Systems (Elsevier) |
-| **Manuscript ID** | ROBOT-D-26-01147 |
-| **Status** | Under Review |
-| **Benchmark** | 7/7 scenarios passed |
-| **Development** | 8 months |
-
-**Technical Innovation:**
-- First known implementation of ring/mesh/star consensus protocols with formation MPC
-- Quaternion-based geometric controller eliminating gimbal lock issues
-- Real-time formation planner supporting multiple geometries
-
-**Stack:** Python, NumPy, ROS/Gazebo | **Repository:** Private (available upon request)
+38 unit tests. This is the project I would want to be judged on: real data, a strong result, a weak result, and no hiding of either.
 
 ---
 
-## Research Contributions
+## Merged Open-Source Contributions — OpenCV & OpenDR
 
-### Modernized Bees Algorithm for Dynamic Path Planning
+Three pull requests accepted into major open-source projects. Two landed in **OpenCV core**, one of the most widely used computer-vision libraries in the world.
 
-**Recognition:** Submitted to *Applied Soft Computing* (Elsevier) — leading journal in computational intelligence.
+| Pull request | Project | What it fixed |
+|---|---|---|
+| [opencv#28935](https://github.com/opencv/opencv/pull/28935) | OpenCV (core) | Unicode temp-path handling on Windows |
+| [opencv#28880](https://github.com/opencv/opencv/pull/28880) | OpenCV (highgui/Qt) | UTF-8 window names preserved in fallback paths |
+| [opendr#522](https://github.com/opendr-eu/opendr/pull/522) | OpenDR | Python 3.12 compatibility |
 
-| Specification | Detail |
-|--------------|--------|
-| **Publication** | Applied Soft Computing (Elsevier) |
-| **Manuscript ID** | ASOC-D-26-06746 |
-| **Status** | Under Review |
-| **Performance** | 100% success, 0.35s avg planning time |
+Both OpenCV fixes concern **non-ASCII path and text handling** — the class of bug that quietly breaks the library for everyone outside the English-speaking world, and that is easy to miss if you never work in Arabic.
 
-A complete overhaul of the classical Bees Algorithm introducing adaptive parameter tuning and multi-objective optimization for real-world robotics applications.
-
-**Repository:** [GitHub](https://github.com/mulhamfetna/swarm-path-planning-bees)
+Contributing to a library used by millions means most submissions are rejected. I have opened {{< fact key="oss_submitted" >}} pull requests across OpenCV, opencv-python, Ultralytics, and OpenDR; these three were accepted.
 
 ---
 
-### Hybrid Inverse Kinematics Ensemble with Uncertainty Estimation
+## WiFi as a Radar Replacement for Automotive SLAM
 
-**Recognition:** Submitted to *IEEE Robotics and Automation Letters* — premier venue for robotics research.
+**[github.com/mulhamfetna/wifi-radar-slam](https://github.com/mulhamfetna/wifi-radar-slam)** · Python · AGPL-3.0
+Archived on Zenodo — DOI [10.5281/zenodo.21247288](https://doi.org/10.5281/zenodo.21247288)
 
-| Specification | Detail |
-|--------------|--------|
-| **Publication** | IEEE RA-L |
-| **Submission** | 26-2479 |
-| **Status** | Under Review |
-| **Performance** | 100% random targets, 86.7% overall |
-| **Solve Time** | 5ms average |
+Can ambient WiFi substitute for radar in automotive localization and mapping? A simulation-first feasibility study using Sionna ray tracing, testing whether the channel-state information available from commodity WiFi carries enough structure for SLAM.
 
-**International Collaboration:** Co-authored with **Luca Ricci**, University of Tuscia, Italy.
-
-This work bridges traditional robotics (Damped Least Squares) with modern machine learning (neural networks), achieving state-of-the-art results through learned uncertainty quantification.
+**Status: active research, feasibility stage.** The literature review and simulation infrastructure are complete; there are **no results yet**. I publish it as it develops rather than after the fact.
 
 ---
 
-## Enterprise Systems
+## Trading Strategy Finder
 
-### Sentiment Analysis Dashboard
+**[github.com/mulhamfetna/trading-strategy-finder](https://github.com/mulhamfetna/trading-strategy-finder)** · Python · MIT
 
-Production-grade data pipeline serving Arabic NLP at scale.
+A backtesting engine comparing scalping, day, and intraday strategies on NQ futures, with a machine-learning filter layer over signal generation.
 
-| Specification | Detail |
-|--------------|--------|
-| **Architecture** | Hybrid cloud + local GPU |
-| **Scale** | 20+ active users |
-| **Stack** | Redis, Dask, Torch, Dash |
-| **NLP** | Arabert, pyarabic |
+Frozen at tag `v1.0.0` with reproducible results: **$633.65 net profit, 54.5% win rate, 2.62 profit factor.**
 
-**Business Impact:** Used by Neurobotics Academy students for real-world Arabic text analysis projects.
+Modest, believable numbers on a small account — which is the point. The engineering (versioning, tests, reproducibility) is the deliverable here, not a claim of a trading edge.
 
 ---
 
-### Local LLM Deployment with RAG
+## OpenCode Presentations
 
-Enterprise-ready private AI infrastructure.
+**[github.com/mulhamfetna/opencode-presentations-skill](https://github.com/mulhamfetna/opencode-presentations-skill)** · JavaScript · MIT · published on npm
 
-| Specification | Detail |
-|--------------|--------|
-| **Deployment** | On-premise |
-| **Users** | 10+ internal |
-| **Stack** | Ollama, LLaMA, FastAPI, Docker |
-| **Security** | API authentication, rate limiting |
+A Marp-based presentation generator with 20 design styles and live preview. Small, finished, and actually shipped — a working tool anyone can install and use today.
 
 ---
 
-### Edge AI Emotion Detection
+## Geopolymer Design System
 
-Real-time computer vision on resource-constrained hardware.
+**[github.com/mulhamfetna/geopolymer-design-system](https://github.com/mulhamfetna/geopolymer-design-system)** · Jupyter · Apache-2.0 · archived on Zenodo with a DOI
 
-| Specification | Detail |
-|--------------|--------|
-| **Hardware** | Raspberry Pi 5 |
-| **Model** | PyTorch CNN (FER-2013) |
-| **Latency** | Real-time |
-| **Application** | Robotics control systems |
+A Gradio application pairing a materials database with a RandomForest predictor and a Nelder–Mead optimizer, to design geopolymer mixes for nuclear-waste adsorption.
+
+**Caveat stated up front:** the model is trained on **synthetic data**, not laboratory measurements. It is a design-exploration tool, and explicitly not a validated substitute for experimental work.
 
 ---
 
-## Professional Experience
+## Embedded Systems — Ala'a Screens
 
-### Embedded Systems Development
-
-**Ala'a Screens Company** | Jun 2022 – Oct 2023
-
-Delivered 2 commercial products from concept to deployment:
-- Basketball stadium clock/counter system
-- Interactive school bus display system
-
-**Tech Stack:** Atmega8, C, PCB Design (Proteus, EasyEDA)
+Professional work, 2022–2023. Embedded systems design for P10 DMD LED display applications, including a basketball stadium scoreboard clock and a school-bus information display. Firmware and hardware, shipped and deployed.
 
 ---
 
-### Automation Infrastructure
+## Research papers
 
-Private enterprise workflow system used daily by team.
+Three robotics papers are **under peer review**: distributed model-predictive control for multi-UAV formation, a modernized Bees Algorithm for dynamic path planning, and hybrid inverse kinematics with learned uncertainty estimation.
 
-| Specification | Detail |
-|--------------|--------|
-| **Stack** | Docker, N8N, Twingate |
-| **Uptime** | 99.9% |
-| **Security** | Encrypted remote access |
+They are submitted, not accepted, and their code is early-stage. See **[Research](/research/)** for detail — submission is not publication, and this site will not pretend otherwise.
 
 ---
 
-## Open Source Leadership
-
-### opencode-presentations-skill
-
-Published npm package with **MIT license** — freely available for commercial use.
-
-| Specification | Detail |
-|--------------|--------|
-| **Version** | 2.0.0 |
-| **Downloads** | 100+ |
-| **Tests** | 20 tests, 100% pass |
-| **Features** | 20 design styles, 5 sizes, AI generation |
-
-**Repository:** [GitHub](https://github.com/mulhamfetna/opencode-presentations-skill)
-
----
-
-## Technical Competencies
-
-### Core Technologies
-
-| Level | Technologies |
-|-------|--------------|
-| **Expert** | Python, C++, PyTorch, TensorFlow, OpenCV, ROS |
-| **Advanced** | Docker, FastAPI, Linux, Embedded Systems |
-| **Proficient** | TensorFlow Lite, ROS2, KiCad, MongoDB |
-
-### Domain Expertise
-
-- **Robotics:** MPC, Control Systems, Path Planning, IK
-- **AI/ML:** Computer Vision, NLP, Edge AI, RAG
-- **Embedded:** Firmware, PCB Design, RTOS
-- **DevOps:** Docker, CI/CD, Cloud Infrastructure
-
----
-
-## Notable Achievements
-
-- **Top 3 — Ramadan Initiatives Award 2026** — Directorate of Development
-- **100% research benchmark success** — across 3 papers
-- **18+ open source contributions** — 2 approved PRs
-- **2 commercial embedded products** — deployed and operational
-
----
-
-*For detailed technical documentation or code access, contact: molhamfetneh@gmail.com*
+**Code:** [github.com/mulhamfetna](https://github.com/mulhamfetna) · **Contact:** contact@mulhamfetna.com

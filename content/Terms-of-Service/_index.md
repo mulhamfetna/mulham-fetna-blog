@@ -16,7 +16,7 @@ These Terms of Service (“Terms”) govern your use of **Mulham Fetna Blog** an
 ## 1. Owner and contact
 
 - **Owner/Operator:** Mulham Fetna
-- **Contact:** [mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)
+- **Contact:** [contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)
 
 ## 2. Scope of services
 

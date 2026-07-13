@@ -17,7 +17,7 @@ I build robotics and machine-learning systems, publish research, and train the n
 | | |
 |---|---|
 | **{{< fact key="teaching_years" >}} years** teaching | **{{< fact key="learners_total" >}}** learners taught |
-| **{{< fact key="papers_under_review" >}}** papers under peer review | **{{< fact key="open_source_prs" >}}** open-source contributions |
+| **{{< fact key="papers_under_review" >}}** papers under peer review | **{{< fact key="oss_merged" >}}** merged PRs to {{< fact key="oss_projects" >}} |
 
 ---
 
@@ -43,7 +43,7 @@ I build robotics and machine-learning systems, publish research, and train the n
 
 **[Scientific Research Camp](/ventures/)** — {{< fact key="src1_hours" >}} training hours across {{< fact key="src1_workshops" >}} workshops, with SANAD and UNFPA Syria. Camp II is running now with {{< fact key="src2_researchers" >}} researchers.
 
-**[Open source](/open-source/)** — {{< fact key="open_source_prs" >}} pull requests to OpenCV, Ultralytics, and OpenDR.
+**[Open source](/open-source/)** — {{< fact key="oss_merged" >}} merged pull requests into {{< fact key="oss_projects" >}}, including a Unicode fix in OpenCV core.
 
 ---
 

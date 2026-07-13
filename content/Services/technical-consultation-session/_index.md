@@ -45,7 +45,7 @@ slug: "technical-consultation-session"
 - يسمح بإعادة جدولة مرة واحدة عند إشعار مسبق **24 ساعة**.
 - لا يوجد استرداد بعد تنفيذ الجلسة.
 
-> **تنبيه مهم:** للمدفوعات الدولية، تواصل معي مباشرة على **[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)** وسيتم التعامل يدويًا مؤقتًا إلى أن يصبح حجم الطلب مبررًا لنظام دفع آلي.
+> **تنبيه مهم:** للمدفوعات الدولية، تواصل معي مباشرة على **[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)** وسيتم التعامل يدويًا مؤقتًا إلى أن يصبح حجم الطلب مبررًا لنظام دفع آلي.
 
 ### خطوات الحجز (مهم)
 1. حوّل الرسوم عبر ShamCash أولًا.
@@ -72,7 +72,7 @@ slug: "technical-consultation-session"
 ## الدعم وحل المشاكل
 
 لأي مشكلة في الحجز أو الدفع، أرسل التفاصيل مع لقطات شاشة إلى:
-**[mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com)**
+**[contact@mulhamfetna.com](mailto:contact@mulhamfetna.com)**
 {{% /rtl %}}
 
 ## Booking Widget
@@ -88,4 +88,4 @@ One-to-one technical consultation on your selected topic, limited to real expert
 - Pay first via ShamCash (Identifier: `d9baec7d91b344eb9c2d04363dd84664`).
 - Direct booking link: [https://cal.com/mulham-fetna/1-hour-meeting](https://cal.com/mulham-fetna/1-hour-meeting)
 - Pricing: $25 (Syria), $50–$75 (Diaspora/Gulf), $100 (International) per session.
-- For international payments, contact: [mulham.fetna.blog@gmail.com](mailto:mulham.fetna.blog@gmail.com) for manual handling.
+- For international payments, contact: [contact@mulhamfetna.com](mailto:contact@mulhamfetna.com) for manual handling.

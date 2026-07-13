@@ -137,7 +137,15 @@ OpenDR (Open Domain Radiance) is a modular, open-source library for robotic visi
 
 **Username:** [mulhamfetna](https://github.com/mulhamfetna)
 
-**Total Contributions:** 18+ PRs across 4 major open source projects
+**Merged contributions:** {{< fact key="oss_merged" >}} pull requests accepted into {{< fact key="oss_projects" >}}, from {{< fact key="oss_submitted" >}} submitted across four projects.
+
+| Pull request | Project | What it fixed |
+|---|---|---|
+| [opencv#28935](https://github.com/opencv/opencv/pull/28935) | OpenCV (core) | Unicode temp-path handling on Windows |
+| [opencv#28880](https://github.com/opencv/opencv/pull/28880) | OpenCV (highgui/Qt) | UTF-8 window names preserved in fallback paths |
+| [opendr#522](https://github.com/opendr-eu/opendr/pull/522) | OpenDR | Python 3.12 compatibility |
+
+Two of these landed in **OpenCV core**. Contributing to a library used by millions means most submissions are rejected — I have opened {{< fact key="oss_submitted" >}} PRs across OpenCV, opencv-python, Ultralytics, and OpenDR, and these three were accepted.
 
 ---
 

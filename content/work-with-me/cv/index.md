@@ -9,13 +9,17 @@ showTableOfContents: true
 
 Mechatronics and AI/ML engineer, researcher, and technical trainer — Aleppo, Syria.
 
-**{{< fact key="teaching_years" >}} years teaching** · **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}** · **{{< fact key="open_source_prs" >}} open-source PRs** · **{{< fact key="papers_under_review" >}} papers under peer review** · 2 companies founded
+**{{< fact key="teaching_years" >}} years teaching** · **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}** · **{{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}}** · **{{< fact key="papers_under_review" >}} papers under peer review** · 2 companies founded
 
 Contact: **contact@mulhamfetna.com** · [ORCID {{< fact key="orcid" >}}](https://orcid.org/0009-0006-4432-798X)
 
 ---
 
 # Professional Experience
+
+## {{< fact key="current_role" >}} | {{< fact key="current_employer" >}} ({{< fact key="current_employer_location" >}}) | {{< fact key="current_role_since" >}} – Present
+
+Full-time data science research for a Kuwait-based media company, focused on **qualitative analysis** — turning unstructured media and audience data into evidence that a business can act on.
 
 ## Founder & CEO | [Neurobotics — Integrated Technology Solutions](https://www.instagram.com/neurobotics_tech) | Jan 2025 – Ongoing
 
@@ -80,14 +84,17 @@ One of 20 selected national trainers for the Kids and Adolescents Programming Ma
 
 ## Open Source Contributions
 
-{{< fact key="open_source_prs" >}} PRs across 4 repositories. Full detail: **[Open Source](/open-source/)**.
+{{< fact key="oss_merged" >}} merged pull requests into {{< fact key="oss_projects" >}}, from {{< fact key="oss_submitted" >}} submitted. Full detail: **[Open Source](/open-source/)**.
 
-| Repository | Role | PRs |
-|------------|------|-----|
-| **OpenCV** (opencv/opencv) | Contributor | 11 PRs (2 merged, 1 approved) |
-| **opencv-python** | Contributor | 4 PRs |
-| **Ultralytics** | Contributor | 5 PRs (2 direct commits merged) |
-| **OpenDR** (opendr-eu/opendr) | Contributor | 1 PR (approved) |
+**Merged contributions** — each links to the accepted pull request:
+
+| Pull request | Project | What it fixed |
+|---|---|---|
+| [opencv#28935](https://github.com/opencv/opencv/pull/28935) | OpenCV (core) | Unicode temp-path handling on Windows |
+| [opencv#28880](https://github.com/opencv/opencv/pull/28880) | OpenCV (highgui/Qt) | UTF-8 window names preserved in fallback paths |
+| [opendr#522](https://github.com/opendr-eu/opendr/pull/522) | OpenDR | Python 3.12 compatibility |
+
+Two of these landed in **OpenCV core** — one of the most widely used computer-vision libraries in the world. I have also submitted PRs to opencv-python and Ultralytics that were not accepted.
 
 **GitHub:** [github.com/mulhamfetna](https://github.com/mulhamfetna)
 
