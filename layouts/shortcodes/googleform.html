@@ -1,0 +1,32 @@
+{{- /*
+  googleform — embed a Google Form responsively.
+
+  Usage: {{< googleform id="1FAIpQLSxxxxxxxxxxxxxxxxxxxxxxxxx" height="1600" >}}
+
+  The id is the long token in the form's share/embed URL:
+    https://docs.google.com/forms/d/e/<ID>/viewform
+
+  If the id is missing or still the placeholder, the shortcode renders an email
+  fallback instead of a broken iframe — so the page is safe to deploy before the
+  form exists. Swap in the real id and the embed appears with no other change.
+*/ -}}
+{{- $id := .Get "id" -}}
+{{- $height := .Get "height" | default "1800" -}}
+{{- $placeholder := "REPLACE_WITH_GOOGLE_FORM_ID" -}}
+{{- if and $id (ne $id $placeholder) -}}
+<div style="position:relative;width:100%;max-width:760px;margin:1.5rem auto;">
+  <iframe
+    src="https://docs.google.com/forms/d/e/{{ $id }}/viewform?embedded=true"
+    width="100%" height="{{ $height }}" frameborder="0" marginheight="0" marginwidth="0"
+    style="border:0;border-radius:0.5rem;"
+    loading="lazy"
+    title="Collaboration proposal form">
+    Loading…
+  </iframe>
+</div>
+{{- else -}}
+<div class="rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-200" dir="rtl" style="text-align:right;">
+  نموذج التعاون قيد التفعيل. حتى ذلك الحين، يُرجى إرسال مقترحكم على
+  <a href="mailto:contact@mulhamfetna.com"><strong>contact@mulhamfetna.com</strong></a>.
+</div>
+{{- end -}}
