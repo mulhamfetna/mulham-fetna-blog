@@ -1,6 +1,29 @@
 /* Custom CSS for Organization Gallery */
 /* Blowfish Theme Extensions */
 
+/* ---------------------------------------------------------------------------
+   Cairo for Arabic text, site-wide.
+   Self-hosted (no external request). One variable woff2, Arabic subset only.
+   unicode-range restricts Cairo to Arabic codepoints, so Latin text keeps the
+   theme's default sans font untouched — Cairo is prepended to the stack but the
+   browser only reaches for it on Arabic glyphs.
+--------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 200 1000;               /* variable: covers all weights */
+  font-display: swap;
+  src: url("/fonts/cairo-arabic-var.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1,
+    U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF,
+    U+FE70-FE74, U+FE76-FEFC, U+1EE00-1EEFF;
+}
+
+:root {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 /* Line clamp utilities for text truncation */
 .line-clamp-1 {
   display: -webkit-box;
