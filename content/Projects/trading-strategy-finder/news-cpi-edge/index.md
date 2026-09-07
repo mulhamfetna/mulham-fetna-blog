@@ -43,6 +43,30 @@ things; it *pays* on this one:
 - The premium is ordered exactly by index sensitivity: **Nasdaq > S&P > Dow > Russell.** It is an
   equity-index phenomenon — the same event on gold or oil pays nothing.
 
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['Full sample (116 CPI events)', 'Recent regime (2024–2026)'],
+  datasets: [{
+    label: 'ES net per event at $52.50 stressed costs',
+    data: [151.37, 529],
+    backgroundColor: ['rgba(34, 197, 94, 0.55)', 'rgba(34, 197, 94, 0.75)']
+  }]
+},
+options: {
+  plugins: { legend: { display: false }, title: { display: true, text: 'ES riding the CPI release — net $ per event (stressed costs)' } },
+  scales: { y: { title: { display: true, text: '$ per event' } } }
+}
+{{< /chart >}}
+
+{{< mermaid >}}
+flowchart LR
+    NQ["NQ · Nasdaq<br>most index-sensitive<br>largest premium"] --> ES["ES · S&P 500"]
+    ES --> YM["YM · Dow"]
+    YM --> RTY["RTY · Russell<br>smallest premium"]
+    RTY -.-> X["GC · CL · NG …<br>same event,<br>pays nothing"]
+{{< /mermaid >}}
+
 ## The graveyard (equally important)
 
 Of the 661-cell closing census, **exactly one cell** came out exploratory-positive. 179 cells are
@@ -50,6 +74,37 @@ significant negatives — and here's the instructive part: 41% of those lose *pu
 gross edge is within $5 of zero), and 29% are actually gross-positive before friction. The market
 really does move; the move really is bigger than quiet times; and the spread eats it. **Violence is
 not premium.**
+
+{{< chart >}}
+type: 'doughnut',
+data: {
+  labels: ['Exploratory-positive', 'Significant negatives', 'Rest (underpowered "no verdict" / not significant)'],
+  datasets: [{
+    data: [1, 179, 481],
+    backgroundColor: ['rgba(34, 197, 94, 0.75)', 'rgba(239, 68, 68, 0.6)', 'rgba(148, 163, 184, 0.45)']
+  }]
+},
+options: {
+  plugins: { title: { display: true, text: 'The 661-cell closing census: exactly one positive sliver' } }
+}
+{{< /chart >}}
+
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['Lose purely to costs (gross edge within $5 of zero)', 'Gross-positive — friction eats it', 'Gross-negative'],
+  datasets: [{
+    label: 'Share of the 179 significant negatives',
+    data: [41, 29, 30],
+    backgroundColor: ['rgba(245, 158, 11, 0.6)', 'rgba(239, 68, 68, 0.6)', 'rgba(148, 163, 184, 0.5)']
+  }]
+},
+options: {
+  indexAxis: 'y',
+  plugins: { legend: { display: false }, title: { display: true, text: 'Anatomy of the 179 significant negatives (%)' } },
+  scales: { x: { title: { display: true, text: '% of significant-negative cells' }, max: 100 } }
+}
+{{< /chart >}}
 
 Two named tombstones worth remembering:
 

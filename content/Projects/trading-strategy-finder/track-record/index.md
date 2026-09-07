@@ -35,6 +35,13 @@ author could later fudge:
   and a "never-list" (no manual overrides, no window cherry-picking, no pausing to wait out a
   drawdown) — violations void the record's claims from that point, by the protocol's own text.
 
+{{< mermaid >}}
+flowchart LR
+    P["✍️ signed protocol<br>2026-08-31, public in the repo"] --> U["THE UNIVERSE<br>9 of 54 configurations,<br>admitted by five pre-registered<br>criteria (beat a random-set control)"]
+    P --> PAR["THE PARAMETERS<br>pinned by cryptographic hash —<br>replay refuses to run on a<br>one-byte difference"]
+    P --> RU["THE RULES<br>1 contract · stated fills ·<br>mechanical kills · never-list<br>(violations void the record)"]
+{{< /mermaid >}}
+
 Because the parameters and universe were published *before* any future data existed, every recorded
 window is out-of-sample **by construction**. When new data arrives, it is first audited against the
 previous delivery for retroactive changes (a repaint check), then replayed with the frozen set. The
@@ -45,6 +52,17 @@ pre-registered power threshold; interim windows are descriptive only.
 
 Changes? Dated, attributed, append-only amendments — the signature claim's falsifier literally
 counts them and checks their wording. There is no quiet edit.
+
+{{< mermaid >}}
+flowchart TB
+    D["📦 new market data arrives"] --> A["repaint audit against the previous<br>delivery — any retroactive changes?"]
+    A --> H{"universe file hash ==<br>the signed protocol's hash?"}
+    H -->|"differs by one byte"| X["⛔ the replay tooling<br>refuses to run"]
+    H -->|"match"| RP["replay the 9 frozen configurations<br>under the frozen rules"]
+    RP --> CL["result becomes a new claim<br>in the machine-verified ledger"]
+    CL --> PUB["published — a losing window under<br>the same rules and prominence<br>as a winning one"]
+    PUB --> D
+{{< /mermaid >}}
 
 ## Where this honestly places us
 

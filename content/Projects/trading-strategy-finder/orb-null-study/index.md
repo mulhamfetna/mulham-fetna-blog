@@ -36,6 +36,15 @@ tunable parameters, verdict thresholds and controls fixed in advance. Sixteen ye
 data (2010–2026). One contract per trade. Costs stressed at \$25 per round trip. No configuration
 could be added, removed, or "fixed" after seeing results.
 
+{{< mermaid >}}
+flowchart LR
+    A["9 futures markets<br>NQ · ES · RTY · YM<br>GC · SI · HG · CL · NG"] --> G["225<br>pre-registered<br>configurations"]
+    B["2 session anchors<br>cash open · Globex open"] --> G
+    C["4 range lengths<br>5 / 15 / 30 / 60 minutes"] --> G
+    D["3 exit rules from the literature<br>+ a published comparator"] --> G
+    G --> E["🔒 grid, thresholds and controls<br>frozen before any P&L existed"]
+{{< /mermaid >}}
+
 ## What happened
 
 - **Zero of 225 configurations met the pre-registered bar for a positive result.**
@@ -47,6 +56,36 @@ could be added, removed, or "fixed" after seeing results.
 - The 5-minute opening range — the literature's favourite — was the **worst** window of the four.
 - The single best-earning configuration failed our random-anchor control: ranges anchored at
   *random hours* of the day earned just as much. Whatever it was trading, it wasn't "the open."
+
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['Gross (no costs)', 'Net at $25 per round trip'],
+  datasets: [{
+    label: 'Grid P&L, confirmation window ($ millions)',
+    data: [1.57, -6.49],
+    backgroundColor: ['rgba(34, 197, 94, 0.55)', 'rgba(239, 68, 68, 0.65)']
+  }]
+},
+options: {
+  plugins: { legend: { display: false }, title: { display: true, text: 'The entire "edge" lives inside the spread' } },
+  scales: { y: { title: { display: true, text: '$ millions' } } }
+}
+{{< /chart >}}
+
+{{< chart >}}
+type: 'doughnut',
+data: {
+  labels: ['Met the pre-registered positive bar', 'Negative with statistical power', 'Below the bar, individually underpowered'],
+  datasets: [{
+    data: [0, 28, 197],
+    backgroundColor: ['rgba(34, 197, 94, 0.7)', 'rgba(239, 68, 68, 0.65)', 'rgba(148, 163, 184, 0.5)']
+  }]
+},
+options: {
+  plugins: { title: { display: true, text: '225 cells by verdict — the green slice does not exist' } }
+}
+{{< /chart >}}
 
 Full study, with every number re-derivable:
 **https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7428398**.

@@ -22,6 +22,13 @@ failures. The code, the evidence, and every number below are public and machine-
 
 Here is the whole arc, honestly told.
 
+{{< mermaid >}}
+flowchart LR
+    A["May 2026<br>machinery built:<br>backtest engine · optimizer ·<br>claims ledger"] --> B["Jun–Aug 2026<br>the studies:<br>economic-calendar sweep ·<br>225-cell ORB grid ·<br>forward test of our own fleet"]
+    B --> C["Aug 31, 2026<br>track record frozen<br>under a signed protocol"]
+    C --> D["Sep 2026<br>two preprints filed ·<br>everything published,<br>including the failures"]
+{{< /mermaid >}}
+
 ## The rule that shaped everything
 
 Backtests lie — not because the math is wrong, but because the person running them chooses what to
@@ -31,6 +38,18 @@ negative result had to prove it had the statistical power to see an effect**, **
 to beat a dumb control**, and **every published number lives in a machine-verified claims ledger**
 — re-derived from committed evidence files by our CI on every change, 79 claims and counting. If a
 number in this series doesn't re-derive, our own build fails.
+
+{{< mermaid >}}
+flowchart LR
+    A["💡 Study idea"] --> B["📋 Pre-registration<br>design · thresholds · controls<br>frozen in writing first"]
+    B --> C["▶️ The study runs<br>(changes = dated,<br>append-only amendments)"]
+    C --> D{"Result?"}
+    D -->|"negative"| E["⚡ Power analysis required —<br>underpowered means 'no verdict',<br>never 'proven absent'"]
+    D -->|"positive"| F["🎲 Must beat a dumb control<br>+ a placebo noise check"]
+    E --> G["📒 Claims ledger entry<br>evidence committed to git ·<br>falsifier · declared blind spot"]
+    F --> G
+    G --> H["🤖 CI re-derives all 79 claims<br>offline, no market data —<br>a broken number = red build"]
+{{< /mermaid >}}
 
 ## What we found — the short version
 
@@ -54,6 +73,22 @@ fresh forward window our 54 deployed configurations made 3,733 trades: +$29,807 
 at $25 per round-trip — 17.6% of what the calibration window promised. Along the way the forward
 test caught a look-ahead bug in vendor data that had been silently inflating results. Full story:
 [the forward test](/projects/trading-strategy-finder/forward-decay/).
+
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['Calibration window (the promise)', 'Fresh forward window (the reality)'],
+  datasets: [{
+    label: 'Per-trade rate kept',
+    data: [100, 17.6],
+    backgroundColor: ['rgba(99, 102, 241, 0.55)', 'rgba(239, 68, 68, 0.65)']
+  }]
+},
+options: {
+  plugins: { legend: { display: false } },
+  scales: { y: { title: { display: true, text: '% of in-sample per-trade rate' }, max: 100 } }
+}
+{{< /chart >}}
 
 **4. Honesty can be automated.** The claims ledger, the falsifiers, the self-test that replays our
 own five historical mistakes and demands the gate reject each one for the right reason — the whole

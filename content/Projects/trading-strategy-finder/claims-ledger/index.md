@@ -33,6 +33,16 @@ verifications that must fail for different reasons**, one of which is a *falsifi
 so that a specific way of being wrong would trip it; and a **mandatory declared blind spot**,
 because "verified, with no stated limitation" is itself a defect.
 
+{{< mermaid >}}
+flowchart TB
+    C["📄 One published claim"] --> S["the statement,<br>numbers inline"]
+    C --> EV["evidence files —<br>must be git-tracked<br>(untracked ⇒ rejected structurally)"]
+    C --> R["executable re-derivation<br>must equal the published value<br>within an explicit tolerance"]
+    C --> V["three verifications that<br>must fail for DIFFERENT reasons"]
+    V --> F["one is a falsifier — built so a<br>specific way of being wrong<br>would trip it"]
+    C --> B["mandatory declared blind spot<br>('verified, with no stated<br>limitation' is itself a defect)"]
+{{< /mermaid >}}
+
 All 79 current claims replay offline in minutes with **no market data**, and CI runs them on every
 change: break a published number and the build goes red.
 
@@ -48,6 +58,16 @@ marker; an absolute stop that was silently a different percentage on every instr
 And the self-test's own origin story is the best argument for it: on its first run, two replays
 were "correctly rejected" — by a file-path crash, not by the defect. Green for the wrong reason is
 the same disease one level up. It now demands each rejection match the *specific* expected failure.
+
+{{< mermaid >}}
+flowchart LR
+    P["any push or pull request"] --> CI["CI replays all 79 claims<br>offline · minutes · no market data"]
+    CI -->|"every number re-derives"| G["✅ build green"]
+    CI -->|"one number off"| R["❌ build red —<br>the repo refuses to publish it"]
+    ST["self-test: 5 real historical mistakes,<br>reconstructed as originally published"] --> Q{"does the harness<br>reject each one?"}
+    Q -->|"rejected for the RIGHT reason"| OK["✅ the gate is certified"]
+    Q -->|"rejected by a crash or<br>for the wrong reason"| BAD["❌ self-test fails —<br>green for the wrong reason<br>is the same disease"]
+{{< /mermaid >}}
 
 ## Two episodes where the machinery overruled us
 
