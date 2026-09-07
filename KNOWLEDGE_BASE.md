@@ -108,9 +108,13 @@ Blowfish is not forked. Eight custom files, each justified by a capability the t
 - **Blowfish is vendored into git with a broken submodule link** (~2,250 files, no `.gitmodules`).
   Theme upgrades will be painful until this is resolved. Deliberately out of scope so far.
 - **Bilingual EN/AR is not implemented.** The site is English-only (`languages.en.toml`); `i18n/` is
-  empty. Arabic currently exists only as inline `{{% rtl %}}` blocks in Services and the
-  University-Email tutorials. Phase 4 of the spec designs the real multilingual build.
-- **Blog has no posts yet.** Phase 5 imports Facebook / Instagram / Telegram exports.
+  empty. Arabic exists only as `rtl` shortcode blocks inside English-configured pages — eleven
+  files as of 2026-09-07: the four `content/Research/*-ar/` paper pages, the Blog post, Services
+  (`_index.md` plus all three service pages), `work-with-me/invite`, and the University-Email
+  tutorial. Grep for `rtl`, not `{{% rtl %}}` — University-Email uses the unspaced `{{%rtl%}}` and
+  a spaced-form search silently misses it. Phase 4 of the spec designs the real multilingual build.
+- **Blog has one post:** `five-years-building-impact` (Arabic, 2026-07-13). Phase 5 imports
+  Facebook / Instagram / Telegram exports.
 - **Unverified credentials still published** on `/work-with-me/cv/`: CS50 Certified Instructor,
   Modarby, Courseing Platform. No supporting artifact was found for these. Substantiate or remove.
 - **Degree dates conflict:** the CV page says University of Aleppo 2023–2027, while other records
