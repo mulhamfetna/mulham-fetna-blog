@@ -109,6 +109,8 @@ $$Ca_{9.70}Mg_{0.20}Zn_{0.10}(SiO_4)_{0.20}(PO_4)_{5.80}(OH)_2$$
 
 ### 5.1 الإطلاق التراكمي في سائل الجسم المحاكي خلال 28 يوماً
 
+{{% /rtl %}}
+
 {{< chart >}}
 type: 'line',
 data: {
@@ -128,12 +130,16 @@ options: {
 }
 {{< /chart >}}
 
+{{% rtl %}}
+
 إجماليات اليوم 28: ‏Ca²⁺ {{< fact key="paper_rel_ca" >}} mg/L · ‏Si {{< fact key="paper_rel_si" >}} mg/L ·
 ‏Mg²⁺ {{< fact key="paper_rel_mg" >}} mg/L · ‏Zn²⁺ {{< fact key="paper_rel_zn" >}} mg/L.
 الشروط: 100 mg مسحوق في 50 mL من SBF (وفق Kokubo و Takadama)، 37 °C، هزّاز مداري 120 rpm،
 ترشيح 0.22 µm، قياس بـ ICP-OES، ‏n = 3.
 
 ### 5.2 الإطلاق استجابةً لتغيّر الحموضة، اليوم السابع
+
+{{% /rtl %}}
 
 {{< chart >}}
 type: 'bar',
@@ -148,6 +154,8 @@ options: {
   scales: { y: { title: { display: true, text: 'الإطلاق التراكمي في اليوم السابع (mg/L)' } } }
 }
 {{< /chart >}}
+
+{{% rtl %}}
 
 مقارنةً بـ pH 7.4: الزنك {{< fact key="paper_zn_ph_increase" >}} والكالسيوم
 {{< fact key="paper_ca_ph_increase" >}} عند pH 5.5؛ والزنك {{< fact key="paper_zn_ph_alkaline" >}}
@@ -166,6 +174,8 @@ options: {
 
 ### 6.1 حيوية الخلايا مقابل تركيز المستخلص
 
+{{% /rtl %}}
+
 {{< chart >}}
 type: 'bar',
 data: {
@@ -181,7 +191,11 @@ options: {
 }
 {{< /chart >}}
 
+{{% rtl %}}
+
 ### 6.2 منحني الجرعة-الاستجابة للتعليق المباشر
+
+{{% /rtl %}}
 
 {{< chart >}}
 type: 'line',
@@ -200,6 +214,8 @@ options: {
   }
 }
 {{< /chart >}}
+
+{{% rtl %}}
 
 | المعامل | ‏Mg/Si/Zn-HAp | ‏HAp نقي |
 | --- | --- | --- |
