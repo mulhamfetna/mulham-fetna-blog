@@ -12,6 +12,7 @@ series_order: 3
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 Scheduled economic news — inflation prints, jobs reports, rate decisions, oil inventories — moves

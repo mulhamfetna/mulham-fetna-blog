@@ -12,6 +12,7 @@ series_order: 5
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 The hardest problem in trading research isn't statistics — it's that the researcher grades their

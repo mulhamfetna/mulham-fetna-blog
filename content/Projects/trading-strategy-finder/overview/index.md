@@ -12,6 +12,7 @@ series_order: 1
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 This is the story of a research project my team at BeInMedia ran from May to September 2026: a

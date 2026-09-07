@@ -12,6 +12,7 @@ series_order: 6
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 Every trading track record you've ever seen asks you to trust its author about one thing: that the

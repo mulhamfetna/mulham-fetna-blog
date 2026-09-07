@@ -12,6 +12,7 @@ series_order: 4
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 Everyone forward-tests other people's strategies. The uncomfortable experiment is doing it to your

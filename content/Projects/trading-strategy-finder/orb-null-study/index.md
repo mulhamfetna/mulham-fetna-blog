@@ -12,6 +12,7 @@ series_order: 2
 showDate: true
 showAuthor: true
 showTableOfContents: true
+heroStyle: "background"
 ---
 
 If you've ever watched a trading tutorial, you've met the **opening-range breakout**: mark the high
