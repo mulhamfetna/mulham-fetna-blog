@@ -2,7 +2,7 @@
 title: "What 16 years of data and 3.5 months of honest testing taught us about trading strategies"
 slug: "overview"
 date: 2026-09-07
-draft: true
+draft: false
 description: "The end-to-end story of an open futures research programme: pre-registered studies, a 225-cell ORB null, one paying place in the economic calendar, honest out-of-sample decay, and a track record that can't cheat."
 keywords: ["trading strategy research", "backtest overfitting", "pre-registration", "futures trading", "out-of-sample decay", "machine-verified claims"]
 tags: ["quantitative-finance", "research-methods", "trading", "reproducibility"]

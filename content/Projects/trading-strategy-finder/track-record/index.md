@@ -1,8 +1,8 @@
 ---
 title: "Our track record can't cheat. Here's how we froze it"
 slug: "track-record"
-date: 2026-09-17
-draft: true
+date: 2026-09-07
+draft: false
 description: "Nine configurations hash-frozen under a signed public protocol: every future evaluation window is out-of-sample by construction, losing windows publish under the same rules as winning ones, and no quiet edit is possible."
 keywords: ["trading track record", "out-of-sample", "signed protocol", "pre-registration", "auditable research", "futures trading"]
 tags: ["quantitative-finance", "trading", "reproducibility", "research-methods"]

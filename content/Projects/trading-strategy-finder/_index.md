@@ -2,7 +2,7 @@
 title: "Trading Strategy Finder — 16 Years of Futures Data, Honestly Tested"
 description: "An open, machine-verified futures trading research programme: pre-registered studies, powered nulls, a 225-cell ORB study, the one place the economic calendar pays, and a track record that is out-of-sample by construction."
 keywords: ["trading strategy research", "backtest overfitting", "pre-registration", "futures trading", "machine-verified claims", "quantitative finance", "reproducibility"]
-draft: true
+draft: false
 ---
 
 {{< github repo="mulhamfetna/trading-strategy-finder" showThumbnail=true >}}

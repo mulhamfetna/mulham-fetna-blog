@@ -1,8 +1,8 @@
 ---
 title: "We forward-tested our own strategies on data they'd never seen. They kept 17.6%"
 slug: "forward-decay"
-date: 2026-09-13
-draft: true
+date: 2026-09-07
+draft: false
 description: "3,733 fresh trades across 54 deployed configurations: +$29,807 raw, −$63,518 at $25 per round trip — 17.6% of the calibration promise. Plus the vendor look-ahead bug the forward test caught."
 keywords: ["forward testing", "out-of-sample decay", "walk-forward", "look-ahead bias", "futures trading", "backtest overfitting"]
 tags: ["quantitative-finance", "trading", "backtesting", "data-quality"]

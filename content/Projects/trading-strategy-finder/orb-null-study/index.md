@@ -1,8 +1,8 @@
 ---
 title: "We tested the most famous day-trading strategy on 16 years of data. Zero of 225 versions survived real costs."
 slug: "orb-null-study"
-date: 2026-09-09
-draft: true
+date: 2026-09-07
+draft: false
 description: "A pre-registered 225-cell study of opening-range breakout on nine futures markets over 16 years: +$1.57M gross becomes −$6.49M at $25 per round trip. The edge lives inside the spread."
 keywords: ["opening range breakout", "ORB strategy", "day trading", "futures backtest", "transaction costs", "pre-registered study"]
 tags: ["quantitative-finance", "trading", "backtesting", "null-results"]

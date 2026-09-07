@@ -1,8 +1,8 @@
 ---
 title: "We swept the entire economic calendar since 2010. Exactly one place pays"
 slug: "news-cpi-edge"
-date: 2026-09-11
-draft: true
+date: 2026-09-07
+draft: false
 description: "A complete, pre-registered sweep of scheduled economic news on nine futures markets: the CPI release on equity-index futures is the only premium that survives stressed costs. Everything else — including Retail Sales — is a graveyard."
 keywords: ["economic calendar trading", "CPI release", "news trading", "futures markets", "event-driven trading", "negative results"]
 tags: ["quantitative-finance", "trading", "macro-news", "research-methods"]

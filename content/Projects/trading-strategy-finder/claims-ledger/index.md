@@ -1,8 +1,8 @@
 ---
 title: "Every number we publish is machine-verified. Here's the machinery"
 slug: "claims-ledger"
-date: 2026-09-15
-draft: true
+date: 2026-09-07
+draft: false
 description: "A claims ledger where every published number is an object bound to committed evidence, three verifications that must fail for different reasons, a falsifier, and a declared blind spot — replayed by CI offline with no market data."
 keywords: ["machine-verified claims", "reproducibility", "research verification", "pre-registration", "falsification", "research software"]
 tags: ["reproducibility", "research-methods", "software-engineering", "quantitative-finance"]
