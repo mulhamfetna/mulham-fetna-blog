@@ -69,6 +69,14 @@ Blowfish is not forked. Eight custom files, each justified by a capability the t
   page-scoped `<head>` output use **`extend-head-uncached.html`**, which receives the page.
 - **Nested shortcodes render BEFORE their parent.** `faq.html` must not reset its page store before
   reading it, or it wipes the `faqitem` children that already ran.
+- **Never nest a `{{< >}}` shortcode that emits raw JS or HTML inside a `{{% %}}` one.**
+  Percent delimiters markdownify the parent's `.Inner` — and since children render first, that
+  Markdown pass runs over the child's *rendered output*. This broke the Cloudflare build for two
+  commits: `{{< chart >}}` nested inside `{{% rtl %}}` on the Arabic research pages had its
+  `type: 'line'` smart-quoted into `type: ’line’` and its lines wrapped in `<p>`, so the JS minifier
+  died with `expected Identifier, String, Numeric, or [ instead of <`. Fence the child out
+  (`{{% /rtl %}}` … `{{% rtl %}}`) rather than switching the parent to `{{< >}}` — that
+  would stop markdownifying the Arabic prose and destroy every table and heading. Fixed in e93cbc6.
 - Hugo errors if a shortcode has a closing tag but never evaluates `.Inner`.
 - **`--minify` strips attribute quotes and JSON whitespace.** Never grep built HTML for
   `type="application/ld+json"` or `"@type": "Question"` — parse the JSON instead.
