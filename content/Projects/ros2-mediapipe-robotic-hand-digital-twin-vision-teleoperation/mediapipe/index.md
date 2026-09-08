@@ -47,6 +47,8 @@ flowchart TB
     F -->|"confidence < 0.5"| B
 {{< /mermaid >}}
 
+![The MediaPipe landmark skeleton overlaid on a hand in the tracker's preview window](mediapipe-landmarks.png "The regressor's output, drawn back onto the frame: 21 points and the connections between them.")
+
 ### Stage 1 — BlazePalm detects palms, never fingers
 
 This is the design decision the whole system rests on.

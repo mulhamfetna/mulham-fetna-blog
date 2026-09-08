@@ -18,7 +18,8 @@ corresponding joint in the CAD model. Every wrong movement has a findable cause 
 what you want from a system you intend to attach to real servos.
 
 The code is open under AGPL-3.0 and DOI-archived
-([10.5281/zenodo.22658556](https://doi.org/10.5281/zenodo.22658556)).
+([10.5281/zenodo.22658556](https://doi.org/10.5281/zenodo.22658556)), and the
+[Onshape assembly is public](https://cad.onshape.com/documents/a2dbb5f16624f10f1aa22f02/w/3eff80c19eddad52bfa92f87/e/4d69727744037003575f4068).
 
 ## The pipeline
 
@@ -56,9 +57,10 @@ Worth stating up front, because it bounds what this demonstrates:
 - **No smoothing.** Landmark jitter passes straight through to the joint angles.
 - **Forward kinematics only**, joint by joint. No inverse kinematics, no coupling.
 
-Each of these is a documented next step rather than a hidden flaw — the repository's
+Each of these is a documented next step rather than a hidden flaw. The repository keeps a running
 [known-defects log](https://github.com/mulhamfetna/ros2-mediapipe-robotic-hand-digital-twin-vision-teleoperation/blob/main/docs/5-onshape-urdf/3-known-export-defects.md)
-includes a mapping row that is currently wrong by about 23°, along with the fix.
+— including a mapping row that silently commanded 23° past a mechanical stop until it was found and
+fixed, and two warnings ROS logs at every startup that had gone unread for the life of the project.
 
 ## Cite it
 

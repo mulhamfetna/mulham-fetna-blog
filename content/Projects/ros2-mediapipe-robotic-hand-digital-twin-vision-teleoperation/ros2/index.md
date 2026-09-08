@@ -3,7 +3,7 @@ title: "Why ROS 2 earns its complexity — and how this graph is wired"
 slug: "ros2"
 date: 2026-09-08
 draft: false
-description: "The honest case for ROS 2 middleware, what RViz is and is not, how to build a package from scratch, and a full walkthrough of this project's real node graph: two topics, a custom message, four containers, and the joint_state_publisher that was deliberately deleted."
+description: "The honest case for ROS 2 middleware, what RViz is and is not, how to build a package from scratch, and a full walkthrough of this project's real node graph: two topics, a custom message, three containers, and the joint_state_publisher that was deliberately deleted."
 keywords: ["ROS 2 Jazzy", "ROS 2 topics", "DDS discovery", "RViz vs Gazebo", "robot_state_publisher", "joint_state_publisher", "colcon build", "ROS 2 custom message", "rclpy node"]
 tags: ["ros2", "robotics", "middleware", "software-architecture"]
 categories: ["Projects"]
@@ -153,9 +153,13 @@ flowchart TB
     URDF["robot.urdf"] --> RSP
 {{< /mermaid >}}
 
-Four containers, all on `ROS_DOMAIN_ID=42`, all on host networking.
+Three containers, all on `ROS_DOMAIN_ID=42`, all on host networking. A fourth service,
+`gazebo_sim`, is defined in the compose file but currently commented out — it does not take part in
+the graph above.
 
 ### Two topics, because one would hide faults
+
+![Interleaved container logs: hand_tracker printing the mapped index MCP angle, topic_sniffer printing all fifteen raw angles for the same frame](two-topics-log.png "Both topics for the same frames. hand_tracker reports one mapped joint; topic_sniffer reports all fifteen raw angles — the redundancy is what makes faults localizable.")
 
 | Topic | Type | Contents | Consumer |
 |---|---|---|---|

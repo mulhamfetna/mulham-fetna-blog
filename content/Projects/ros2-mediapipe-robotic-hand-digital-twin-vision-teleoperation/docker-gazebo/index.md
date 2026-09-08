@@ -31,6 +31,8 @@ of which live outside it. You end up building a box and then carefully cutting f
 
 Here is every hole in this project's compose file and what it is for.
 
+![A full docker compose up --build: image layers exporting, colcon building hand_msgs inside both Python containers, then the ROS nodes attaching](compose-build-log.png "Cold start to live tracking. Note hand_msgs being compiled separately inside two different containers — that duplication is deliberate and load-bearing.")
+
 {{< mermaid >}}
 flowchart TB
     subgraph HOST["🖥️ Host — Ubuntu / Kubuntu"]
@@ -39,23 +41,21 @@ flowchart TB
         GPU["/dev/dri"]
         NET["host network<br>UDP multicast"]
     end
-    subgraph C["Four containers · ROS_DOMAIN_ID=42"]
+    subgraph C["Active containers · ROS_DOMAIN_ID=42"]
         HT["hand_tracker"]
         RV["ros_rviz"]
         TS["topic_sniffer"]
-        GZ["gazebo_sim"]
     end
+    GZ["gazebo_sim<br>(commented out)"]:::parked
+    classDef parked stroke-dasharray: 5 5,opacity:0.55
     CAM --> HT
     GPU --> HT
     GPU --> RV
-    GPU --> GZ
     X11 --> HT
     X11 --> RV
-    X11 --> GZ
     NET <--> HT
     NET <--> RV
     NET <--> TS
-    NET <--> GZ
 {{< /mermaid >}}
 
 ## Hole 1 — the network wall has to come down
@@ -191,8 +191,9 @@ physics solver resolves that interpenetration by launching the model violently i
 
 ## The Gazebo path, honestly
 
-`gazebo_sim` is the newest and least finished service. Its entrypoint automates what was originally
-a manual sequence:
+`gazebo_sim` is the newest and least finished service — and it is currently **commented out** in
+`docker-compose.yml`, which is why the build log above shows three images rather than four. Its
+entrypoint automates what was originally a manual sequence:
 
 ```bash
 gz sim empty.sdf &
@@ -220,10 +221,34 @@ The distinction is worth being precise about:
 |---|---|---|
 | What it shows | What the robot believes about itself | What physics would do to it |
 | Needs | `/tf` from `robot_state_publisher` | Inertials ✅ · transmissions ❌ · controllers ❌ |
+| Status | Running | Commented out until there is something to drive |
 | Answers | "Do my tracked angles match the twin?" | "Can this hand hold a ball?" |
 
 Closing that gap is controller plumbing, not CAD work — and it is the next substantial piece of the
 project.
+
+## Two warnings you will see every time
+
+The build log above contains both, and neither is noise.
+
+```text
+[WARN] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does
+not support a root link with an inertia.
+
+[WARN] [robot_state_publisher]: No robot_description parameter, but command-line argument
+available. ... This backwards compatibility fallback will be removed in the future.
+```
+
+The first says the exporter's `addDummyBaseLink` wrote a `1e-09` mass on the root link, and KDL
+wants the root to carry no `<inertial>` block at all. Harmless today — nothing integrates the
+root's dynamics — but a real objection rather than a clean bill of health.
+
+The second is a deprecation with a deadline. The compose command passes the URDF as a positional
+argument; the supported form sets the `robot_description` parameter with the file's *contents*,
+most naturally from a launch file. It works now and will stop working eventually.
+
+Reading your own startup logs is unglamorous and repeatedly worth it. Both of these were sitting in
+plain text through every single run of this project before anyone read them carefully.
 
 ## What you should take away
 

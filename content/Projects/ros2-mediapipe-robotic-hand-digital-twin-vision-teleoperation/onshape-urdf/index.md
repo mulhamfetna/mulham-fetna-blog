@@ -21,6 +21,11 @@ roboticists lose days. The exporter translates exactly what it sees — so every
 becomes a bug in ROS.
 {{< /lead >}}
 
+**[→ Open the assembly on Onshape](https://cad.onshape.com/documents/a2dbb5f16624f10f1aa22f02/w/3eff80c19eddad52bfa92f87/e/4d69727744037003575f4068)** —
+it is public, so everything below is checkable against the source.
+
+![The robotic hand assembly in Onshape, fingers extended, showing blue finger linkages, grey phalanges and the orange thumb link](cad-hand-extended.png "The assembly: four fingers on blue linkages, the thumb on an orange one, all mounted to a single palm block.")
+
 `onshape-to-robot` is a compiler. Assembly in, robot description out. It reads mate names, mate
 limits and material densities directly from the CAD document and writes them into URDF as joint
 names, joint limits and inertia tensors.
@@ -45,9 +50,18 @@ Each of these exists because its absence cost real time on this project.
 
 ### 1. Mate names are joint names
 
+![The Onshape mate features tree expanded, listing fifteen dof-prefixed revolute mates from dof_twinky_dip through dof_thumb_mcp](onshape-mate-tree.png "The Mate features (15) tree is the real contract between CAD and code.")
+
+The exporter's convention is the **`dof_` prefix**. A mate named `dof_index_mcp` is exported as a
+joint; a revolute mate *without* the prefix is exported as a rigid weld. The prefix is then
+**stripped**, so `dof_index_mcp` becomes `<joint name="index_mcp">`.
+
+That is why the tree above reads `dof_twinky_dip`, `dof_ring_mcp`, `dof_thumb_pip`, while the URDF
+reads `twinky_dip`, `ring_mcp`, `thumb_pip` — and why whatever you type after the prefix has to
+match a string in the Python mapping table, character for character.
+
 **The trap.** It is easy to leave mates named `Revolute 1`, or to carry a legacy name from an old
-iteration. The exporter uses the mate name *verbatim* as `<joint name="...">`, and `JointState`
-matches joints by exact string.
+iteration.
 
 **Worse:** duplicating a finger sub-assembly in Onshape copies its mates **and their names**. Two
 joints then share one name, and the exporter resolves the collision by dropping one.
@@ -84,7 +98,7 @@ mass or inertia, and a part left as generic geometry exports with nothing.
 
 **The fix.** Right-click every part (bulk-select works) and **Assign Material** — ABS plastic,
 aluminium, whatever it will actually be made from. The exporter uses that density to compute the
-full \(i_{xx}, i_{yy}, i_{zz}\) inertia matrix.
+full `ixx` / `iyy` / `izz` inertia matrix.
 
 Skip it and Gazebo receives zero-mass links, and the physics solver collapses the model instantly.
 
@@ -207,21 +221,50 @@ was dropped. The ring finger had no base knuckle.
 The URDF now has a properly distinct `ring_mcp` with its own limits. A stale comment in the source
 still describes the manual patch, and should be deleted.
 
-### ❌ `ring_mcp` limits are out of sync — still open
+### ✅ `ring_mcp` limits were out of sync — now fixed
 
-The one genuine numerical defect. Fourteen mapping rows transcribe their joint's limits exactly;
-this one does not:
+The one genuine numerical defect. Fourteen mapping rows transcribed their joint's limits exactly;
+this one did not:
 
 | Source | Open | Closed |
 |---|---|---|
-| `JOINT_MAPPING` | `0.000` | `-1.571` |
+| `JOINT_MAPPING` (before) | `0.000` | `-1.571` |
 | `<limit>` in the URDF | `0.39671` | `-1.17409` |
 
-At full curl the node commands roughly 23° past the joint's mechanical stop. Nothing errors, because
-`robot_state_publisher` does not enforce limits.
+At full curl the node commanded roughly 23° past the joint's mechanical stop. Nothing errored,
+because `robot_state_publisher` does not enforce limits — it applies whatever transform it is
+handed.
 
-It is a direct consequence of rule 2 being applied *late*: the joint originally had generic bounds,
-the table was written against those, the CAD gained a real limit, and the table was never revisited.
+It was a direct consequence of rule 2 being applied *late*: the joint originally had generic
+bounds, the table was written against those, the CAD gained a real limit, and the table was never
+revisited. The row now reads `('ring_mcp', 9, 0.397, -1.174)`.
+
+The durable fix is different and still outstanding: **parse the limits out of the URDF at startup**
+rather than transcribing them, so the two representations cannot disagree in the first place. A
+corrected constant fixes today's bug; reading from one source fixes the class of bug.
+
+### ⚠️ Two warnings at every startup
+
+Both are visible in the build log the moment `robot_state_publisher` initializes, and both are
+worth knowing about.
+
+```text
+[WARN] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does
+not support a root link with an inertia. As a workaround, you can add an extra dummy link.
+
+[WARN] [robot_state_publisher]: No robot_description parameter, but command-line argument
+available. Assuming argument is name of URDF file. This backwards compatibility fallback will
+be removed in the future.
+```
+
+The first is the flip side of the inertia story above: `addDummyBaseLink` writes a `1e-09` mass on
+the root, and KDL wants the root to carry *no* `<inertial>` block at all rather than a negligible
+one. Harmless — the root is fixed to the world and nothing integrates its dynamics — but it is a
+real objection, not a clean bill of health.
+
+The second has a deadline. The compose command passes the URDF as a positional argument, which is
+a compatibility shim scheduled for removal. The supported form sets the `robot_description`
+parameter with the URDF's *contents*, most cleanly from a launch file.
 
 ### ⚠️ Mesh paths are absolute container paths
 
@@ -244,14 +287,15 @@ The portable version wraps the description in a `hand_description` package and u
 | # | Item | Status | Cost if ignored |
 |---|---|---|---|
 | 1 | Pinky named `twinky` | Open, cosmetic | Confusion only |
-| 2 | `ring_mcp` limits mismatch | **Open, real** | Commands 23° past the stop |
+| 2 | `ring_mcp` limits mismatch | Fixed | Commanded 23° past the stop |
 | 3 | Missing `ring_mcp` joint | Fixed | — |
 | 4 | Absolute mesh paths | Patched, fragile | Repo not relocatable; patch lost on re-export |
 | 5 | Inertials | Correct | — |
 | 6 | Joint axes | Correct | — |
+| 7 | Deprecated `robot_description` argument | **Open** | Breaks on a future ROS 2 release |
 
-Only defect 2 changes what appears on screen today. Defect 4 is the one that will bite the next
-person who clones the repository.
+Nothing here changes what appears on screen today. Defect 4 is the one that will bite the next
+person who clones the repository; defect 7 is the one with a removal notice attached.
 
 ## What you should take away
 
@@ -262,6 +306,7 @@ person who clones the repository.
 - **Every rule you apply in CAD deletes code in Python.** Limits set in Onshape are limits you never
   transcribe — and therefore limits that can never drift.
 - **Audit after every re-export.** Joint names, axes, limits and inertias, in that order.
+- **A corrected constant is not a fix.** If a number lives in two files, read it from one.
 
 Next: getting all of this to run inside containers without losing the webcam, the GPU or the display.
 

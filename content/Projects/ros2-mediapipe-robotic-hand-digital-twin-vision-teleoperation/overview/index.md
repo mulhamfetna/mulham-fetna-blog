@@ -174,8 +174,10 @@ topic, and the model would flicker between your hand and whatever the sliders la
 
 ## Stage 5 — where the model came from
 
-The hand was designed in Onshape and exported with `onshape-to-robot`, which reads mate names,
-mate limits and material densities straight out of the CAD. Done properly, that means joint names
+The hand was designed in Onshape — [the assembly is
+public](https://cad.onshape.com/documents/a2dbb5f16624f10f1aa22f02/w/3eff80c19eddad52bfa92f87/e/4d69727744037003575f4068)
+— and exported with `onshape-to-robot`, which reads mate names, mate limits and material densities
+straight out of the CAD. Done properly, that means joint names
 and inertia tensors are generated rather than hand-written.
 
 Done improperly, every shortcut taken in CAD becomes a bug in ROS. This export produced a good
@@ -202,6 +204,8 @@ bridge network kills it; `/tmp/.X11-unix` mounted so RViz has a portal to your m
 `/dev/video0` and `/dev/dri` passed through for the camera and hardware rendering; source
 directories bind-mounted so a code change needs a restart, not a three-minute rebuild.
 
+![The full running stack: RViz twin, MediaPipe landmark overlay, and the tracker and sniffer logs streaming side by side](live-stack.png "All of it running at once: the twin, the tracker's landmark overlay, and both topics streaming.")
+
 [Part 6 goes deeper →](/projects/ros2-mediapipe-robotic-hand-digital-twin-vision-teleoperation/docker-gazebo/)
 
 ## What it does not do
@@ -216,20 +220,21 @@ flowchart TB
     A --> E["⬜ Forward kinematics only<br>per joint, no IK, no coupling"]
 {{< /mermaid >}}
 
-There is also one live defect. Fourteen of the fifteen mapping rows transcribe their joint's limits
-exactly. `ring_mcp` does not — it carries `0.000 / -1.571` against a URDF limit of
-`0.39671 / -1.17409`, a leftover from before that mate gained a real limit in CAD. At full curl the
-node commands roughly 23° past the joint's mechanical stop.
+There was also, until recently, a live defect worth recounting. Fourteen of the fifteen mapping
+rows transcribed their joint's limits exactly. `ring_mcp` carried `0.000 / -1.571` against a URDF
+limit of `0.39671 / -1.17409` — a leftover from before that mate gained a real limit in CAD. At
+full curl the node commanded roughly 23° past the joint's mechanical stop.
 
-Nothing errors. `robot_state_publisher` does not enforce URDF limits; it applies whatever transform
-it is handed. So RViz shows a ring knuckle bending slightly further than the mechanism physically
-could, silently — and it would become a hard failure the moment this drove a physics engine or a
-real servo.
+Nothing errored. `robot_state_publisher` does not enforce URDF limits; it applies whatever
+transform it is handed. So RViz showed a ring knuckle bending slightly further than the mechanism
+physically could, silently — and it would have become a hard failure the moment this drove a
+physics engine or a real servo.
 
-I am documenting it rather than quietly fixing it, because the *class* of bug is the interesting
-part: a contract duplicated across two files, with no mechanism to detect divergence. The same
-shape of problem sits in the duplicated `hand_msgs` package, where a field added to one copy and
-not the other yields a subscriber that silently never fires.
+The row is fixed now. The *class* of bug is the part worth keeping: a contract duplicated across
+two files, with no mechanism to detect divergence. The same shape sits in the duplicated
+`hand_msgs` package, where a field added to one copy and not the other yields a subscriber that
+silently never fires. A corrected constant is a patch; reading the limits from the URDF at startup
+would be the fix, and that is still on the list.
 
 ## What it was actually for
 
