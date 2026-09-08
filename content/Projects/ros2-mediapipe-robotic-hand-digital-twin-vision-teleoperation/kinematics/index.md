@@ -158,33 +158,49 @@ mechanical range:
 
 $$\theta_{\text{urdf}} = \theta_{\text{open}} + \text{flexion} \times (\theta_{\text{closed}} - \theta_{\text{open}})$$
 
-Each joint's endpoints come from the URDF, and the fifteen-row `JOINT_MAPPING` table is what binds
-everything together — computed angle index, URDF joint name, and the two limits:
+Each joint's endpoints come from the URDF — **literally**, read at node startup rather than copied
+into Python:
+
+```python
+def load_urdf_limits(urdf_path):
+    root = ET.parse(urdf_path).getroot()
+    limits = {}
+    for joint in root.findall('joint'):
+        limit = joint.find('limit')
+        if limit is None:
+            continue
+        limits[joint.get('name')] = (float(limit.get('lower')),
+                                     float(limit.get('upper')))
+    return limits
+```
+
+So the fifteen-row `JOINT_MAPPING` table holds no angles at all. It holds the one fact the URDF
+cannot express:
 
 ```python
 JOINT_MAPPING = [
-    # (urdf joint name, mediapipe index, open angle, closed angle)
-    ('thumb_mcp',   0, -1.377,  0.194),
-    ('thumb_pip',   1, -1.126,  0.445),
-    ('thumb_dip',   2, -1.142,  0.429),
-    ('index_mcp',   3,  0.960, -0.611),
-    ('index_pip',   4,  0.000, -1.571),
+    # (urdf joint name, mediapipe index, which limit is the open hand)
+    ('thumb_mcp',   0, 'lower'),
+    ('index_mcp',   3, 'upper'),
+    ('middle_pip',  7, 'lower'),
     ...
 ]
 ```
 
-### Why the signs disagree between rows
+### Why the open end differs between rows
 
-`thumb_mcp` opens at −1.377 and closes at +0.194. `index_mcp` opens at +0.960 and closes at −0.611 —
-the opposite direction.
+`thumb_mcp` opens at its *lower* limit and closes at its upper. `index_mcp` does the reverse.
 
 This is not inconsistency. Each mate in Onshape was constructed with its own axis orientation, so
-"positive rotation" means a different physical direction per joint. The table records which endpoint
-is *open* and which is *closed* for each joint independently, and the interpolation handles the rest
-without caring about sign.
+"positive rotation" means a different physical direction per joint. Nothing in the URDF records
+which direction is anatomically "open" — a `<limit>` is just two numbers. So that one bit per joint
+has to live in code, and the interpolation handles the rest.
 
-The alternative — normalizing every joint to a common convention — would mean editing the CAD or
-post-processing the URDF, and would gain nothing. Encoding reality in a table beats fighting it.
+Normalizing every joint to a common convention would mean editing the CAD or post-processing the
+URDF, and would gain nothing. Encoding reality beats fighting it.
+
+The earlier version of this table stored the angles too, copied out of the URDF by hand. That is
+what the next section is about.
 
 ## The URDF side of the contract
 
@@ -288,19 +304,24 @@ transform it is handed. RViz showed no error and no obviously broken geometry �
 bending slightly further than the mechanism physically could. It would have become a hard failure
 the moment this drove a physics engine or a real servo.
 
-The row now reads:
+The row was corrected to `('ring_mcp', 9, 0.397, -1.174)`. But a corrected constant is a patch, not
+a fix — it repairs the instance and leaves the mechanism that produced it untouched. The real
+problem was a **contract duplicated across two files**, a URDF and a Python table, with nothing to
+detect divergence.
 
-```python
-('ring_mcp',    9,  0.397, -1.174),
-```
+So the limits moved. They are now parsed from the URDF at startup and exist in exactly one place,
+which is why the table above holds `'lower'` and `'upper'` rather than numbers. Three failure modes
+that used to be silent are now loud:
 
-But the interesting part is the *class* of bug, which the corrected constant does not address. This
-was a contract duplicated across two files — a URDF and a Python table — with nothing to detect
-divergence. The same shape appears elsewhere in the project: the `hand_msgs` package exists in two
-copies, and a field added to one and not the other produces a subscriber that silently never fires.
+| Situation | Before | Now |
+|---|---|---|
+| URDF limit edited, Python not updated | Silent divergence | Impossible — one source |
+| Joint renamed by a re-export | That finger silently freezes | `RuntimeError` at startup, naming the joint |
+| URDF gains a joint with no mapping row | Silently never moves | Warning at startup |
 
-The real fix is parsing the limits out of the URDF at startup instead of transcribing them, so the
-two representations cannot disagree. That remains on the list.
+The same duplicated-contract shape still sits elsewhere in the project: the `hand_msgs` package
+exists in two copies, and a field added to one and not the other produces a subscriber that
+silently never fires. Worth knowing where your second copies are.
 
 ## What you should take away
 

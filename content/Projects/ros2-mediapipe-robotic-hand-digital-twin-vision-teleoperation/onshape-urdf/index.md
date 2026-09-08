@@ -239,9 +239,10 @@ It was a direct consequence of rule 2 being applied *late*: the joint originally
 bounds, the table was written against those, the CAD gained a real limit, and the table was never
 revisited. The row now reads `('ring_mcp', 9, 0.397, -1.174)`.
 
-The durable fix is different and still outstanding: **parse the limits out of the URDF at startup**
-rather than transcribing them, so the two representations cannot disagree in the first place. A
-corrected constant fixes today's bug; reading from one source fixes the class of bug.
+A corrected constant fixes today's bug; reading from one source fixes the class of bug — so the
+limits now come out of the URDF at node startup and the Python table keeps only which end of each
+joint's range is the open hand, which is a CAD convention the URDF cannot express. A joint renamed
+by a re-export raises at startup instead of silently freezing that finger.
 
 ### ⚠️ Two warnings at every startup
 

@@ -150,7 +150,7 @@ because "my simulation is unusably slow" is otherwise a hard symptom to trace.
 ```yaml
 volumes:
   - ./hand_tracker/src:/ws_hand_tracker/src:ro
-  - /mnt/data/projects/ros-robotic-hand:/workspace:rw
+  - /mnt/data/projects/ros2-mediapipe-robotic-hand-digital-twin-vision-teleoperation:/workspace:rw
 ```
 
 Baking source into the image means a rebuild for every changed constant. With a bind mount, the edit
@@ -163,8 +163,8 @@ docker compose restart hand_tracker
 
 Rebuild only when a Dockerfile or a dependency changes.
 
-> **The catch.** That second path is absolute. `/mnt/data/projects/ros-robotic-hand` is where *this*
-> machine keeps the repository, and the URDF compounds it by referencing meshes as
+> **The catch.** That second path is absolute — it names where *this* machine keeps the
+> repository, and the URDF compounds it by referencing meshes as
 > `file:///workspace/assets/*.stl`. Clone the repo anywhere else and RViz starts with no meshes until
 > that line is edited. It is the single least portable thing in the project, and it is documented as
 > a known defect rather than hidden.

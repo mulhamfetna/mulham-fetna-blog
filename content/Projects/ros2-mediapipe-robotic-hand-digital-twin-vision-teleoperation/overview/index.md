@@ -135,20 +135,21 @@ constants, not derived ones. They define which slice of human motion gets stretc
 mechanism's full travel, and they are the first thing to touch when the whole hand under- or
 over-flexes.
 
-The per-joint limits live in a fifteen-row table binding each computed angle to a named URDF joint:
+The per-joint limits come from the URDF itself, parsed at startup. A fifteen-row table binds each
+computed angle to a named joint and records which end of its range is the open hand:
 
 ```python
 JOINT_MAPPING = [
-    ('thumb_mcp',   0, -1.377,  0.194),
-    ('index_mcp',   3,  0.960, -0.611),
-    ('middle_pip',  7,  0.000,  1.571),
+    ('thumb_mcp',   0, 'lower'),
+    ('index_mcp',   3, 'upper'),
+    ('middle_pip',  7, 'lower'),
     ...
 ]
 ```
 
-Note the sign conventions disagree between rows. `thumb_mcp` opens negative and closes positive;
-`index_mcp` does the reverse. That is not sloppiness — it reflects how each mate was constructed in
-CAD, and the table encodes reality rather than fighting it.
+Note the open end disagrees between rows: `thumb_mcp` opens at its lower limit, `index_mcp` at its
+upper. That is not sloppiness — it reflects how each mate was constructed in CAD, and it is the
+only per-joint fact the table still stores. The angles themselves are read from the URDF.
 
 [Part 3 goes deeper →](/projects/ros2-mediapipe-robotic-hand-digital-twin-vision-teleoperation/kinematics/)
 
@@ -230,11 +231,17 @@ transform it is handed. So RViz showed a ring knuckle bending slightly further t
 physically could, silently — and it would have become a hard failure the moment this drove a
 physics engine or a real servo.
 
-The row is fixed now. The *class* of bug is the part worth keeping: a contract duplicated across
-two files, with no mechanism to detect divergence. The same shape sits in the duplicated
-`hand_msgs` package, where a field added to one copy and not the other yields a subscriber that
-silently never fires. A corrected constant is a patch; reading the limits from the URDF at startup
-would be the fix, and that is still on the list.
+The row is fixed — but the *class* of bug is the part worth keeping: a contract duplicated across
+two files, with no mechanism to detect divergence.
+
+So the duplication went away. The limits are now parsed from the URDF when the node starts, and the
+Python table holds only which end of each joint's range is the open hand — the one fact a
+`<limit>` element cannot express. Editing the CAD no longer requires editing Python, and a joint
+renamed by a re-export raises at startup rather than silently freezing a finger.
+
+The same shape still sits in the duplicated `hand_msgs` package, where a field added to one copy
+and not the other yields a subscriber that silently never fires. Worth knowing where your second
+copies are.
 
 ## What it was actually for
 

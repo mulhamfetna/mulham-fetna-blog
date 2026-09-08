@@ -60,7 +60,8 @@ Worth stating up front, because it bounds what this demonstrates:
 Each of these is a documented next step rather than a hidden flaw. The repository keeps a running
 [known-defects log](https://github.com/mulhamfetna/ros2-mediapipe-robotic-hand-digital-twin-vision-teleoperation/blob/main/docs/5-onshape-urdf/3-known-export-defects.md)
 — including a mapping row that silently commanded 23° past a mechanical stop until it was found and
-fixed, and two warnings ROS logs at every startup that had gone unread for the life of the project.
+fixed, the structural change that makes that class of bug impossible, and two warnings ROS logs at
+every startup that had gone unread for the life of the project.
 
 ## Cite it
 
