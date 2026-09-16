@@ -60,7 +60,7 @@ The current design used by this twin — the version with the servo base block s
 
 | Onshape version history | Mate features |
 |---|---|
-| ![Onshape version graph: Start, v1.0.0 MediaPipe, v1.0.1, Main, V3, Mujoco branch](current_version_history.png) | ![Mate features list: dof_pinky_dip through dof_thumb_ip, then Fastened mates](current_mate_features.png) |
+| ![Onshape version graph: Start, v1.0.0 MediaPipe, v1.0.1, Main, V3, Mujoco branch](current_version_history.png) | ![Mate features list: dof_pinky_dip through dof_thumb_ip, then Fastened mates](current_mate_list.png) |
 
 *43 part instances, 112 mate features: the 15 `dof_*` knuckle mates, the servo mates, and many `Fastened` mates.*
 
@@ -72,7 +72,7 @@ onshape-to-robot turns each **mate** into a MuJoCo **joint** and keeps its **nam
 `dof_` prefix — `dof_index_pip` becomes joint `index_pip`. Naming in CAD is part of the software
 interface.
 
-![The 15 knuckle mates in Onshape's feature tree](onshape_mate_features.png "Early revision's mate list — the same dof_* names survive into robot.xml.")
+![The 15 knuckle mates in Onshape's feature tree](onshape_mate_list.png "Early revision's mate list — the same dof_* names survive into robot.xml.")
 
 The model ends up with 20 hinge joints: 15 knuckles and 5 servo horns, with limits taken from the mates.
 
