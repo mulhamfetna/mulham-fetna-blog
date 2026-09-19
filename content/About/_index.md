@@ -1,7 +1,7 @@
 ---
 title: "About Mulham Fetna"
-description: "Mulham Fetna — mechatronics and AI/ML engineer, researcher, and technical trainer in Aleppo, Syria. Founder of Neurobotics and Boundless."
-keywords: ["Mulham Fetna", "about Mulham Fetna", "mechatronics engineer Aleppo", "Neurobotics founder", "Boundless founder", "AI engineer Syria"]
+description: "Mulham Fetna — mechatronics and AI/ML engineer, researcher, and technical trainer in Aleppo, Syria. Founder of Neurobotics Integrated Technology Solutions and Boundless Academic Research Community."
+keywords: ["Mulham Fetna", "about Mulham Fetna", "mechatronics engineer Aleppo", "Neurobotics Integrated Technology Solutions founder", "Boundless Academic Research Community founder", "AI engineer Syria"]
 image: "/img/mulham_professional_photo.jpg"
 showTableOfContents: true
 ---
@@ -12,7 +12,7 @@ showTableOfContents: true
 
 I build robotics and machine-learning systems, publish research, and train the next generation of Syrian engineers and researchers — from Aleppo.
 
-Mechatronics engineering student at the University of Aleppo (fourth year, top of class at 89%). Open-source contributor with {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}} — two of them into OpenCV core.
+Senior Year Bachelor of Mechatronics Engineering student at Aleppo University (top of class at 89%). Open-source contributor with {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}} — two of them into OpenCV core.
 
 Teaching since {{< fact key="teaching_since" >}} across Syria, Lebanon, Palestine, and internationally through Paper Airplanes and HerWill — **{{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}**.
 
@@ -34,15 +34,15 @@ Syria's engineering talent is not the bottleneck — access is. Access to a rese
 
 ## What I do
 
-I founded and lead two Syrian ventures — **Neurobotics** (engineering and technical education) and **Boundless** (academic services, partnered with SANAD and UNFPA Syria). Together they run technical diplomas, a scientific research camp, olympiad training, and scholarship mentorship.
+I founded and lead two Syrian ventures — **Neurobotics Integrated Technology Solutions** (engineering and technical education) and **Boundless Academic Research Community** (academic services, partnered with SANAD and UNFPA Syria). Together they run technical diplomas, a scientific research camp, olympiad training, and scholarship mentorship.
 
 {{<mermaid>}}
 graph TD
     MF[Mulham Fetna: Renaissance Engineer]
     style MF fill:#2a004e,color:#fff,stroke:#146c94,stroke-width:4px
 
-    NB[Neurobotics: Integrated Tech]
-    BL[Boundless: Academic Services]
+    NB[Neurobotics Integrated Technology Solutions]
+    BL[Boundless Academic Research Community]
     style NB fill:#20002c,color:#fff,stroke:#146c94
     style BL fill:#146c94,color:#fff,stroke:#2a004e
 
@@ -85,7 +85,7 @@ graph TD
 ## Education
 
 **B.Sc. Mechatronics Engineering** — University of Aleppo, 2023–2027
-Fourth year. Top of class, 89% cumulative (first two years). Coursework spans mechanical design, embedded systems, control theory, robotics, and industrial automation.
+Senior Year. Top of class, 89% cumulative (first two years). Coursework spans mechanical design, embedded systems, control theory, robotics, and industrial automation.
 
 **Syrian Baccalaureate** — 2313 / 2400 (96.375%)
 
@@ -95,7 +95,7 @@ Fourth year. Top of class, 89% cumulative (first two years). Coursework spans me
 
 - **[Open Source](/open-source/)** — merged contributions to OpenCV and OpenDR.
 - **[Learn](/learn/)** — courses, workshops, and free roadmaps.
-- **[Ventures](/ventures/)** — Neurobotics and Boundless.
+- **[Ventures](/ventures/)** — Neurobotics Integrated Technology Solutions and Boundless Academic Research Community.
 - **[Work With Me](/work-with-me/)** — engineering, consulting, and mentorship.
 - **[Timeline](/about/timeline/)** — the journey, year by year.
 
@@ -108,7 +108,7 @@ Full experience, affiliations, and certifications: **[see my CV](/work-with-me/c
 {{< faq >}}
 
 {{< faqitem question="What is Mulham Fetna's background?" >}}
-He is a fourth-year mechatronics engineering student at the University of Aleppo, top of his class at 89%, and simultaneously a practising engineer, researcher, and trainer. He founded two Syrian ventures — Neurobotics, for engineering and technical education, and Boundless, for academic services — and has been teaching since {{< fact key="teaching_since" >}}.
+He is a Senior Year Bachelor of Mechatronics Engineering student at Aleppo University, top of his class at 89%, and simultaneously a practising engineer, researcher, and trainer. He founded two Syrian ventures — Neurobotics Integrated Technology Solutions, for engineering and technical education, and Boundless Academic Research Community, for academic services — and has been teaching since {{< fact key="teaching_since" >}}.
 {{< /faqitem >}}
 
 {{< faqitem question="What languages does Mulham Fetna speak?" >}}

@@ -30,7 +30,7 @@ I build robotics and machine-learning systems, publish research, and train the n
 → **[Learn](/learn/)** — courses, workshops, and free roadmaps in Arabic and English.
 
 **Partner or sponsor?**
-→ **[Ventures](/ventures/)** — Neurobotics and Boundless.
+→ **[Ventures](/ventures/)** — Neurobotics Integrated Technology Solutions and Boundless Academic Research Community.
 
 ---
 
@@ -49,7 +49,7 @@ I build robotics and machine-learning systems, publish research, and train the n
 {{< faq >}}
 
 {{< faqitem question="Who is Mulham Fetna?" >}}
-Mulham Fetna is a mechatronics and AI/ML engineer, researcher, and technical trainer based in Aleppo, Syria. He builds robotics and machine-learning systems, has had {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}}, and has taught {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}. He is the founder of Neurobotics, an engineering and technical-education venture, and Boundless, an academic-services venture partnered with SANAD and UNFPA Syria.
+Mulham Fetna is a mechatronics and AI/ML engineer, researcher, and technical trainer based in Aleppo, Syria. He builds robotics and machine-learning systems, has had {{< fact key="oss_merged" >}} pull requests merged into {{< fact key="oss_projects" >}}, and has taught {{< fact key="learners_total" >}} learners {{< fact key="learners_basis" >}}. He is the founder of Neurobotics Integrated Technology Solutions, an engineering and technical-education venture, and Boundless Academic Research Community, an academic-services venture partnered with SANAD and UNFPA Syria.
 {{< /faqitem >}}
 
 {{< faqitem question="What does Mulham Fetna specialize in?" >}}

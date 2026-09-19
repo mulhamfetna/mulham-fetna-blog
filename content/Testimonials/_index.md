@@ -58,7 +58,7 @@ As a coach for the Kids and Adolescents Programming Marathon (KPM):
 
 ---
 
-### Boundless Academic Services
+### Boundless Academic Research Community
 
 **Partner:** SANAD and UNFPA
 **Program:** Scientific Research Camp (SRC1)
@@ -81,7 +81,7 @@ As a coach for the Kids and Adolescents Programming Marathon (KPM):
 > — *Neurobotics Academy Student*
 
 > "The Personal Branding 101 workshop changed how I present myself professionally. Highly recommended for anyone serious about their career."
-> — *Boundless Workshop Participant*
+> — *Boundless Academic Research Community Workshop Participant*
 
 > "The Python course exceeded my expectations. From zero knowledge to building my first data pipeline in 3 months."
 > — *HerWill Program Graduate*

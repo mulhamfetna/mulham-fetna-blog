@@ -87,7 +87,7 @@ multi-step intelligent scaffold for bone healing*، في مجلة {{< fact key="
 الشكر الكبير لجامعة حلب ولرئاسة الجامعة التي آمنت بنا وقدّمت الدعم اللازم لإنجاز هذا البحث. فبدون
 هذا الدعم لم يكن هذا العمل ليرى النور.
 
-ويشكر البحث رسمياً **Boundless Academic Services** و**Sanad Youth for Development** و**UNFPA
+ويشكر البحث رسمياً **Boundless Academic Services** (Boundless Academic Research Community) و**Sanad Youth for Development** و**UNFPA
 Syria**. ولم تتلقَّ الدراسة أي تمويل خارجي.
 
 وشكر خاص لكل الأيادي البيضاء التي قدّمت المساعدة بصمت وإخلاص، لم تظهر أسماؤهم لكن بصماتهم واضحة
@@ -130,7 +130,7 @@ Syria**. ولم تتلقَّ الدراسة أي تمويل خارجي.
 {{< /faqitem >}}
 
 {{< faqitem question="هل كان البحث ممولاً؟" >}}
-لم يتلقَّ أي تمويل خارجي. قدّمت جامعة حلب الدعم المؤسسي، ويشكر البحث Boundless Academic Services وSanad Youth for Development وUNFPA Syria.
+لم يتلقَّ أي تمويل خارجي. قدّمت جامعة حلب الدعم المؤسسي، ويشكر البحث Boundless Academic Services (Boundless Academic Research Community) وSanad Youth for Development وUNFPA Syria.
 {{< /faqitem >}}
 
 {{< faqitem question="هل يمكن قراءة البحث مجاناً؟" >}}

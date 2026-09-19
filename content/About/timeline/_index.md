@@ -17,15 +17,15 @@ showTableOfContents: false
 ### January - Present
 - **Open Source:** two fixes merged into OpenCV core (Unicode and UTF-8 path handling)
 - **Open Source:** {{< fact key="oss_merged" >}} merged PRs into {{< fact key="oss_projects" >}} (from {{< fact key="oss_submitted" >}} submitted)
-- **Neurobotics:** 4th cohort of Python Mastery in progress
+- **Neurobotics Integrated Technology Solutions:** 4th cohort of Python Mastery in progress
 
 ---
 
 ## 2025
 
 ### January
-- **Founded Neurobotics** — Engineering services & education company
-- **Founded Boundless** — Academic services company
+- **Founded Neurobotics Integrated Technology Solutions** — Engineering services & education company
+- **Founded Boundless Academic Research Community** — Academic services company
 
 ### Awards
 - **Top 3 — Ramadan Initiatives Award 2026** — Directorate of Development
@@ -53,7 +53,7 @@ showTableOfContents: false
 ## 2023
 
 ### Education
-- Started Bachelor of Mechatronics Engineering, Aleppo University (4th year of 5)
+- Started Bachelor of Mechatronics Engineering, Aleppo University (Senior Year of 5)
 
 ### Teaching
 - Paper Airplanes — Python & MLOps instructor (Women in Tech Program)

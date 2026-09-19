@@ -21,7 +21,7 @@ Contact: **contact@mulhamfetna.com** · [ORCID {{< fact key="orcid" >}}](https:/
 
 Full-time data science research for a Kuwait-based media company, focused on **qualitative analysis** — turning unstructured media and audience data into evidence that a business can act on.
 
-## Founder & CEO | [Neurobotics — Integrated Technology Solutions](https://www.instagram.com/neurobotics_tech) | Jan 2025 – Ongoing
+## Founder & CEO | [Neurobotics Integrated Technology Solutions](https://www.instagram.com/neurobotics_tech) | Jan 2025 – Ongoing
 
 > **Vision:** Engineering minds and machines. Bridging academic theory and industrial mechatronics practice.
 
@@ -39,7 +39,7 @@ Full-time data science research for a Kuwait-based media company, focused on **q
 * **Top 3 Ramadan Initiative Award 2026** — Directorate of Development, for excellence in educational services.
 * Invited to deliver a hybrid Professional Personal Branding programme at Homs University IT Department.
 
-## Founder & CEO | [Boundless — Academic Services](https://www.instagram.com/boundless.academics) | Jan 2025 – Ongoing
+## Founder & CEO | [Boundless Academic Research Community](https://www.instagram.com/boundless.academics) | Jan 2025 – Ongoing
 
 > **Vision:** Removing barriers to global academic excellence for Syrian and Arab students.
 
@@ -114,7 +114,7 @@ Full matrix: **[Skills](/skills/)**.
 
 ## B.Sc. Mechatronics Engineering — University of Aleppo | 2023–2027
 
-* Currently in fourth year.
+* Currently in Senior Year.
 * Top of class — 89% cumulative grade (first two years).
 * Coursework: mechanical design, embedded systems, control theory, robotics, industrial automation.
 
@@ -199,6 +199,6 @@ Accepted participant, focused on academic research methodology and the publicati
 * **McKinsey Forward** — Alumnus
 * **Research Mentorship Program RP1** — Participant, 2026
 * **ROS Arabic Community** — Founder
-* **Boundless** — Founder & CEO
-* **Neurobotics** — Founder & CEO
+* **Boundless Academic Research Community** — Founder & CEO
+* **Neurobotics Integrated Technology Solutions** — Founder & CEO
 * **Courseing Platform** — Partner Instructor

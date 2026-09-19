@@ -56,7 +56,7 @@ Yes. It is delivered in Arabic and English, online or in person.
 {{< /faqitem >}}
 
 {{< faqitem question="Who has taken this workshop?" >}}
-Two cohorts in 2026: 270 participants online through Boundless, and 75 in person at the IT Department of Homs University. It is designed for students, graduates, engineers, and researchers.
+Two cohorts in 2026: 270 participants online through Boundless Academic Research Community, and 75 in person at the IT Department of Homs University. It is designed for students, graduates, engineers, and researchers.
 {{< /faqitem >}}
 
 {{< faqitem question="Does it cover academic and research profiles?" >}}

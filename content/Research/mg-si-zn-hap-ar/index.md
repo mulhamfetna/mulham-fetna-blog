@@ -35,7 +35,7 @@ showTableOfContents: true
 | الباحث المُراسِل | عبد الرزاق حمال، جامعة حلب |
 | كاتب هذه الصفحة | ملهم فتنه ([ORCID 0009-0006-4432-798X](https://orcid.org/0009-0006-4432-798X))، أحد المؤلفين، قسم هندسة الميكاترونكس |
 | التمويل الخارجي | لا يوجد |
-| شكر وتقدير | Boundless Academic Services · Sanad Youth for Development · UNFPA Syria |
+| شكر وتقدير | Boundless Academic Services (Boundless Academic Research Community) · Sanad Youth for Development · UNFPA Syria |
 
 ## 2. الملخص التقني
 

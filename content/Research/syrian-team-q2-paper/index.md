@@ -92,7 +92,7 @@ is not a nice sentiment; it is just what the work required.
 To the University of Aleppo and the university presidency, who believed in this and gave the
 support that made it possible. Without that backing this work would not exist.
 
-The paper formally acknowledges **Boundless Academic Services**, **Sanad Youth for Development**
+The paper formally acknowledges **Boundless Academic Services** (Boundless Academic Research Community), **Sanad Youth for Development**
 and **UNFPA Syria**. The study received no external funding.
 
 And to every quiet pair of hands that helped without appearing in any author list — the names
@@ -135,7 +135,7 @@ Roles were distributed transparently by interest and specialism rather than by s
 {{< /faqitem >}}
 
 {{< faqitem question="Was the research funded?" >}}
-It received no external funding. The University of Aleppo provided institutional support, and the paper acknowledges Boundless Academic Services, Sanad Youth for Development and UNFPA Syria.
+It received no external funding. The University of Aleppo provided institutional support, and the paper acknowledges Boundless Academic Services (Boundless Academic Research Community), Sanad Youth for Development and UNFPA Syria.
 {{< /faqitem >}}
 
 {{< faqitem question="Can the paper be read for free?" >}}

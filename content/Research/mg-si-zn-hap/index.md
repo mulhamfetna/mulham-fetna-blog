@@ -34,7 +34,7 @@ read [the announcement](/research/syrian-team-q2-paper/); if you want the mechan
 | Corresponding author | Abdulrazzaq Hammal, University of Aleppo |
 | This page's author | Mulham Fetna ([ORCID 0009-0006-4432-798X](https://orcid.org/0009-0006-4432-798X)), co-author, Dept. of Mechatronics Engineering |
 | External funding | None |
-| Acknowledged | Boundless Academic Services · Sanad Youth for Development · UNFPA Syria |
+| Acknowledged | Boundless Academic Services (Boundless Academic Research Community) · Sanad Youth for Development · UNFPA Syria |
 
 ## 2. Technical summary
 
