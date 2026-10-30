@@ -21,6 +21,8 @@ keywords: ["technical consultation", "engineering mentorship Arabic", "AI mentor
    Professional personal branding + career positioning.
 3. **[جلسة استشارة تقنية](./technical-consultation-session/)**  
    جلسة استشارية بموضوع تختاره أنت من نطاق خبراتي العملية.
+4. **[التحقق من استراتيجيات التداول](./strategy-validation/)**  
+   اختبار استراتيجيتك خارج العينة ومع تكاليف تداول واقعية، مع تقرير مكتوب (الطلب عبر Upwork).
 
 ### سياسة الحجز والدفع
 
@@ -60,6 +62,9 @@ For international payments, contact me directly at:
 
 This page is for **mentorship and consultation services**, to visit [my courses page](/courses/).  
 Use the service pages above to choose the right offer for your goal.
+
+For traders and small funds: **[Trading Strategy Validation](./strategy-validation/)** — out-of-sample,
+cost-stressed testing of your strategy in Python with a written report. Ordered and paid through Upwork.
 
 ### Booking & Payment Policy
 

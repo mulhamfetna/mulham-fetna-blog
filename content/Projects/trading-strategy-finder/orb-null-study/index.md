@@ -4,7 +4,7 @@ slug: "orb-null-study"
 date: 2026-09-07
 draft: false
 description: "A pre-registered 225-cell study of opening-range breakout on nine futures markets over 16 years: +$1.57M gross becomes −$6.49M at $25 per round trip. The edge lives inside the spread."
-keywords: ["opening range breakout", "ORB strategy", "day trading", "futures backtest", "transaction costs", "pre-registered study"]
+keywords: ["opening-range breakout does not survive trading costs", "opening range breakout", "ORB strategy", "day trading", "futures backtest", "transaction costs", "pre-registered study"]
 tags: ["quantitative-finance", "trading", "backtesting", "null-results"]
 categories: ["Research"]
 series: ["Trading Strategy Finder"]
@@ -22,6 +22,10 @@ it on stocks.
 
 We wanted to know: does it actually work on futures — the markets we research — once you pay
 real-world trading costs?
+
+The full paper: *[Opening-Range Breakout Does Not Survive Trading Costs: A Pre-Registered 225-Cell
+Study on Sixteen Years of Futures Data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7428398)*
+(Fetna, SSRN working paper, 2026).
 
 ## How we made it impossible to fool ourselves
 
@@ -113,5 +117,8 @@ pipeline runs on any data feed you connect.
 
 The broader story of the project starts here:
 [the end-to-end overview](/projects/trading-strategy-finder/overview/).
+
+Want your own strategy tested the same way?
+[Trading strategy validation](/services/strategy-validation/).
 
 *This research was carried out at BeInMedia (Nmo AI), Kuwait • Dubai • Doha.*

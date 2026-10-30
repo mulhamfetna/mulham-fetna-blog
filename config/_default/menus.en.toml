@@ -78,6 +78,12 @@
     parent = "Mentorship"
     weight = 3
 
+  [[main]]
+    name = "Strategy Validation"
+    pageRef = "Services/strategy-validation"
+    parent = "Mentorship"
+    weight = 4
+
 [[main]]
   name = "Ventures"
   pageRef = "ventures"
